@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class DownloadControl
  */
-@WebServlet("/DownloadControl")
+@WebServlet(name="/DownloadControl",urlPatterns="/DownloadControl")
 public class DownloadControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,7 +40,8 @@ public class DownloadControl extends HttpServlet {
 
 			String pathFile = "C:/Users/Paolo/workspaceProgWeb/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Download&Upload/uploads/lol0.txt";
 			response.setHeader("Content-Disposition", "attachment; filename=" + pathFile.substring(pathFile.lastIndexOf("/") + 1));
-			int dimFile = 1000000; //cambiare con il db
+			/*probabilmente calcolata a runtime cambiare con la dimensione del file*/
+			int dimFile = 1000000; 
 
 			File fileToDown = new File(pathFile);
 

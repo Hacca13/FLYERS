@@ -19,7 +19,7 @@ import javax.servlet.http.Part;
 /**
  * Servlet implementation class UpAndDownControl
  */
-@WebServlet(name="UpAndDownControl" ,urlPatterns="/UpAndDownControl", 
+@WebServlet(name="/UploadControl" ,urlPatterns="/UploadControl", 
 initParams={@WebInitParam(name="files-upload", value="uploads")})
 @MultipartConfig(fileSizeThreshold=1024*1024*5,maxFileSize=1024*1024*50, maxRequestSize=1024*1024*50)//max 50 mega
 
