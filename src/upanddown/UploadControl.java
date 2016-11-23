@@ -1,10 +1,8 @@
 package upanddown;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 
@@ -25,7 +23,7 @@ import javax.servlet.http.Part;
 initParams={@WebInitParam(name="files-upload", value="uploads")})
 @MultipartConfig(fileSizeThreshold=1024*1024*5,maxFileSize=1024*1024*50, maxRequestSize=1024*1024*50)//max 50 mega
 
-public class UpAndDownControl extends HttpServlet {
+public class UploadControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static String SAVE_DIR="";
 
@@ -36,7 +34,7 @@ public class UpAndDownControl extends HttpServlet {
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public UpAndDownControl() {
+	public UploadControl() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -60,7 +58,7 @@ public class UpAndDownControl extends HttpServlet {
 				Part fileToUpload = request.getPart("fileToUpload");
 
 				if(fileToUpload!= null && fileToUpload.getSize()!=0){
-					
+
 					String savePath = request.getServletContext().getRealPath("")+SAVE_DIR;
 
 					/*considera la cartella ove è sarà caricato il file*/
@@ -75,7 +73,7 @@ public class UpAndDownControl extends HttpServlet {
 					String fileNameAndExtension = extractFileName(fileToUpload);
 					/**substring per ottenere solo il nome del file*/
 					fileNameAndExtension = fileNameAndExtension.substring(fileNameAndExtension.indexOf(File.separator,fileNameAndExtension.lastIndexOf(File.separator))+1, fileNameAndExtension.length());
-					
+
 					try{
 						/**definisco dove salvare il file su server*/
 						File save = new File(fileSavePath, fileNameAndExtension);
@@ -89,7 +87,7 @@ public class UpAndDownControl extends HttpServlet {
 						pathToDB = fileSavePath + File.separator + fileNameAndExtension+"-"+tag1;	
 
 					}catch(FileAlreadyExistsException e){
-													
+
 						/*query nel db che conta quante istanze con quel tipo di file ci sono.
 						 *SELECT * FROM FILES WHERE TITOLO LIKE +nomefile
 						 * aggiungere ('numero') e caricare il file.
@@ -101,31 +99,9 @@ public class UpAndDownControl extends HttpServlet {
 						 */
 					}
 				}
-
-			}else if (action.equals("download")){
-				response.setContentType("application/x-download");
-				/**uso del model(query su DB) per prendere il path del file */
-
-				String pathFile = "C:/Users/Paolo/workspaceProgWeb/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/Download&Upload/uploads/lol0.txt";
-				response.setHeader("Content-Disposition", "attachment; filename=" + pathFile.substring(pathFile.lastIndexOf("/") + 1));
-				int dimFile = 1000000; //cambiare con il db
-
-				File fileToDown = new File(pathFile);
-
-				OutputStream outStream = response.getOutputStream();
-				FileInputStream in = new FileInputStream(fileToDown);
-
-				byte[] stream = new byte[dimFile];//da sostituire con la dimensione del file
-				int lenght = 0;
-
-				while( (lenght = in.read(stream)) >0){
-					outStream.write(stream,0,lenght);
-				}
-
-				in.close();
-				outStream.close();	
 			}
 		}
+
 	}
 
 	/**
