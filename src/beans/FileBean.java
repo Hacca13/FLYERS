@@ -5,22 +5,32 @@ import java.util.Collection;
 import java.util.Date;
 
 public class FileBean {
-
+	
+	private int keyFile;
 	private String nome;
 	private String descrizione;
 	private double raiting;
 	private Collection<TagBean> tagsOfFile;
 	private Date dataDiCaricamento; /*controllare struttura su vecchi progetti*/
-	private String userId; /*può variare*/
+	private int keyUtente; /*può variare*/
 
 
-	public FileBean(String nome, String descrizione, Date dataDiCaricamento, double raiting, String userId){
+	public FileBean(int keyFile, String nome, String descrizione, Date dataDiCaricamento, double raiting, int keyUtente){
+		this.keyFile = keyFile;
 		this.nome = nome;
 		this.descrizione = descrizione;
 		this.dataDiCaricamento = dataDiCaricamento;	
 		this.raiting = raiting;
-		this.userId = userId;
+		this.keyUtente = keyUtente;
 		tagsOfFile = new ArrayList<TagBean>();
+	}
+	
+	public int getKeyFile(){
+		return keyFile;
+	}
+	
+	public void setKeyFile(int keyFile){
+		this.keyFile = keyFile;
 	}
 
 	public String getNome() {
@@ -55,12 +65,12 @@ public class FileBean {
 		this.raiting = raiting;
 	}
 
-	public String getUserId() {
-		return userId;
+	public int getKeyUtente() {
+		return keyUtente;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+	public void setKeyUtente(int keyUtente) {
+		this.keyUtente = keyUtente;
 	}
 
 	public Collection<TagBean> getTagsOfFile(){
@@ -88,7 +98,7 @@ public class FileBean {
 	
 	@Override
 	public String toString(){
-		return getClass().getName()+"[nome="+nome+" descrizione="+descrizione+" dataDiCaricamento="+dataDiCaricamento
-				+" raiting="+raiting+" userId="+userId+" tagsOfFile="+tagsOfFile.toString()+"]";
+		return getClass().getName()+"[keyFile="+keyFile+" nome="+nome+" descrizione="+descrizione+" dataDiCaricamento="+dataDiCaricamento
+				+" raiting="+raiting+" keyUtente="+keyUtente+" tagsOfFile="+tagsOfFile.toString()+"]";
 	}
 }
