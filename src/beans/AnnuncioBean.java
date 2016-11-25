@@ -1,20 +1,28 @@
 package beans;
 
+import java.util.Collection;
 import java.util.Date;
 
 public class AnnuncioBean {
 	
 	private int keyAnnuncio;
-	private String nome;
+	private String titolo;
 	private String descrizione;
+	private String contatto;
 	private Date dataDiCaricamento;
+	private Collection<TagBean> tagsOfAnnuncio;
 	private int keyUtente;
 	
-	public  AnnuncioBean(int keyAnnuncio, String nome, String descrizione, Date dataDiCaricamento, int keyUtente){
+
+	public AnnuncioBean(int keyAnnuncio, String titolo, String descrizione, String contatto, Date dataDiCaricamento,
+			Collection<TagBean> tagsOfAnnuncio, int keyUtente) {
+		super();
 		this.keyAnnuncio = keyAnnuncio;
-		this.nome = nome;
+		this.titolo = titolo;
 		this.descrizione = descrizione;
+		this.contatto = contatto;
 		this.dataDiCaricamento = dataDiCaricamento;
+		this.tagsOfAnnuncio = tagsOfAnnuncio;
 		this.keyUtente = keyUtente;
 	}
 
@@ -26,12 +34,12 @@ public class AnnuncioBean {
 		this.keyAnnuncio = keyAnnuncio;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getTitolo() {
+		return titolo;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
 	}
 
 	public String getDescrizione() {
@@ -58,15 +66,29 @@ public class AnnuncioBean {
 		this.keyUtente = keyUtente;
 	}
 
-	@Override
-	public String toString() {
-		return getClass().getName()+"[keyAnnuncio=" + keyAnnuncio + ", nome=" + nome + ", descrizione=" + descrizione
-				+ ", dataDiCaricamento=" + dataDiCaricamento + ", keyUtente=" + keyUtente + "]";
+	public Collection<TagBean> getTagsOfAnnuncio() {
+		return tagsOfAnnuncio;
+	}
+
+	public void setTagsOfAnnuncio(Collection<TagBean> tagsOfAnnuncio) {
+		this.tagsOfAnnuncio = tagsOfAnnuncio;
+	}
+
+	public String getContatto() {
+		return contatto;
+	}
+
+	public void setContatto(String contatto) {
+		this.contatto = contatto;
 	}
 	
 	
-	
-	
-	
+	@Override
+	public String toString() {
+		return this.getClass() +" [keyAnnuncio=" + keyAnnuncio + ", titolo=" + titolo + ", descrizione=" + descrizione
+				+ ", contatto=" + contatto + ", dataDiCaricamento=" + dataDiCaricamento + ", tagsOfAnnuncio="
+				+ tagsOfAnnuncio + ", keyUtente=" + keyUtente + "]";
+	}
+
 	
 }
