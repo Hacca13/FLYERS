@@ -2,8 +2,8 @@ package beans;
 
 public class TagBean {
 	
-	private String nome;
 	private int keyTag;
+	private String nome;	
 	
 		
 	public TagBean(int keyTag, String nome){
