@@ -2,7 +2,7 @@ package beans;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
+import java.sql.Date;
 
 public class FileBean {
 	
