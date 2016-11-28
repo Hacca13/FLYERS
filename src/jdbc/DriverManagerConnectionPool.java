@@ -20,7 +20,7 @@ public class DriverManagerConnectionPool {
 		Connection newConnection = null;
 		String ip = "localhost";
 		String port = "3306";
-		String db = "vinyljungle";
+		String db = "FLYERS";
 		String username = "root";
 		String password = "0000";
 
