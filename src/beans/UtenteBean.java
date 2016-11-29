@@ -18,6 +18,11 @@ public class UtenteBean {
 	}
 
 
+	public UtenteBean() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public int getKeyUtente() {
 		return keyUtente;
 	}
