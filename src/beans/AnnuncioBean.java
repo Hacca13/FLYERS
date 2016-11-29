@@ -13,7 +13,11 @@ public class AnnuncioBean {
 	private Collection<TagBean> tagsOfAnnuncio;
 	private int keyUtente;
 	
-
+	
+	public AnnuncioBean(){
+		
+	}
+	
 	public AnnuncioBean(int keyAnnuncio, String titolo, String descrizione, String contatto, Date dataDiCaricamento,
 			Collection<TagBean> tagsOfAnnuncio, int keyUtente) {
 		super();
