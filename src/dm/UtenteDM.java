@@ -109,7 +109,7 @@ public class UtenteDM {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		
-		String updateSQL = "UPDATE "+TABLE_NAME+" SET ID = ?, EMAIL = ?, CITTA = ? , PASS = ? ";
+		String updateSQL = "UPDATE "+TABLE_NAME+" SET ID = ?, EMAIL = ?, CITTA = ? , PASS = ? WHERE KEYUTENTE = ? ";
 		
 		try {
 			connection = DriverManagerConnectionPool.getConnection();
@@ -118,6 +118,7 @@ public class UtenteDM {
 			preparedStatement.setString(2, user.getEmail());
 			preparedStatement.setString(3, user.getCitta());
 			preparedStatement.setString(4, user.getPassword());
+			preparedStatement.setInt(5, user.getKeyUtente());
 			preparedStatement.executeUpdate();
 			
 			connection.commit();

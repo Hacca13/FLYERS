@@ -12,6 +12,11 @@ public class TagBean {
 	}
 
 	
+	public TagBean() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public int getKeyTag(){
 		return keyTag;
 	}
