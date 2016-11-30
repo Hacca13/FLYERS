@@ -14,7 +14,7 @@ public class TagDM {
 	private final static String TABLE_NAME="TAG";
 
 
-	public synchronized void insertUser(TagBean newTag) throws SQLException{
+	public synchronized void insertTag(TagBean newTag) throws SQLException{
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 

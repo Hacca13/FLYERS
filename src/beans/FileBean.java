@@ -14,7 +14,8 @@ public class FileBean {
 	private Date dataDiCaricamento; /*controllare struttura su vecchi progetti*/
 	private int keyUtente; /*può variare*/
 
-
+	public FileBean(){}
+	
 	public FileBean(int keyFile, String nome, String descrizione, Date dataDiCaricamento, double raiting, int keyUtente){
 		this.keyFile = keyFile;
 		this.nome = nome;
