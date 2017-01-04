@@ -2,28 +2,702 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21f72854-bacc-4522-91f1-bfa9f1de688c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/deep-minified.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/a22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/b05.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/blue.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/c-finger-pointing.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/c-navigator-horizontal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/c-phone-horizontal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/c-slide-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/c-slide-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/purple.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/img/red.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/js/jquery-1.11.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/js/jssor.slider-22.0.6.debug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/js/jssor.slider-22.0.6.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/js/jssor.slider-22.0.6.mini.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/no-jquery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/slider/with-jquery.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FLYERS.iml" afterPath="$PROJECT_DIR$/.idea/FLYERS.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/aboutus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/aboutus2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/audio/juicy.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/blog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/blogdetails.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/blogfour.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/blogone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/blogthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/blogtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/coming-soon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/contact.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/contact2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/css/lightbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/css/prettyPhoto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/css/responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/404-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/404.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/Untitled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/aboutus/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/biologia.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/blog-arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/masonary/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blog/timeline/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blogdetails/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blogdetails/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blogdetails/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/blogdetails/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/chimica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/coming-soon-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/coming-soon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/coming-soon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/coming-soon3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/coming-soon4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/contact-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/fisica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/activeicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/client1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/client2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/client3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/client4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/client5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/client6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/clients.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/cycle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/footer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/icon3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/image1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/image2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/image3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/profile1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/profile2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider/birds1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider/birds2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider/hill.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider/house.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider/paperplane.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider/paperplane2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/slider/sun.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/tour-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/tour-icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/tour-icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/home/under.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/ico/apple-touch-icon-114-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/ico/apple-touch-icon-144-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/ico/apple-touch-icon-57-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/ico/apple-touch-icon-72-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/ico/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/icon-map.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/informatica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/lightbox/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/lightbox/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/lightbox/next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/lightbox/prev.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/matematica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio-details/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/popular1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/popular2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/popular3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/popular4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/popular5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/project1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/project2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/project3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/portfolio/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/services/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/services/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/services/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/images/services/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/audio.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/audiojs.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/coundown-timer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/gmaps.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/holder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/jquery.countTo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/jquery.fitvids.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/jquery.isotope.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/lightbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/masonry.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/player-graphics.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/respond.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/w.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/js/wow.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/portfolio-details.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/portfolio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/portfoliofour.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/portfolioone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/portfoliothree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/portfoliotwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/pricing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/sendemail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/service.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/shortcodes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/.idea/triangle-free-responsive-multipurpose-template.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/css/documenter_style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/css/img/info.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/css/img/warning.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/js/google-code-prettify/prettify.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/js/google-code-prettify/prettify.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/js/jquery.easing.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/js/jquery.scrollTo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/assets/js/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/documentation/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/aboutus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/aboutus2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/audio/juicy.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/blog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/blogdetails.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/blogfour.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/blogone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/blogthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/blogtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/coming-soon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/contact.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/contact2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/css/lightbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/css/prettyPhoto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/css/responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/404-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/404.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/Untitled.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/aboutus/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/biologia.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/blog-arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/masonary/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blog/timeline/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blogdetails/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blogdetails/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blogdetails/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/blogdetails/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/chimica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/coming-soon-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/coming-soon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/coming-soon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/coming-soon3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/coming-soon4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/contact-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/fisica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/activeicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/client1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/client2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/client3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/client4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/client5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/client6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/clients.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/cycle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/footer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/icon3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/image1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/image2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/image3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/profile1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/profile2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider/birds1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider/birds2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider/hill.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider/house.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider/paperplane.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider/paperplane2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/slider/sun.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/tour-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/tour-icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/tour-icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/home/under.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/ico/apple-touch-icon-114-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/ico/apple-touch-icon-144-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/ico/apple-touch-icon-57-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/ico/apple-touch-icon-72-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/ico/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/icon-map.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/informatica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/lightbox/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/lightbox/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/lightbox/next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/lightbox/prev.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/matematica.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio-details/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/popular1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/popular2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/popular3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/popular4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/popular5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/project1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/project2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/project3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/portfolio/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/services/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/services/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/services/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/images/services/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/audio.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/audiojs.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/coundown-timer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/gmaps.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/holder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/jquery.countTo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/jquery.fitvids.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/jquery.isotope.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/lightbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/masonry.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/player-graphics.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/respond.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/w.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/js/wow.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/portfolio-details.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/portfolio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/portfoliofour.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/portfolioone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/portfoliothree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/portfoliotwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/pricing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/sendemail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/service.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/multicolor/shortcodes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/404.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/aboutus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/aboutus2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/audio/juicy.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/blog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/blogdetails.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/blogfour.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/blogone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/blogthree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/blogtwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/coming-soon.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/contact.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/contact2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/css/lightbox.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/css/prettyPhoto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/css/responsive.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/404.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/aboutus/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/blog-arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/masonary/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blog/timeline/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blogdetails/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blogdetails/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blogdetails/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/blogdetails/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/contact-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/activeicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/client1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/client2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/client3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/client4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/client5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/client6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/clients.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/cycle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/footer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/icon3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/image1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/image2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/image3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/profile1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/profile2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/circle1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/circle2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/cloud1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/cloud2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/cloud3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/cycle.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/house.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/slider/slide1/sun.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/tour-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/tour-icon1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/tour-icon2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/home/under.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/ico/apple-touch-icon-114-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/ico/apple-touch-icon-144-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/ico/apple-touch-icon-57-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/ico/apple-touch-icon-72-precomposed.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/ico/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/icon-map.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/lightbox/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/lightbox/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/lightbox/next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/lightbox/prev.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio-details/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/11.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/12.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/13.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/14.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/15.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/16.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/17.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/18.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/19.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/20.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/21.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/22.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/24.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/9.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/left.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/popular1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/popular2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/popular3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/popular4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/popular5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/project1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/project2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/project3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/portfolio/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/services/1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/services/2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/services/3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/images/services/4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/audio.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/audiojs.swf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/coundown-timer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/gmaps.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/holder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/html5shiv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/jquery.countTo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/jquery.fitvids.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/jquery.isotope.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/lightbox.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/masonry.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/player-graphics.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/respond.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/w.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/js/wow.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/portfolio-details.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/portfolio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/portfoliofour.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/portfolioone.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/portfoliothree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/portfoliotwo.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/pricing.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/sendemail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/service.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/template/singlecolor/shortcodes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/hoverex-all.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_rounded/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_rounded/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_rounded/contentPattern.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_rounded/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_rounded/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_square/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_square/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_square/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/dark_square/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/default/default_thumb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/default/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/default/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/default/sprite_next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/default/sprite_prev.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/default/sprite_x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/default/sprite_y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/contentPatternBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/contentPatternLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/contentPatternRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/contentPatternTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/default_thumbnail.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/facebook/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/light_rounded/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/light_rounded/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/light_rounded/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/light_rounded/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/light_square/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/light_square/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/images/prettyPhoto/light_square/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/prettyPhoto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/agency.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/browser.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/clients/client01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/clients/client02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/clients/client03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/clients/client04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/contact.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/portfolio_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/single01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/single02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/portfolio/single03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/post01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/post02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/post03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/t-back.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/team/team01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/team/team02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/team/team03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/team/team04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/thumb01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/thumb02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/thumb03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/img/thumb04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/js/custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/js/jquery.hoverdir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/js/jquery.hoverex.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/js/jquery.isotope.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/js/jquery.prettyPhoto.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/assets/js/retina-1.1.0.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/blog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/contact.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/portfolio.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/single-post.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/triangle-free-responsive-multipurpose-template/theme/single-project.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html" afterPath="$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html" />
     </list>
     <ignored path="FLYERS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,13 +717,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/Flyers/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="350">
+              <caret line="130" column="163" lean-forward="false" selection-start-line="130" selection-start-column="163" selection-end-line="130" selection-end-column="163" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -65,14 +742,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="freelancer.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/freelancer.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="771">
+              <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>STAR</find>
+      <find>navbar-t</find>
+      <find>header</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,6 +777,8 @@
       <list>
         <option value="$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/carousel.css" />
         <option value="$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html" />
+        <option value="$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/freelancer.css" />
+        <option value="$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/Flyers/home.html" />
       </list>
     </option>
   </component>
@@ -95,6 +792,9 @@
   <component name="ProjectFrameBounds">
     <option name="width" value="1440" />
     <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -111,7 +811,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -138,8 +837,45 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FLYERS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FLYERS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-freelancer-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FLYERS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FLYERS" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="startbootstrap-freelancer-gh-pages" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -149,10 +885,14 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="FullScreen" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/img" />
     </key>
   </component>
   <component name="RunManager">
@@ -226,17 +966,20 @@
       <workItem from="1479982332938" duration="38000" />
       <workItem from="1482496640451" duration="388000" />
       <workItem from="1483463395768" duration="4000" />
+      <workItem from="1483521848062" duration="1181000" />
+      <workItem from="1483526885000" duration="22000" />
+      <workItem from="1483527472467" duration="1305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430000" />
+    <option name="totallyTimeSpent" value="2938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -248,6 +991,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -274,13 +1018,83 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html">
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/Flyers/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/freelancer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/Flyers/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="78" lean-forward="false" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
+          <folding>
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/freelancer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1515">
+          <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/carousel.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -295,6 +1109,29 @@
     <entry file="file://$PROJECT_DIR$/slider/deep-minified.html" />
     <entry file="file://$PROJECT_DIR$/slider/no-jquery.html" />
     <entry file="file://$PROJECT_DIR$/slider/with-jquery.html" />
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/vendor/bootstrap/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/Template/multicolor/aboutus.html" />
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="153" column="28" lean-forward="true" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/freelancer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="101" column="8" lean-forward="false" selection-start-line="101" selection-start-column="2" selection-end-line="101" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/css/carousel.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -303,12 +1140,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/index.html">
+    <entry file="file://$PROJECT_DIR$/startbootstrap-freelancer-gh-pages/Flyers/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        <state relative-caret-position="350">
+          <caret line="130" column="163" lean-forward="false" selection-start-line="130" selection-start-column="163" selection-end-line="130" selection-end-column="163" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
