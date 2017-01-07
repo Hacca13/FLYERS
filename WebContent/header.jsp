@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+
+<%
+	Boolean userLof = (Boolean)request.getSession().getAttribute("userlog");
+%>
+
 <html>
 <head>
 
@@ -62,18 +67,23 @@
                                 <li class="page-scroll">
                                     <a href="#">Appunti</a>
                                 </li>
+                                <%if(userLog){ %>
                                 <li class="page-scroll">
                                     <a href="#">Profilo</a>
                                 </li>
+                                <%} %>
                                 <li class="page-scroll">
                                     <a href="#">Help</a>
                                 </li>
+                                <%if(userLog){ %>
                                 <li>
                                     <a href="#">Login</a>
                                 </li>
+                                <% } else {%>
                                 <li>
                                     <a href="#">Logout</a>
                                 </li>
+                                <% } %>
                             </ul>
                         </div>
                     </div>
