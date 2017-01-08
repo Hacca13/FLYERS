@@ -20,7 +20,6 @@ public class AnnuncioBean {
 	
 	public AnnuncioBean(int keyAnnuncio, String titolo, String descrizione, String contatto, Date dataDiCaricamento,
 			Collection<TagBean> tagsOfAnnuncio, int keyUtente) {
-		super();
 		this.keyAnnuncio = keyAnnuncio;
 		this.titolo = titolo;
 		this.descrizione = descrizione;
@@ -29,7 +28,12 @@ public class AnnuncioBean {
 		this.tagsOfAnnuncio = tagsOfAnnuncio;
 		this.keyUtente = keyUtente;
 	}
-
+ 
+	
+	
+	
+	
+	
 	public int getKeyAnnuncio() {
 		return keyAnnuncio;
 	}

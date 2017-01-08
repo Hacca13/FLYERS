@@ -14,7 +14,7 @@ import jdbc.DriverManagerConnectionPool;
 public class AnnuncioDM {
 	
 	private final static String TABLE_ANNUNCIO="ANNUNCIO(TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE)";
-	private final static String TABLE_TAG="TAG(KEYTAG, NOME)";
+	private final static String TABLE_TAG="TAG(NOME)";
 	private final static String TABLE_TAGPERANNUNCIO="TAGPERANNUNCIO(KEYTAG, KEYANNUNCIO)";
 	
 	
@@ -24,7 +24,8 @@ public class AnnuncioDM {
 		PreparedStatement prepareteStatement =null;
 		
 		String sqlForAnnuncio="INSERT INTO"+TABLE_ANNUNCIO+"VALUES(?,?,?,?,?)";
-		String sqlForTag= "INSERT INTO"+TABLE_TAG+"Values(?,?)";
+		
+		String sqlForTagPerAnnuncio= "INSERT INTO"+TABLE_TAGPERANNUNCIO+"Values(?,?)";
 		
 		
 		try {
@@ -41,6 +42,7 @@ public class AnnuncioDM {
 			connection.commit();
 			
 			
+			
 		}finally {
 			if(connection !=null){
 				try{
@@ -51,17 +53,54 @@ public class AnnuncioDM {
 			}		
 		}
 		
+		// Aggiungo i tag che non esistono alla tabbella TAG
+		TagDM tagDM = new TagDM();
 		for (int i =0 ; i<colTags.size(); i++ ){
 			TagBean t = colTags.get(i);
-		
-			try {
-
-				connection = DriverManagerConnectionPool.getConnection();
-				prepareteStatement =connection.prepareStatement(sqlForTag);
-				prepareteStatement.setString(1, t.getNome());
-				prepareteStatement.executeUpdate();
+				if(tagDM.existsTag(t.getNome())==false){
+					tagDM.insertUser(t);		
+				}
+		}
 			
+		
+		//ultima chiave;
+		String sqlUltimaKey ="LAST(KEYANNUNCIO) FROM ANNUNCIO";
+		ResultSet rs =null;
+		try {
+			connection = DriverManagerConnectionPool.getConnection();
+			prepareteStatement =connection.prepareStatement(sqlUltimaKey);
+			 int i=PreparedStatement.RETURN_GENERATED_KEYS;
+			
+			
+		}finally {
+			if(connection !=null){
+				try{
+					connection.close();	
+				}finally {
+					DriverManagerConnectionPool.releaseConnection(connection);
+				}
+			}		
+		}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//Aggiungo i riferimenti alla tabella TAGPERANNUNCIO
+		for (int i =0 ; i<colTags.size(); i++ ){
+			TagBean t = colTags.get(i);
+			TagBean t2= tagDM.searchTag(t.getNome());
+			
+			try {
+				connection = DriverManagerConnectionPool.getConnection();
+				prepareteStatement =connection.prepareStatement(sqlForTagPerAnnuncio);
+				prepareteStatement.setInt(1, t2.getKeyTag());
 				
+				prepareteStatement.executeUpdate();	
 			}finally {
 				if(connection !=null){
 					try{
@@ -72,10 +111,17 @@ public class AnnuncioDM {
 				}		
 			}	
 		}
+		
+		
+		
+		
+		
+		
+		
 	}	
 	
 	
-	public synchronized LinkedList<AnnuncioBean> retriveAnnuncio(String titolo) throws SQLException {
+	public synchronized List<AnnuncioBean> searchAnnuncio(String titolo) throws SQLException {
 		
 		AnnuncioBean annuncioBean;
 		LinkedList<AnnuncioBean> lista= new LinkedList<AnnuncioBean>();
@@ -119,7 +165,7 @@ public class AnnuncioDM {
 		}
 	
 	
-	private synchronized LinkedList<TagBean> searchTagPerAnnuncio (int keyAnnuncio) throws SQLException {
+	private synchronized List<TagBean> searchTagPerAnnuncio (int keyAnnuncio) throws SQLException {
 		
 		LinkedList<TagBean> listaTag=new LinkedList<TagBean>();
 		
@@ -138,7 +184,7 @@ public class AnnuncioDM {
 			rs = preparedStatement.executeQuery();
 			
 			while(rs.next()){
-				tag= searchTag(rs.getInt("KEYTAG"));
+				tag= tagDM.searchTag(rs.getInt("KEYTAG"));
 				
 				listaTag.add(tag);
 			}
@@ -166,7 +212,7 @@ public class AnnuncioDM {
 			connection = DriverManagerConnectionPool.getConnection();
 			preparedStatement=connection.prepareStatement(deleteAnnuncio);
 			preparedStatement.setInt(1, keyAnnuncio);
-			//elimino anche i riferimenti nella tabella TAGPERANNUNCIO
+			// elimino anche i riferimenti nella tabella TAGPERANNUNCIO
 			deleteTagPerAnnuncio(keyAnnuncio);
 			
 			rs=preparedStatement.executeUpdate();
@@ -218,7 +264,7 @@ public class AnnuncioDM {
 	public synchronized void updateAnnuncio(int key) throws SQLException {}
 	
 	
-	public synchronized void retriveAnnuncio(TagBean tag) throws SQLException {}
+	public synchronized void searchAnnuncio(TagBean tag) throws SQLException {}
 	public synchronized void deleteAnnuncio(TagBean tag) throws SQLException {}
 	public synchronized void updateAnnuncio(TagBean tag) throws SQLException {}
 	
