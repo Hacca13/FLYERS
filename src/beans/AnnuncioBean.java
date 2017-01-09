@@ -1,7 +1,7 @@
 package beans;
 
 import java.util.Collection;
-import java.util.Date;
+import java.sql.Date;
 
 public class AnnuncioBean {
 	
@@ -13,10 +13,13 @@ public class AnnuncioBean {
 	private Collection<TagBean> tagsOfAnnuncio;
 	private int keyUtente;
 	
-
+	
+	public AnnuncioBean(){
+		
+	}
+	
 	public AnnuncioBean(int keyAnnuncio, String titolo, String descrizione, String contatto, Date dataDiCaricamento,
 			Collection<TagBean> tagsOfAnnuncio, int keyUtente) {
-		super();
 		this.keyAnnuncio = keyAnnuncio;
 		this.titolo = titolo;
 		this.descrizione = descrizione;
@@ -25,7 +28,12 @@ public class AnnuncioBean {
 		this.tagsOfAnnuncio = tagsOfAnnuncio;
 		this.keyUtente = keyUtente;
 	}
-
+ 
+	
+	
+	
+	
+	
 	public int getKeyAnnuncio() {
 		return keyAnnuncio;
 	}
