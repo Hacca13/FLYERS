@@ -36,14 +36,44 @@
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-<%@include file="header.jsp"%>
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="home.html">Flyers</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#portfolio">Appunti</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#about">Annunci</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#contact">Login</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
 
 
 
 
 
 <!-- Portfolio Grid Section -->
-<section id="portfolio" style="margin-top: 10%;">
+<section id="portfolio">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -119,7 +149,17 @@
 
 
 <!-- Footer -->
-<%@include file="footer.jsp"%>
+<footer class="text-center">
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Interazione Uomo Macchina - Realized by Ammirati Severino, Paolo Di Filippo, Giorgio Vitiello, Mirko Aliberti, Giuseppe Sgambato, Vincenzo Noviello
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
