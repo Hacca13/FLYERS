@@ -1,12 +1,10 @@
 <?php
 include_once '../model/Annuncio.php';
 include_once '../control/Connector.php';
-include_once '../manager/TagManager.php';
 
 class AnnuncioManager {
 
     private $db;
-    private $managerTag;
 
     public function __construct() {
         $this->db = new Connector();

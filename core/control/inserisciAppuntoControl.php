@@ -1,6 +1,6 @@
 <?php
 
-include_once "../manager/AnnuncioManager.php";
+include_once "../manager/AppuntiManager.php";
 include_once "../manager/CategoriaManager.php";
 
 if(isset($_POST['titolo']) && $_POST['titolo']!= null) {
@@ -32,12 +32,15 @@ if(isset($_POST['categorie']) && $_POST['categorie']!= null) {
     //toast
 }
 
-$data = date("Y-m-d");
-$manager = new AnnuncioManager();
-$contatto = 2;
-$idUtente = 1;
+if(isset($_POST['file']) && $_POST['file']!= null) {
+    $file = $_POST['file'];
+    echo $file;
+} else {
+    //toast
+}
 
-$manager->insertAnnuncio($titolo, $descrizione, $contatto, $data, $tags, $idUtente, $idCategoria);
+
+$data = date("Y-m-d");
 
 //toast e redirect
 
