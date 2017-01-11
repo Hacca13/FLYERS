@@ -1,3 +1,18 @@
+<?php
+
+include_once "../control/inserimentoAnnuncio.php";
+
+$categorie = array();
+
+if (isset($_SESSION['categorie']) && $_SESSION['categorie'] != null) {
+    $categorie = unserialize($_SESSION['categorie']);
+} else {
+    echo "categorie non ricevute";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,6 +72,7 @@
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
+
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Tags</label>
@@ -64,6 +80,26 @@
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
+
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Categorie</label>
+                            <select class="form-control" name="categorie">
+                                <option value="" disabled selected>Seleziona una Categoria</option>
+                                <?php
+                                    for ($i = 0; $i < count($categorie); $i++) {
+                                ?>
+                                        <option><?php echo $categorie[$i]->getNome();?></option>
+
+                                        <?php
+                                    }
+                                ?>
+                            </select>
+
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Descrizione</label>
@@ -103,21 +139,22 @@
 
 
 <!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
+<script src="./style/vendor/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="./style/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
+<script src="./style/js/jqBootstrapValidation.js"></script>
+<script src="./style/js/contact_me.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="js/freelancer.min.js"></script>
+<script src="./style/js/freelancer.min.js"></script>
 
 </body>
 
 </html>
+

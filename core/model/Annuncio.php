@@ -8,8 +8,9 @@ class Annuncio {
     private $contatto;
     private $date;
     private $utente;
+    private $idcategoria;
 
-    public function __construct($id1="", $titolo1, $descrizione1, $contatto1, $date1, $utente1) {
+    public function __construct($id1="", $titolo1, $descrizione1, $contatto1, $date1, $utente1, $idcategoria1) {
 
         $this->id = $id1;
         $this->titolo = $titolo1;
@@ -17,6 +18,7 @@ class Annuncio {
         $this->contatto = $contatto1;
         $this->date = $date1;
         $this->utente = $utente1;
+        $this->idcategoria = $idcategoria1;
     }
 
     /**
@@ -66,6 +68,15 @@ class Annuncio {
     {
         return $this->utente;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIdcategoria()
+    {
+        return $this->idcategoria;
+    }
+
 
 
 
