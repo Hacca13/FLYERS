@@ -39,7 +39,9 @@ $idUtente = 1;
 
 $manager->insertAnnuncio($titolo, $descrizione, $contatto, $data, $tags, $idUtente, $idCategoria);
 
+//toast e redirect
 
-
-
+//$_SESSION['toast-type'] = "success";
+//$_SESSION['toast-message'] = "Utente aggiornato";
+//redirect
 ?>
