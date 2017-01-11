@@ -1,20 +1,13 @@
 <?php
 
-include_once '../model/Categoria.php';
 
-include "Connector.php";
-$db = new Connector();
-$sql2 = "SELECT * FROM CATEGORIA";
+include_once '../manager/CategoriaManager.php';
 
-$res = mysqli_query($db->getConnector(), $sql2);
-$categorie = array();
-if ($res) {
-    while ($obj = $res->fetch_assoc()) {
-        $categoria = new Categoria($obj['KEYCATEGORIA'], $obj['NOME']);
-        $categorie[] = $categoria;
-    }
-}
+$manager = new CategoriaManager();
+
+$categorie = $manager->getAllCategories();
 
 $_SESSION['categorie'] = serialize($categorie);
+
 
 ?>

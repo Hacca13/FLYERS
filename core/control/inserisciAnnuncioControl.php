@@ -1,33 +1,43 @@
 <?php
 
-echo "ok";
+include_once "../manager/AnnuncioManager.php";
+include_once "../manager/CategoriaManager.php";
 
 if(isset($_POST['titolo']) && $_POST['titolo']!= null) {
-    echo $titolo = $_POST['titolo'];
+    $titolo = $_POST['titolo'];
 } else {
     //toast
 }
 
 if(isset($_POST['tags']) && $_POST['tags']!= null) {
-    echo $tags = $_POST['tags'];
+    $tags = $_POST['tags'];
 } else {
     //toast
 }
 
 
 if(isset($_POST['descrizione']) && $_POST['descrizione']!= null) {
-    echo $descrizione = $_POST['descrizione'];
+    $descrizione = $_POST['descrizione'];
 } else {
     //toast
 }
 
 
 if(isset($_POST['categorie']) && $_POST['categorie']!= null) {
-    echo $categorie = $_POST['categorie'];
+    $categoria = $_POST['categorie'];
+    $managerC = new CategoriaManager();
+    $categorie = $managerC->getCategoriesFromName($categoria);
+    $idCategoria = $categorie[0]->getId();
 } else {
     //toast
 }
 
+$data = date("Y-m-d");
+$manager = new AnnuncioManager();
+$contatto = 2;
+$idUtente = 1;
+
+$manager->insertAnnuncio($titolo, $descrizione, $contatto, $data, $tags, $idUtente, $idCategoria);
 
 
 
