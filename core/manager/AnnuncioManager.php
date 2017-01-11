@@ -10,7 +10,7 @@ class AnnuncioManager {
         $this->db = new Connector();
     }
 
-    public function getAllAnnuci() {
+    public function getAllAnnunci() {
 
     }
 
