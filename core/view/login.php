@@ -39,57 +39,37 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <h2>Profilo</h2>
+                <h2>Login</h2>
                 <hr class="star-primary">
                 <br>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <img src="" height="150" width="150" alt="immagine non disponibile">
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>ID</h4>
-                        <p>Lorem ipsius</p>
-                        <p class="help-block text-danger"></p>
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Email</h4>
-                        <p>Lorem ipsius</p>
-                        <p class="help-block text-danger"></p>
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <button class="btn btn-success btn-lg">
-                            <a href="#"></a>Modifica Profilo
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <button id="my-appunti"class="btn btn-success btn-lg">
-                            I Miei Appunti
-                        </button>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <button id="my-annunci" class="btn btn-success btn-lg">
-                            I Miei Annunci
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    <div id="container-things">
-                        <p>Lorem ipsius eccc.....</p>
-                    </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form action="" method="post">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Username</label>
+                                <input type="text" class="form-control" placeholder="Username" name="Username" id="Username" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Password</label>
+                                <input type="password" class="form-control" placeholder="Password" name="password" id="password" required="" data-validation-required-message="Please enter your password." aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-success btn-lg">Accedi</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

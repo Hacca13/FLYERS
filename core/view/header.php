@@ -49,7 +49,7 @@
                             </ul>
                         </div>
                         <input type="hidden" name="search_param" value="appunti" id="search_param">
-                        <input type="text" class="form-control" name="x" placeholder="Search">
+                        <input type="text" name="user_param" class="form-control"  placeholder="Search">
                         <span class="input-group-btn">
 								<button class="btn btn-default" type="button">
 									<span class="glyphicon glyphicon-search"></span>
@@ -59,6 +59,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </nav>
 </body>
