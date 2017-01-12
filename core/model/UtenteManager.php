@@ -9,4 +9,16 @@
 class UtenteManager
 {
 
+    function insertUser(Utente $utente){
+
+    }
+
+    function updateUser(){
+
+    }
+
+    function searchUser (){
+
+    }
+
 }

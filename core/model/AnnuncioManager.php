@@ -6,14 +6,16 @@
  * Date: 12/01/2017
  * Time: 09:51
  */
-class AnnucioManager
+include_once '../beans/Annuncio.php';
+include_once '../control/Connector.php';
+
+class AnnuncioManager
 {
+    private $db;
 
-    public function __construct()
-    {
-
+    public function __construct() {
+        $this->db = new Connector();
     }
-
 
     public function searchAds($nameAd){
         $GET_ADS = "SELECT * FROM annnunci WHERE LIKE '%s'";
@@ -22,4 +24,12 @@ class AnnucioManager
         return $result;
 
     }
+
+    public function insertAnnuncio($titolo, $descrizione, $contatto, $data, $tag, $idUtente, $idCategoria) {
+        $str = "INSERT INTO `ANNUNCIO` (`KEYANNUNCIO`, `TITOLO`, `DESCRIZIONE`, `CONTATTO`, `DATADICARICAMENTO`, `TAG`, `KEYUTENTE`, `KEYCATEGORIA`) 
+                  VALUES (NULL, '%s', '%s', '%s', '%s', '%s', '%s', '%s')";
+        $query = sprintf($str, $titolo, $descrizione, $contatto, $data, $tag, $idUtente, $idCategoria);
+        $res = mysqli_query($this->db->getConnector(), $query);
+    }
+
 }
