@@ -8,3 +8,8 @@
 .main-section{
 	margin-top:10%;
 }
+
+#dropzone.dropzone-wrapper{
+    width:200px;
+    height:100px;
+}
