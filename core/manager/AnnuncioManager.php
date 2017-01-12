@@ -11,6 +11,16 @@ class AnnuncioManager {
     }
 
     public function getAllAnnuci() {
+        $str = "SELECT * FROM ANNUNCIO";
+        $res = mysqli_query($this->db->getConnector(), $str);
+        $annunci = array();
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $annuncio = new Annuncio($obj['KEYANNUNCIO'], $obj['TITOLO'], $obj['DESCRIZIONE'], $obj['CONTATTO'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE'], $obj['KEYCATEGORIA']);
+                $annunci[] = $annuncio;
+            }
+        }
+        return $annunci;
 
     }
 

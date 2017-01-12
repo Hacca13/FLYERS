@@ -39,6 +39,20 @@ class CategoriaManager {
         return $categorie;
     }
 
+    public function getCategoriesFromId($id1) {
+        $sql = "SELECT * FROM `CATEGORIA` WHERE KEYCATEGORIA = '%s' ";
+        $query = sprintf($sql, $id1);
+        $res = mysqli_query($this->db->getConnector(), $query);
+        $categorie = array();
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $categoria = new Categoria($obj['KEYCATEGORIA'], $obj['NOME']);
+                $categorie[] = $categoria;
+            }
+        }
+        return $categorie;
+    }
+
 }
 
 
