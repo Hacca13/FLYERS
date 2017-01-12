@@ -41,12 +41,16 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>Profilo</h2>
                 <hr class="star-primary">
+                <br>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group">
+                        <img src="" height="150" width="150" alt="immagine non disponibile">
+                    </div>
+                </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>ID</h4>
@@ -63,29 +67,30 @@
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>CittÃ </h4>
-                        <p>Lorem ipsius</p>
-                        <p class="help-block text-danger"></p>
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>Password</h4>
-                        <button id="showPss" class="btn btn-success btn-lg">
-                            Mostra</button>
-                        <p id="showing">Lorem ipsius</p>
-                        <p class="help-block text-danger"></p>
+                        <button class="btn btn-success btn-lg">
+                            <a href="#"></a>Modifica Profilo
+                        </button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div
-                class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <br>
-                <button class="btn btn-success btn-lg">
-                    <a href=""></a>Modifica Dati
-                </button>
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <button id="my-appunti"class="btn btn-success btn-lg">
+                            I Miei Appunti
+                        </button>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <button id="my-annunci" class="btn btn-success btn-lg">
+                            I Miei Annunci
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div id="container-things">
+                        <p>Lorem ipsius eccc.....</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

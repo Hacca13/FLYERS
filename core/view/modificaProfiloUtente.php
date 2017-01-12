@@ -45,7 +45,13 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                 <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="changeData" id="changeForm">
+                <form name="changeData" id="changeForm"  enctype="multipart/form-data">
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>ID</label>
@@ -88,6 +94,13 @@
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Nuova Immagine del Profilo</label>
+                                <div id="myDropZone" class="dropzone dropzone-wrapper">
+                                </div>
+                        </div>
+                    </div>
                     <br>
                     <div id="success"></div>
                     <div class="row">
@@ -117,5 +130,11 @@
 
 <!-- Theme JavaScript -->
 <script src="style/js/freelancer.min.js"></script>
+
+<!-- Dropzone JS -->
+<script src="style/js/dropzone.js"></script>
+
+<!-- Dropzone JS -->
+<script src="style/js/dropzoneFunction.js"></script>
 
 </html>
