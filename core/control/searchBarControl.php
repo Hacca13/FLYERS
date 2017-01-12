@@ -5,7 +5,11 @@
  * Date: 11/01/2017
  * Time: 14:37
  */
-include_once MODEL_DIR . "SearchManager.php";
+
+include_once MODEL_DIR . "AnnuncioManager.php";
+include_once MODEL_DIR . "AppuntiManager.php";
+include_once MODEL_DIR . "TagManager.php";
+include_once MODEL_DIR . "UtenteManager.php";
 
 if(isset($_POST["search"])){
 
@@ -14,7 +18,7 @@ if(isset($_POST["search"])){
         if($_POST["search_param"] == "appunti"){
 
             $paramByUser = $_POST["user_param"];
-            $sm = new SearchManager();
+            $sm = new AppuntiManager();
             $result = $sm->searchNotes($paramByUser);
 
             include_once VIEW_DIR ."resultSearch.php";
@@ -22,7 +26,7 @@ if(isset($_POST["search"])){
         }else if($_POST["search_param"] == "annunci"){
 
             $paramByUser = $_POST["user_param"];
-            $sm = new SearchManager();
+            $sm = new AnnuncioManager();
             $result = $sm->searchAds($paramByUser);
 
             include_once VIEW_DIR ."resultSearch.php";
@@ -30,14 +34,14 @@ if(isset($_POST["search"])){
         }else if($_POST["search_param"] == "tag"){
 
             $paramByUser = $_POST["user_param"];
-            $sm = new SearchManager();
+            $sm = new TagManager();
             $result = $sm->searchByTag($paramByUser);
 
             include_once VIEW_DIR ."resultSearch.php";
 
         }else if($_POST["search_param"] == "categoria"){
             $paramByUser = $_POST["user_param"];
-            $sm = new SearchManager();
+            $sm = new CategoriaManager();
             $result = $sm->searchNotesByCategory($paramByUser);
 
             include_once VIEW_DIR ."resultSearch.php";
