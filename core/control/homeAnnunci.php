@@ -1,16 +1,14 @@
 <?php
 
-include_once "../model/AppuntiManager.php";
+include_once "../model/AnnuncioManager.php";
 
-$manager = new AppuntiManager();
+$manager = new AnnuncioManager();
 
-$appunti = array();
+$annunci = array();
 
-$appunti = $manager->getAllAppunti();
+$annunci = $manager->getAllAnnunci();
 
-echo count($appunti);
-
-
+$_SESSION['annunci'] = serialize($annunci);
 
 ?>
 
