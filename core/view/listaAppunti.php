@@ -4,6 +4,8 @@ include_once "../control/getAppunti.php";
 if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
     $appunti = array();
     $appunti = unserialize($_SESSION['appunti']);
+} else {
+    echo "no";
 }
 
 
@@ -61,7 +63,9 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
             <div class="col-lg-12 text-center">
                 <h2>Scarica file </h2>
                 <hr class="star-primary">
+                <a href="inserisciAppunto.php">
                 <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi appunti +</button>
+                </a>
             </div>
         </div>
 
@@ -73,7 +77,6 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
 
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form name="sentMessage" id="contactForm" novalidate>
                         <br>
                         <div class="row" style="  position:relative;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -85,13 +88,15 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
                                 <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
                                 <P><b> Utente:</b>&nbsp <?php ?> </P>
                                 <P><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </P>
-                                <a href="<?php echo $appunti[$i]->getPath();?>"><button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
-                                <i class="fa fa-download"></i></button></a>
-                                <a><button class="btn btn-success btn-lg" style="float: right;">Leggi
+                                <a href="../control/scaricaAppunti.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>">
+                                <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
+                                <i class="fa fa-download"></i></button>
+                                </a>
+                                <a href="../control/visualizzaFile.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
                                 <i class="fa fa-file-pdf-o"></i></button></a>
+
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
 
@@ -108,12 +113,6 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
 <!-- Footer -->
 <?php  include_once"footer.php"; ?>
 
-<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-    <a class="btn btn-primary" href="#page-top">
-        <i class="fa fa-chevron-up"></i>
-    </a>
-</div>
 
 
 

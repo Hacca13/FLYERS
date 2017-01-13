@@ -1,14 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Mirko Aliberti
- * Date: 13/01/2017
- * Time: 09:25
- */
+include_once "../model/AppuntiManager.php";
 
-$file = '../profile.png';
+$manager = new AppuntiManager();
+$id = $_GET['id'];
+$appunto = $manager->getAppunto($id);
+$file = $appunto->getPath();
 
-if (file_exists($file)) {
+  if (file_exists($file)) {
     header('Content-Description: File Transfer');
     header('Content-Type: application/octet-stream');
     header('Content-Disposition: attachment; filename="'.basename($file).'"');
@@ -17,9 +15,7 @@ if (file_exists($file)) {
     header('Pragma: public');
     header('Content-Length: ' . filesize($file));
     readfile($file);
-    exit;
 }
-
 
 
 

@@ -42,4 +42,16 @@ class AppuntiManager
         $res = mysqli_query($this->db->getConnector(), $query);
     }
 
+    public function getAppunto($id) {
+        $str = "SELECT * FROM `APPUNTO` WHERE `KEYFILE` = $id";
+        $res = mysqli_query($this->db->getConnector(), $str);
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $appunto = new Appunti($obj['KEYFILE'], $obj['NOME'], $obj['CATEGORIA'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['PATH'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
+            }
+        }
+        return $appunto;
+
+    }
+
 }

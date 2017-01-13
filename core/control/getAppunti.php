@@ -7,8 +7,6 @@ $appunti = array();
 
 $appunti = $manager->getAllAppunti();
 
-echo count($appunti);
-
 session_start();
 
 $_SESSION['appunti'] = serialize($appunti);
