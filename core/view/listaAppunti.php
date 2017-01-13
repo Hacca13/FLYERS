@@ -1,3 +1,15 @@
+<?php
+include_once "../control/getAppunti.php";
+
+if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
+    $appunti = array();
+    $appunti = unserialize($_SESSION['appunti']);
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,30 +64,42 @@
                 <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi appunti +</button>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <form name="sentMessage" id="contactForm" novalidate>
-              
-                  
-                    <br>
-                    <div id="success"></div>
-                    <div class="row">
-                        <div class="form-group col-xs-12" style=" border-style:solid; float: right;">
-                            <P><b> Titolo:</b>&nbsp Appunti - Programmazione 2</P> 
-                            <P><b> Descrizione: </b>&nbsp lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-                            laborum.</P> 
-                            <P><b> Categoria:</b>&nbsp Informatica</P>
-                            <P><b> Tag:</b>&nbsp Java</P>
-                            <button type="submit" class="btn btn-success btn-lg" style="float: right;">Download</button>
+
+
+        <?php
+
+        for ($i = 0; $i < count($appunti); $i++) {
+            ?>
+
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <br>
+                        <div class="row" style="  position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;">
+                            <div class="form-group col-xs-12" style="float: right; margin-top: 2%">
+                                <P><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome() ?></P>
+                                <P><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione() ?> .</P>
+                                <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
+                                <P><b> Utente:</b>&nbsp <?php ?> </P>
+                                <P><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </P>
+                                <a href="<?php echo $appunti[$i]->getPath();?>"><button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
+                                <i class="fa fa-download"></i></button></a>
+                                <a><button class="btn btn-success btn-lg" style="float: right;">Leggi
+                                <i class="fa fa-file-pdf-o"></i></button></a>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
+
+            <?php
+        }
+        ?>
+
+
     </div>
 </section>
 
