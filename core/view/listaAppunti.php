@@ -61,7 +61,7 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Scarica file </h2>
+                <h2>Lista appunti </h2>
                 <hr class="star-primary">
                 <a href="inserisciAppunto.php">
                 <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi appunti +</button>
