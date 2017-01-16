@@ -6,10 +6,10 @@
  * Time: 14:37
  */
 
-include_once MODEL_DIR . "AnnuncioManager.php";
-include_once MODEL_DIR . "AppuntiManager.php";
-include_once MODEL_DIR . "TagManager.php";
-include_once MODEL_DIR . "UtenteManager.php";
+include_once MODEL_DIR . 'AnnuncioManager.php';
+include_once MODEL_DIR . 'AppuntiManager.php';
+//include_once MODEL_DIR . 'TagManager.php';
+include_once MODEL_DIR . 'UtenteManager.php';
 
 if(isset($_POST["search"])){
 

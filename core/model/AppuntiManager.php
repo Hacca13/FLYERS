@@ -7,8 +7,8 @@
  * Time: 09:43
  */
 
-include_once '../beans/Appunto.php';
-include_once '../control/Connector.php';
+include_once BEANS_DIR .'Appunti.php';
+include_once MODEL_DIR .'Connector.php';
 
 class AppuntiManager
 {
