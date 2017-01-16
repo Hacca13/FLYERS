@@ -1,6 +1,6 @@
 <?php
 
-include_once "../model/AnnuncioManager.php";
+include_once MODEL_DIR . "AnnuncioManager.php";
 
 $manager = new AnnuncioManager();
 

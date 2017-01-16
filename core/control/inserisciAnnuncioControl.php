@@ -1,6 +1,6 @@
 <?php
 
-include_once "../model/AnnuncioManager.php";
+include_once MODEL_DIR . "AnnuncioManager.php";
 
 if(isset($_POST['titolo']) && $_POST['titolo']!= null) {
     $titolo = $_POST['titolo'];
