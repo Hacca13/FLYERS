@@ -41,6 +41,7 @@ class Appunti
         $this->keyUtente = $keyUtente;
     }
 
+
     /**
      * @return mixed
      */
