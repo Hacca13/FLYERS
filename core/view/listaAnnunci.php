@@ -1,3 +1,15 @@
+<?php
+include_once "../control/getAnnunci.php";
+
+$annunci = array();
+
+if(isset($_SESSION['annunci']) && $_SESSION['annunci'] != null) {
+    $annunci = unserialize($_SESSION['annunci']);
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,30 +61,46 @@
             <div class="col-lg-12 text-center">
                 <h2>Lista Annunci </h2>
                 <hr class="star-primary">
+                <a href="inserisciAnnuncio.php">
                 <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovo annunci +</button>
+                </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <form name="sentMessage" id="contactForm" novalidate>
-             
-                 
-                    <br>
-                    <div id="success"></div>
-                    <div class="row">
-                        <div class="form-group col-xs-12" style=" border-style:solid; float: right;">
-                            <P><b> Titolo:</b>&nbsp Camera per Studenti fisciano</P> 
-                            <P><b> Descrizione: </b>&nbsp lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis .</P> 
-                            <P><b> Tag:</b>&nbsp Affitto  &nbsp Camera  &nbsp   Singola </P>
-                            <button type="submit" class="btn btn-success btn-lg" style="float: right;">Leggi</button>
+
+
+        <?php
+
+        for ($i = 0; $i < count($annunci); $i++) {
+            ?>
+
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <br>
+                        <div class="row" style="  position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;">
+                            <div class="form-group col-xs-12" style="float: right; margin-top: 2%">
+                                <P><b> Titolo:</b>&nbsp <?php echo $annunci[$i]->getTitolo()?></P>
+                                <P><b> Descrizione: </b>&nbsp <?php echo $annunci[$i]->getDescrizione()?> .</P>
+                                <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
+                                <P><b> Utente:</b>&nbsp <?php ?> </P>
+                                <P><b> Data:</b>&nbsp <?php echo $annunci[$i]->getDataDiCaricamento();?> </P>
+                                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Leggi
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-        </div>
+
+            <?php
+        }
+
+        ?>
+
+
     </div>
 </section>
 

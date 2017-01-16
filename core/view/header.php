@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <a class="navbar-brand" href="#">Flyers</a>
+                <a class="navbar-brand" href="../view/home.php">Flyers</a>
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1">
@@ -23,12 +23,11 @@
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden"><a href="#"></a></li>
-                        <li class="page-scroll"><a href="#">Annunci</a></li>
-                        <li class="page-scroll"><a href="#">Appunti</a></li>
-                        <li class="page-scroll"><a href="#">Profilo</a></li>
+                        <li class="page-scroll"><a href="../view/listaAnnunci.php">Annunci</a></li>
+                        <li class="page-scroll"><a href="../view/listaAppunti.php">Appunti</a></li>
+                        <li class="page-scroll"><a href="../view/profiloUtente.php">Profilo</a></li>
                         <li class="page-scroll"><a href="#">Help</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="../view/login.php">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,8 +42,8 @@
                                 <span id="search_concept">Appunti</span> <span class="caret"></span>
                             </button>
                             <ul id="list-option" class="dropdown-menu" role="menu">
-                                <li><a href="#">Appunti</a></li>
-                                <li><a href="#">Annunci</a></li>
+                                <li><a href="../view/listaAnnunci.php">Annunci</a></li>
+                                <li><a href="../view/listaAppunti.php">Appunti</a></li>
                                 <li><a href="#">Tag</a></li>
                             </ul>
                         </div>
