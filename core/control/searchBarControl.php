@@ -50,3 +50,6 @@ if(isset($_POST["search"])){
     }
 
 }
+//stub
+$result = array();
+include_once VIEW_DIR ."resultSearch.php";

@@ -6,17 +6,18 @@
  * Time: 14:56
  */
 define('ROOT_DIR', dirname(__FILE__));
-define('DOMINIO_SITO', "/FLYERS");//da usare se si va online
+define('DOMINIO_SITO', '/FLYERS');//da usare se si va online
 define('CORE_DIR', ROOT_DIR . '/core/');
-define('VIEW_DIR', CORE_DIR . "view/");
-define('MODEL_DIR', CORE_DIR . "model/");
-define('BEANS_DIR', CORE_DIR . "beans/");
-define('CONTROL_DIR', CORE_DIR . "control/");
-define('UPLOADS_DIR', DOMINIO_SITO . "/uploads/");
-define('STYLE_DIR', DOMINIO_SITO . "/core/view/style/");
-define('UTILS_DIR', CORE_DIR . "utils/");
-define('FILES_UPLOADED', UPLOADS_DIR. "files_uploaded/");
-define('IMG_PROFILES', UPLOADS_DIR . "img_profiles/");
+define('VIEW_DIR', CORE_DIR . 'view/');
+define('MODEL_DIR', CORE_DIR . 'model/');
+define('BEANS_DIR', CORE_DIR . 'beans/');
+define('CONTROL_DIR', CORE_DIR . 'control/');
+define('UPLOADS_DIR', DOMINIO_SITO . '/uploads/');
+define('STYLE_DIR', DOMINIO_SITO . '/core/view/style/');
+define('IMG_DIR', CORE_DIR .'img/');
+define('UTILS_DIR', CORE_DIR . 'utils/');
+define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
+define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
 
     /*
      * URL Parsing, in pratica qualsiasi richiesta al sito arriva a questo file,
@@ -86,8 +87,8 @@ define('IMG_PROFILES', UPLOADS_DIR . "img_profiles/");
             case 'profiloUtente':
                 include_once VIEW_DIR . "profiloUtente.php";
                 break;
-            case 'resultSearch':
-                include_once VIEW_DIR . "resultSearch.php";
+            default:
+                include_once VIEW_DIR ."404.php";
                 break;
         }
 

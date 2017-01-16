@@ -1,5 +1,5 @@
-<?php include_once BEANS_DIR . "Appunti.php"?>
-<?php include_once BEANS_DIR . "Annuncio.php"?>
+<?php include_once BEANS_DIR . "Annuncio.php" ?>
+<?php include_once BEANS_DIR . "Appunti.php" ?>
 <!DOCTYPE html>
 <html>
 
@@ -48,10 +48,13 @@
         <div class="row">
             <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <?php
-                if(isset($result)){
+
+                    $classname_appunti = "Appunti";
+                    $classname_annuncio = "Annuncio";
+
                     for($i=0; $i<count($result);$i++){
 
-                        if($result[$i] instanceof Appunto ){
+                        if($result[$i] instanceof $classname_appunti ){
                             ?>
                             <div class="row">
                                 <div class="form-group col-xs-12" style=" border-style:solid; float: right;">
@@ -63,7 +66,7 @@
                                 </div>
                             </div>
 
-                        <?php} else if($result[$i] instanceof Annuncio){?>
+                        <?php} else if($result[$i] instanceof $classname_annuncio){?>
 
                             <div class="row">
                                 <div class="form-group col-xs-12" style=" border-style:solid; float: right;">
@@ -76,8 +79,7 @@
 
                         <?php }?>
 
-                    <?    }
-                }?>
+                    <?php } ?>
             </div>
         </div>
     </div>
