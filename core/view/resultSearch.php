@@ -39,20 +39,45 @@
 <?php include_once "header.php"?>
 <section class="main-section">
     <div class="container">
-        <?php
-                foreach ($result as $a){
-                        if($a instanceof Appunto ){
-             ?>
-                        /*HTML per appunti*/
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Risultato Ricerca</h2>
+                <hr class="star-primary">
+                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi appunti +</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <?php
+                for($i=0; $i<count($result);$i++){
 
-                    <?php}else if($a instanceof Annuncio){?>
+                    if($result[$i] instanceof Appunto ){
+                        ?>
+                        <div class="row">
+                            <div class="form-group col-xs-12" style=" border-style:solid; float: right;">
+                                <p><b> Titolo:</b><?php echo $result[$i]->getTitolo()?></p>
+                                <p><b> Descrizione:</b><?php echo $result[$i]->getDescrizione()?></p>
+                                <p><b> Tag:</b><?php echo $result[$i]->getTag()?></p>
+                                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Download</button>
+                            </div>
+                        </div>
 
-                        /*HTML per annuncio*/
+                    <?php} else if($result[$i] instanceof Annuncio){?>
 
-                  <?php  }?>
+                        <div class="row">
+                            <div class="form-group col-xs-12" style=" border-style:solid; float: right;">
+                                <p><b> Titolo:</b><?php echo $result[$i]->getTitolo()?></p>
+                                <p><b> Descrizione:</b><?php echo $result[$i]->getDescrizione()?></p>
+                                <p><b> Tag:</b><?php echo $result[$i]->getTag()?></p>
+                                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Leggi</button>
+                            </div>
+                        </div>
 
-        <?    }?>
+                    <?php }?>
 
+                <?    }?>
+            </div>
+        </div>
     </div>
 </section>
 <?php include_once "footer.php"?>
