@@ -31,4 +31,6 @@ $contatto = 2;
 $idUtente = 1;
 $manager->insertAnnuncio($titolo, $descrizione, $contatto, $data, $idUtente);
 header("location: " . "../view/listaAnnunci.php");
+
 ?>
+
