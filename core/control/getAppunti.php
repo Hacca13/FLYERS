@@ -12,4 +12,5 @@ session_start();
 $_SESSION['appunti'] = serialize($appunti);
 
 
+
 ?>

@@ -10,6 +10,7 @@ $annunci = $manager->getAllAnnunci();
 
 $_SESSION['annunci'] = serialize($annunci);
 
+
 ?>
 
 

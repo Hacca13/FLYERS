@@ -37,6 +37,7 @@ if(isset($_FILES['file']) && $_FILES['file']!= null) {
 
     // new file size in KB
     $new_size = $file_size/1024;
+
     // new file size in KB
 
     // make file name in lower case
