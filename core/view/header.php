@@ -23,9 +23,9 @@
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden"><a href="#"></a></li>
-                        <li class="page-scroll"><a href="../view/listaAnnunci.php">Annunci</a></li>
-                        <li class="page-scroll"><a href="../view/listaAppunti.php">Appunti</a></li>
-                        <li class="page-scroll"><a href="../view/profiloUtente.php">Profilo</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAnnunci">Annunci</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAppunti">Appunti</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/profiloUtente.php">Profilo</a></li>
                         <li class="page-scroll"><a href="#">Help</a></li>
                         <li><a href="../view/login.php">Login</a></li>
                     </ul>
@@ -42,9 +42,9 @@
                                 <span id="search_concept">Appunti</span> <span class="caret"></span>
                             </button>
                             <ul id="list-option" class="dropdown-menu" role="menu">
-                                <li><a href="../view/listaAnnunci.php">Annunci</a></li>
-                                <li><a href="../view/listaAppunti.php">Appunti</a></li>
-                                <li><a href="#">Tag</a></li>
+                                <li><a>Annunci</a></li>
+                                <li><a>Appunti</a></li>
+                                <li><a>Tag</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="search_param" value="appunti" id="search_param">

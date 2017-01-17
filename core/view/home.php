@@ -44,7 +44,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" src="<?php echo IMG_DIR;?>img/paperplane.png" width="300" alt="">
+                <img class="img-responsive" src="<?php echo IMG_DIR;?>paperplane.png" width="300" alt="">
                 <div class="intro-text">
                     <span class="name">Flyers</span>
                     <hr class="star-light">
@@ -57,9 +57,6 @@
     </div>
 </header>
 
-
-
-
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
 
@@ -68,7 +65,7 @@
         <li data-target="#myCarousel" data-slide-to="1" class=""></li>
     </ol>
     <div class="carousel-inner">
-        <div class="item active"> <img src="../img/appunti.jpg" style="width:100%" alt="First slide">
+        <div class="item active"> <img src="<?php echo IMG_DIR;?>appunti.jpg" style="width:100%" alt="First slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Appunti</h1>
@@ -77,7 +74,7 @@
                 </div>
             </div>
         </div>
-        <div class="item"> <img src="../img/annunci.jpg" style="width:100%" data-src="" alt="Second    slide">
+        <div class="item"> <img src="<?php echo IMG_DIR;?>annunci.jpg" style="width:100%" data-src="" alt="Second    slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Annunci</h1>

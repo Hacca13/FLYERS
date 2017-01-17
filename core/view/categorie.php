@@ -59,7 +59,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/categories/biologia.png" class="img-responsive" alt="">
+                    <img src="../../img/categories/biologia.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -69,7 +69,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/categories/chimica.png" class="img-responsive" alt="">
+                    <img src="../../img/categories/chimica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -79,7 +79,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/categories/fisica.png" class="img-responsive" alt="">
+                    <img src="../../img/categories/fisica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -89,7 +89,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/categories/informatica.png" class="img-responsive" alt="">
+                    <img src="../../img/categories/informatica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -99,7 +99,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/categories/matematica.png" class="img-responsive" alt="">
+                    <img src="../../img/categories/matematica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-sm-4 portfolio-item">
@@ -109,7 +109,7 @@
                             <i class="fa fa-search-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/categories/scienze%20ambientali.png" class="img-responsive" alt="">
+                    <img src="../../img/categories/scienze%20ambientali.png" class="img-responsive" alt="">
                 </a>
             </div>
         </div>
