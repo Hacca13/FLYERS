@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>Flyers | Categorie</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

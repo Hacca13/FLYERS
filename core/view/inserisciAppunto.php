@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FLYERS</title>
+    <title>Flyers | inserisciAppunto</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
