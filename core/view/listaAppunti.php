@@ -1,5 +1,5 @@
 <?php
-include_once "../control/getAppunti.php";
+include_once CONTROL_DIR . "getAppunti.php";
 
 if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
     $appunti = array();

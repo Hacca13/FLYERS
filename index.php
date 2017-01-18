@@ -14,7 +14,7 @@ define('BEANS_DIR', CORE_DIR . 'beans/');
 define('CONTROL_DIR', CORE_DIR . 'control/');
 define('UPLOADS_DIR', DOMINIO_SITO . '/uploads/');
 define('STYLE_DIR', DOMINIO_SITO . '/core/view/style/');
-define('IMG_DIR', ROOT_DIR .'/img/');
+define('IMG_DIR', DOMINIO_SITO .'/img/');
 define('UTILS_DIR', CORE_DIR . 'utils/');
 define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
 define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');

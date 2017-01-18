@@ -1,5 +1,5 @@
 <?php
-include_once "../control/getAnnunci.php";
+include_once CONTROL_DIR ."getAnnunci.php";
 
 $annunci = array();
 
