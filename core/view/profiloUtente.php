@@ -44,13 +44,10 @@
                 <br>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group">
-                        <img src="" height="150" width="150" alt="immagine non disponibile">
-                    </div>
-                </div>
+            <div class="col-md-offset-4 col-xs-offset-2 col-sm-offset-4 col-lg-4 col-md-4 col-sm-4 col-xs-8 col-md-offset-4 text-center" style="border: 1px red dashed">
+
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>ID</h4>
@@ -58,6 +55,7 @@
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
+
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Email</h4>
@@ -65,34 +63,33 @@
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
+
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
+                        <h4>Città</h4>
+                        <p>Lorem ipsius</p>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group" style="margin-top: 2%;">
                         <button class="btn btn-success btn-lg">
                             <a href="#"></a>Modifica Profilo
                         </button>
                     </div>
                 </div>
+
             </div>
-            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <button id="my-appunti"class="btn btn-success btn-lg">
-                            I Miei Appunti
-                        </button>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <button id="my-annunci" class="btn btn-success btn-lg">
-                            I Miei Annunci
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    <div id="container-things">
-                        <p>Lorem ipsius eccc.....</p>
-                    </div>
-                </div>
-            </div>
+
         </div>
+
+
+
+
     </div>
 </section>
 <?php include_once VIEW_DIR . "footer.php"?>
