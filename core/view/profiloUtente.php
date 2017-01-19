@@ -21,7 +21,7 @@
     <link href="<?php echo STYLE_DIR;?>css/modCustom.css" type="text/css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="style/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo STYLE_DIR;?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -48,11 +48,6 @@
             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <img src="" height="150" width="150" alt="immagine non disponibile">
-                    </div>
-                </div>
-                <div class="row control-group">
-                    <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>ID</h4>
                         <p>Lorem ipsius</p>
                         <p class="help-block text-danger"></p>
@@ -67,23 +62,29 @@
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <button class="btn btn-success btn-lg">
-                            <a href="#"></a>Modifica Profilo
-                        </button>
+                        <a href="<?php echo DOMINIO_SITO;?>/modificaProfiloUtente">
+                            <button class="btn btn-success btn-lg">
+                                Modifica Profilo
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <button id="my-appunti"class="btn btn-success btn-lg">
-                            I Miei Appunti
-                        </button>
+                        <a href="<?php DOMINIO_SITO?>">
+                            <button id="my-appunti"class="btn btn-success btn-lg">
+                                I Miei Appunti
+                            </button>
+                        </a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <button id="my-annunci" class="btn btn-success btn-lg">
-                            I Miei Annunci
-                        </button>
+                        <a href="<?php DOMINIO_SITO?>">
+                            <button id="my-annunci" class="btn btn-success btn-lg">
+                                I Miei Annunci
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">

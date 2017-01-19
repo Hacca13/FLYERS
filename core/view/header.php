@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <a class="navbar-brand" href="../view/home.php">Flyers</a>
+                <a class="navbar-brand" href="<?php echo DOMINIO_SITO;?>/home">Flyers</a>
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1">
@@ -26,7 +26,7 @@
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAnnunci">Annunci</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAppunti">Appunti</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/profiloUtente.php">Profilo</a></li>
-                        <li class="page-scroll"><a href="#">Help</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/help">Help</a></li>
                         <li><a href="../view/login.php">Login</a></li>
                     </ul>
                 </div>
@@ -50,10 +50,12 @@
                         <input type="hidden" name="search_param" value="appunti" id="search_param">
                         <input type="text" name="user_param" class="form-control"  placeholder="Search">
                         <span class="input-group-btn">
+                            <a href="">
 								<button class="btn btn-default" type="button">
 									<span class="glyphicon glyphicon-search"></span>
 								</button>
-							</span>
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>

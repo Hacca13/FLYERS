@@ -17,7 +17,6 @@ define('STYLE_DIR', DOMINIO_SITO . '/core/view/style/');
 define('IMG_DIR', DOMINIO_SITO .'/img/');
 define('UTILS_DIR', CORE_DIR . 'utils/');
 define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
-define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
 
     /*
      * URL Parsing, in pratica qualsiasi richiesta al sito arriva a questo file,
@@ -65,6 +64,9 @@ define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
                 break;
             case 'home':
                 include_once VIEW_DIR . "home.php";
+                break;
+            case 'help':
+                include_once VIEW_DIR . "help.php";
                 break;
             case 'inserisciAnnucio':
                 include_once VIEW_DIR . "inserisciAnnucio.php";

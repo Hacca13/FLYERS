@@ -94,13 +94,6 @@
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Nuova Immagine del Profilo</label>
-                                <div id="myDropZone" class="dropzone dropzone-wrapper">
-                                </div>
-                        </div>
-                    </div>
                     <br>
                     <div id="success"></div>
                     <div class="row">
