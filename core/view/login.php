@@ -9,19 +9,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Flyers | Il tuo Profilo</title>
+    <title>Flyers | Login</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR;?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="style/css/freelancer.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR;?>css/freelancer.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link type="text/css" rel="stylesheet" href="style/css/modCustom.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo STYLE_DIR;?>css/modCustom.css">
 
     <!-- Custom Fonts -->
-    <link href="style/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo STYLE_DIR;?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -49,7 +49,7 @@
             <div class="row">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <form action="" method="post">
+                    <form action="<?php echo DOMINIO_SITO;?>/login" method="post">
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Username</label>
@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <form action="../control/registrazione.php" method="post">
+                        <form action="<?php echo DOMINIO_SITO; ?>/registrazione" method="post">
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Username</label>
@@ -138,24 +138,24 @@
 </body>
 
 <!-- jQuery -->
-<script src="style/vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo STYLE_DIR;?>vendor/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="style/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo STYLE_DIR;?>vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="style/js/jqBootstrapValidation.js"></script>
+<script src="<?php echo STYLE_DIR;?>js/jqBootstrapValidation.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="style/js/freelancer.min.js"></script>
+<script src="<?php echo STYLE_DIR;?>js/freelancer.min.js"></script>
 
 <!--DropDown menu PrivacyUser-->
-<script src="style/js/privacyUser.js"></script>
+<script src="<?php echo STYLE_DIR;?>js/privacyUser.js"></script>
 
 <!--DropDown menu Search Bar-->
-<script src="style/js/searchBarDropDown.js"></script>
+<script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-include_once '../beans/Appunti.php';
+include_once BEANS_DIR . 'Appunti.php';
 include_once 'Connector.php';
 
 class AppuntiManager
