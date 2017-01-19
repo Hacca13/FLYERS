@@ -77,9 +77,9 @@
 
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group" style="margin-top: 2%;">
-                        <button class="btn btn-success btn-lg">
-                            <a href="#"></a>Modifica Profilo
-                        </button>
+                            <a href="modificaProfiloUtente">
+                                <button class="btn btn-success btn-lg">Modifica Profilo</button>
+                            </a>
                     </div>
                 </div>
 
