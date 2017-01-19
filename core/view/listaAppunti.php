@@ -84,14 +84,14 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
                             <div class="form-group col-xs-12" style="float: right; margin-top: 2%">
                                 <P><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome() ?></P>
                                 <P><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione() ?> .</P>
-                                <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
+                                <P><b> Tag:</b>&nbsp  </P>
                                 <P><b> Utente:</b>&nbsp <?php ?> </P>
                                 <P><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </P>
-                                <a href="../control/scaricaAppunti.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>">
+                                <a href="scaricaAppunto?id=<?php echo $appunti[$i]->getKeyFile(); ?>">
                                 <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
                                 <i class="fa fa-download"></i></button>
                                 </a>
-                                <a href="../control/visualizzaFile.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
+                                <a href="visualizzaAppunto?id=<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
                                 <i class="fa fa-file-pdf-o"></i></button></a>
 
                             </div>

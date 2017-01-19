@@ -58,6 +58,12 @@ define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
             case 'insertAppunto':
                 include_once CONTROL_DIR . "inserisciAppuntoControl.php";
                 break;
+            case 'visualizzaAppunto':
+                include_once CONTROL_DIR . "visualizzaFile.php";
+                break;
+            case 'scaricaAppunto':
+                include_once CONTROL_DIR . "scaricaAppunti.php";
+                break;
 
             //VIEWS
             case 'home':
