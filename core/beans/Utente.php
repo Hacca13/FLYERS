@@ -6,6 +6,7 @@
  * Date: 12/01/2017
  * Time: 09:51
  */
+
 class Utente
 {
 
@@ -23,9 +24,8 @@ class Utente
      * @param $citta
      * @param $password
      */
-    public function __construct($keyUtente, $id, $email, $citta, $password)
+    public function __construct($id,$email, $citta, $password)
     {
-        $this->keyUtente = $keyUtente;
         $this->id = $id;
         $this->email = $email;
         $this->citta = $citta;

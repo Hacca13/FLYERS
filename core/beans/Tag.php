@@ -16,9 +16,8 @@ class Tag
      * @param $keyTag
      * @param $nome
      */
-    public function __construct($keyTag, $nome)
+    public function __construct($nome)
     {
-        $this->keyTag = $keyTag;
         $this->nome = $nome;
     }
 

@@ -74,7 +74,7 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
             case 'inserisciAppunto':
                 include_once VIEW_DIR . "inserisciAppunto.php";
                 break;
-            case 'listaApputi':
+            case 'listaAppunti':
                 include_once VIEW_DIR . "listaAppunti.php";
                 break;
             case 'listaAnnunci':

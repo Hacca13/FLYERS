@@ -25,9 +25,9 @@
                         <li class="hidden"><a href="#"></a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAnnunci">Annunci</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAppunti">Appunti</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/profiloUtente.php">Profilo</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/profiloUtente">Profilo</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/help">Help</a></li>
-                        <li><a href="../view/login.php">Login</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/login">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         <input type="hidden" name="search_param" value="appunti" id="search_param">
                         <input type="text" name="user_param" class="form-control"  placeholder="Search">
                         <span class="input-group-btn">
-                            <a href="">
+                            <a href="<?php echo DOMINIO_SITO;?>/search">
 								<button class="btn btn-default" type="button">
 									<span class="glyphicon glyphicon-search"></span>
 								</button>
@@ -64,5 +64,6 @@
     </div>
 </nav>
 </body>
-
+<!--DropDown menu Search Bar-->
+<script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
 </html>
