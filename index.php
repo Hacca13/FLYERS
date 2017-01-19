@@ -12,7 +12,7 @@ define('VIEW_DIR', CORE_DIR . 'view/');
 define('MODEL_DIR', CORE_DIR . 'model/');
 define('BEANS_DIR', CORE_DIR . 'beans/');
 define('CONTROL_DIR', CORE_DIR . 'control/');
-define('UPLOADS_DIR', DOMINIO_SITO . '/uploads/');
+define('UPLOADS_DIR', CONTROL_DIR . 'upload/');
 define('STYLE_DIR', DOMINIO_SITO . '/core/view/style/');
 define('IMG_DIR', DOMINIO_SITO .'/img/');
 define('UTILS_DIR', CORE_DIR . 'utils/');

@@ -62,7 +62,7 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
             <div class="col-lg-12 text-center">
                 <h2>Lista appunti </h2>
                 <hr class="star-primary">
-                <a href="inserisciAppunto.php">
+                <a href="<?php echo "inserisciAppunto"?>">
                 <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi appunti +</button>
                 </a>
             </div>
