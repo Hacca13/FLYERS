@@ -1,6 +1,6 @@
 <?php
 
-include_once '../beans/Utente.php';
+include_once BEANS_DIR . 'Utente.php';
 include_once 'Connector.php';
 /**
  * Created by PhpStorm.

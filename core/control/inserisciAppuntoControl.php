@@ -1,6 +1,6 @@
 <?php
 
-include_once "../model/AppuntiManager.php";
+include_once MODEL_DIR . "AppuntiManager.php";
 
 if(isset($_POST['titolo']) && $_POST['titolo']!= null) {
     $titolo = $_POST['titolo'];
