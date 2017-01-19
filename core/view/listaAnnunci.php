@@ -1,14 +1,3 @@
-<?php
-include_once CONTROL_DIR ."getAnnunci.php";
-
-$annunci = array();
-
-if(isset($_SESSION['annunci']) && $_SESSION['annunci'] != null) {
-    $annunci = unserialize($_SESSION['annunci']);
-}
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">

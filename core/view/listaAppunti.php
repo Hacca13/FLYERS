@@ -1,15 +1,4 @@
-<?php
-include_once CONTROL_DIR . "getAppunti.php";
 
-if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
-    $appunti = array();
-    $appunti = unserialize($_SESSION['appunti']);
-} else {
-    echo "no";
-}
-
-
-?>
 
 
 <!DOCTYPE html>

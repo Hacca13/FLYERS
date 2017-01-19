@@ -60,7 +60,7 @@ $idUtente = 1;
 
 $manager = new AppuntiManager();
 $manager->insertAppunti($titolo, $categoria, $descrizione, $raiting, $path, $data, $idUtente);
-header("location: " . "listaAppunti");
+include_once CONTROL_DIR ."getAppunti.php";
 
 
 ?>

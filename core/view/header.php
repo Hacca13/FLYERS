@@ -22,9 +22,9 @@
                 <div class="collapse navbar-collapse"
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden"><a href="#"></a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/listaAnnunci"?>">Annunci</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/listaAppunti"?>">Appunti</a></li>
+                        <li class="hidden"><a href="<?php echo DOMINIO_SITO . "/home"?>"></a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/homeAnnunci"?>">Annunci</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/homeAppunti"?>">Appunti</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/profiloUtente.php">Profilo</a></li>
                         <li class="page-scroll"><a href="#">Help</a></li>
                         <li><a href="../view/login.php">Login</a></li>
