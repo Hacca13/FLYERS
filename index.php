@@ -12,7 +12,7 @@ define('VIEW_DIR', CORE_DIR . 'view/');
 define('MODEL_DIR', CORE_DIR . 'model/');
 define('BEANS_DIR', CORE_DIR . 'beans/');
 define('CONTROL_DIR', CORE_DIR . 'control/');
-define('UPLOADS_DIR', DOMINIO_SITO . '/uploads/');
+define('UPLOADS_DIR', CONTROL_DIR . 'upload/');
 define('STYLE_DIR', DOMINIO_SITO . '/core/view/style/');
 define('IMG_DIR', DOMINIO_SITO .'/img/');
 define('UTILS_DIR', CORE_DIR . 'utils/');
@@ -46,37 +46,43 @@ define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
             case 'search':
                 include_once CONTROL_DIR . "searchBarControl.php";
                 break;
-            case 'caricaCategorie':
-                include_once CONTROL_DIR . "caricaCategorie.php";
-                break;
             case 'homeAnnunci':
-                include_once CONTROL_DIR . "homeAnnunci.php";
+                include_once CONTROL_DIR . "getAnnunci.php";
+                break;
+            case 'homeAppunti':
+                include_once CONTROL_DIR . "getAppunti.php";
                 break;
             case 'insertAnnuncio':
-                include_once CONTROL_DIR . "inserisciAnnucio.php";
+                include_once CONTROL_DIR . "inserisciAnnuncioControl.php";
                 break;
             case 'insertAppunto':
-                include_once CONTROL_DIR . "inserisciAppunto.php";
+                include_once CONTROL_DIR . "inserisciAppuntoControl.php";
+                break;
+            case 'visualizzaAppunto':
+                include_once CONTROL_DIR . "visualizzaFile.php";
+                break;
+            case 'scaricaAppunto':
+                include_once CONTROL_DIR . "scaricaAppunti.php";
+                break;
+            case 'registrazione':
+                include_once CONTROL_DIR . "registrazione.php";
                 break;
 
             //VIEWS
-            case 'categorie':
-                include_once VIEW_DIR . "categorie.php";
-                break;
             case 'home':
                 include_once VIEW_DIR . "home.php";
                 break;
             case 'inserisciAnnucio':
-                include_once VIEW_DIR . "inserisciAnnucio.php";
+                include_once VIEW_DIR . "inserisciAnnuncio.php";
                 break;
             case 'inserisciAppunto':
                 include_once VIEW_DIR . "inserisciAppunto.php";
                 break;
-            case 'listaApputi':
+            case 'listaAppunti':
                 include_once VIEW_DIR . "listaAppunti.php";
                 break;
             case 'listaAnnunci':
-                include_once VIEW_DIR . "listAnnnunci.php";
+                include_once VIEW_DIR . "listaAnnunci.php";
                 break;
             case 'login':
                 include_once VIEW_DIR ."login.php";
@@ -86,6 +92,9 @@ define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
                 break;
             case 'profiloUtente':
                 include_once VIEW_DIR . "profiloUtente.php";
+                break;
+            case 'regFail':
+                include_once VIEW_DIR . "regFail.php";
                 break;
             default:
                 include_once VIEW_DIR ."404.php";

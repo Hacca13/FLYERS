@@ -1,34 +1,26 @@
-<?php
-include_once CONTROL_DIR . "getAppunti.php";
 
-if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
-    $appunti = array();
-    $appunti = unserialize($_SESSION['appunti']);
-} else {
-    echo "no";
-}
-
-
-?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FLYERS</title>
+    <title>Flyers | Il tuo Profilo</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR;?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="style/css/freelancer.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR;?>css/freelancer.min.css" rel="stylesheet">
 
+    <!-- Custom CSS -->
+    <link href="<?php echo STYLE_DIR;?>css/modCustom.css" type="text/css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="style/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -38,14 +30,9 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="../https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="../https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-
-
 </head>
 
 
@@ -63,7 +50,7 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
             <div class="col-lg-12 text-center">
                 <h2>Lista appunti </h2>
                 <hr class="star-primary">
-                <a href="inserisciAppunto.php">
+                <a href="<?php echo "inserisciAppunto"?>">
                 <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi appunti +</button>
                 </a>
             </div>
@@ -85,14 +72,14 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
                             <div class="form-group col-xs-12" style="float: right; margin-top: 2%">
                                 <P><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome() ?></P>
                                 <P><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione() ?> .</P>
-                                <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
+                                <P><b> Tag:</b>&nbsp  </P>
                                 <P><b> Utente:</b>&nbsp <?php ?> </P>
                                 <P><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </P>
-                                <a href="../control/scaricaAppunti.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>">
+                                <a href="scaricaAppunto?id=<?php echo $appunti[$i]->getKeyFile(); ?>">
                                 <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
                                 <i class="fa fa-download"></i></button>
                                 </a>
-                                <a href="../control/visualizzaFile.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
+                                <a href="visualizzaAppunto?id=<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
                                 <i class="fa fa-file-pdf-o"></i></button></a>
 
                             </div>
@@ -119,20 +106,18 @@ if(isset($_SESSION['appunti']) && $_SESSION['appunti'] != null) {
 
 
 <!-- jQuery -->
-<script src="style/vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo STYLE_DIR; ?>vendor/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="style/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="/https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="<?php echo STYLE_DIR; ?>vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="style/js/jqBootstrapValidation.js"></script>
-<script src="style/js/contact_me.js"></script>
+<script src="<?php echo STYLE_DIR; ?>js/jqBootstrapValidation.js"></script>
+<script src="<?php echo STYLE_DIR; ?>js/contact_me.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="style/js/freelancer.min.js"></script>
+<script src="<?php echo STYLE_DIR; ?>js/freelancer.min.js"></script>
+
 
 
 </body>

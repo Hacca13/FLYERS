@@ -8,9 +8,7 @@ $annunci = array();
 
 $annunci = $manager->getAllAnnunci();
 
-$_SESSION['annunci'] = serialize($annunci);
-
-
+include_once VIEW_DIR ."listaAnnunci.php";
 ?>
 
 
