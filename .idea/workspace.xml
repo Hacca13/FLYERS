@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8da2d598-b61d-4de4-b709-a3550cde6641" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FLYERS.iml" afterPath="$PROJECT_DIR$/.idea/FLYERS.iml" />
-    </list>
+    <list default="true" id="8da2d598-b61d-4de4-b709-a3550cde6641" name="Default" comment="" />
     <ignored path="FLYERS.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,12 +20,12 @@
     <favorites_list name="FLYERS" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="lol.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/control/lol.php">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="b.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/control/b.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -75,6 +73,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -121,8 +121,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,11 +205,12 @@
       <updated>1484050667722</updated>
       <workItem from="1484050669406" duration="2974000" />
       <workItem from="1484831144756" duration="21000" />
+      <workItem from="1484831659132" duration="164000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2995000" />
+    <option name="totallyTimeSpent" value="3159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1382" height="744" extended-state="0" />
@@ -290,10 +289,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/control/lol.php">
+    <entry file="file://$PROJECT_DIR$/core/control/lol.php" />
+    <entry file="file://$PROJECT_DIR$/core/control/b.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding />
         </state>
       </provider>
