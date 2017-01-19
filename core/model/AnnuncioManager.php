@@ -40,10 +40,11 @@ class AnnuncioManager
     }
 
     public function insertAnnuncio($titolo, $descrizione, $contatto, $data, $idUtente) {
-        $str = "INSERT INTO `ANNUNCIO` (`KEYANNUNCIO`, `TITOLO`, `DESCRIZIONE`, `CONTATTO`, `DATADICARICAMENTO`, `KEYUTENTE`) 
-                  VALUES (NULL, '%s', '%s', '%s', '%s', '%s')";
+        $str = "INSERT INTO `ANNUNCIO`(`KEYANNUNCIO`, `TITOLO`, `DESCRIZIONE`, `CONTATTO`, `DATADICARICAMENTO`, `KEYUTENTE`) 
+              VALUES (NULL, '%s', '%s', '%s', '%s', '%s')";
         $query = sprintf($str, $titolo, $descrizione, $contatto, $data, $idUtente);
         $res = mysqli_query($this->db->getConnector(), $query);
+        echo $query;
     }
 
 }
