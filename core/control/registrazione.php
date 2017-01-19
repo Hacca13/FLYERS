@@ -1,6 +1,6 @@
 <?php
 
-include_once "";
+include_once MODEL_DIR . "UtenteManager.php";
 
 if(isset($_POST['username']) &&  $_POST['username'] != null) {
     $username = $_POST['username'];
@@ -24,9 +24,24 @@ if(isset($_POST['password']) &&  $_POST['password'] != null) {
 }
 
 $manager = new UtenteManager();
-$manager->insertUser($username, $email, $citta, $password);
+$users = $manager->getAllUser();
 
-header("location: ../view/home.php");
+for ($i = 0; $i < count($users); $i++) {
+    if ($users[$i]->getEmail() == $email) {
+        $variableInsert = 1;
+        include_once VIEW_DIR . "regFail.php";
+        if ($users[$i]->getId() == $username) {
+            $variableInsert = 2;
+            include_once VIEW_DIR . "regFail.php";
+
+        }
+    }
+}
+
+if ($variableInsert == null) {
+    $manager->insertUser($username, $email, $citta, $password);
+    include_once VIEW_DIR . "home.php";
+}
 
 
 

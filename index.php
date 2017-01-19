@@ -64,6 +64,9 @@ define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
             case 'scaricaAppunto':
                 include_once CONTROL_DIR . "scaricaAppunti.php";
                 break;
+            case 'registrazione':
+                include_once CONTROL_DIR . "registrazione.php";
+                break;
 
             //VIEWS
             case 'home':
@@ -89,6 +92,9 @@ define('IMG_PROFILES', UPLOADS_DIR . 'img_profiles/');
                 break;
             case 'profiloUtente':
                 include_once VIEW_DIR . "profiloUtente.php";
+                break;
+            case 'regFail':
+                include_once VIEW_DIR . "regFail.php";
                 break;
             default:
                 include_once VIEW_DIR ."404.php";

@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                <a class="navbar-brand" href="../view/home.php">Flyers</a>
+                <a class="navbar-brand" href="<?php echo DOMINIO_SITO . "/home"?>">Flyers</a>
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1">
@@ -22,12 +22,11 @@
                 <div class="collapse navbar-collapse"
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="hidden"><a href="<?php echo DOMINIO_SITO . "/home"?>"></a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/homeAnnunci"?>">Annunci</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/homeAppunti"?>">Appunti</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/profiloUtente.php">Profilo</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO ."/profiloUtente"?>">Profilo</a></li>
                         <li class="page-scroll"><a href="#">Help</a></li>
-                        <li><a href="../view/login.php">Login</a></li>
+                        <li><a href="<?php echo DOMINIO_SITO . "/login"?>">Login</a></li>
                     </ul>
                 </div>
             </div>
