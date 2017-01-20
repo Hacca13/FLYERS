@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FLYERS</title>
+    <title>Flyers | Home</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="../view/style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR; ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Theme CSS -->
-    <link href="../view/style/css/freelancer.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR; ?>css/freelancer.min.css" rel="stylesheet">
 
 
     <!-- Custom Fonts -->
-    <link href="../view/style/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo STYLE_DIR; ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -37,14 +37,14 @@
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-<?php include_once 'header.php'?>
+<?php include_once VIEW_DIR .'header.php'?>
 
 <!-- Header -->
 <header>
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <img class="img-responsive" src="../core/img/paperplane.png" width="300" alt="">
+                <img class="img-responsive" src="<?php echo IMG_DIR;?>paperplane.png" width="300" alt="">
                 <div class="intro-text">
                     <span class="name">Flyers</span>
                     <hr class="star-light">
@@ -57,9 +57,6 @@
     </div>
 </header>
 
-
-
-
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
 
@@ -68,21 +65,21 @@
         <li data-target="#myCarousel" data-slide-to="1" class=""></li>
     </ol>
     <div class="carousel-inner">
-        <div class="item active"> <img src="../img/appunti.jpg" style="width:100%" alt="First slide">
+        <div class="item active"> <img src="<?php echo IMG_DIR;?>appunti.jpg" style="width:100%" alt="First slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Appunti</h1>
                     <p>Upload e Download di appunti utili al tuo studio.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Dai uno sguardo</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="<?php DOMINIO_SITO;?>/listaAppunti" role="button">Dai uno sguardo</a></p>
                 </div>
             </div>
         </div>
-        <div class="item"> <img src="../img/annunci.jpg" style="width:100%" data-src="" alt="Second    slide">
+        <div class="item"> <img src="<?php echo IMG_DIR;?>annunci.jpg" style="width:100%" data-src="" alt="Second    slide">
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Annunci</h1>
                     <p>Consulta oppure pubblica un annuncio universitario.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Consulta gli annunci</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="<?php DOMINIO_SITO;?>/listaAnnunci" role="button">Consulta gli annunci</a></p>
                 </div>
             </div>
         </div>
@@ -91,7 +88,7 @@
 
 
 <!-- Footer -->
-<?php include_once 'footer.php'?>
+<?php include_once VIEW_DIR .'footer.php'?>
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
@@ -103,20 +100,17 @@
 
 
 <!-- jQuery -->
-<script src="../core/view/style/vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo STYLE_DIR; ?>vendor/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../core/view/style/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="<?php echo STYLE_DIR; ?>vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="../core/view/style/js/jqBootstrapValidation.js"></script>
-<script src="../core/view/style/js/contact_me.js"></script>
+<script src="<?php echo STYLE_DIR; ?>js/jqBootstrapValidation.js"></script>
+<script src="<?php echo STYLE_DIR; ?>js/contact_me.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="..core/view/style/js/freelancer.min.js"></script>
+<script src="<?php echo STYLE_DIR; ?>js/freelancer.min.js"></script>
 
 </body>
 

@@ -1,7 +1,6 @@
 <?php
 
-include_once "../model/AppuntiManager.php";
-include_once "../model/CategoriaManager.php";
+include_once MODEL_DIR . "AppuntiManager.php";
 
 if(isset($_POST['titolo']) && $_POST['titolo']!= null) {
     $titolo = $_POST['titolo'];
@@ -15,6 +14,11 @@ if(isset($_POST['tags']) && $_POST['tags']!= null) {
     //toast
 }
 
+if(isset($_POST['categorie']) && $_POST['categorie']!= null) {
+    $categoria = $_POST['categorie'];
+} else {
+    //toast
+}
 
 if(isset($_POST['descrizione']) && $_POST['descrizione']!= null) {
     $descrizione = $_POST['descrizione'];
@@ -23,28 +27,40 @@ if(isset($_POST['descrizione']) && $_POST['descrizione']!= null) {
 }
 
 
-if(isset($_POST['categorie']) && $_POST['categorie']!= null) {
-    $categoria = $_POST['categorie'];
-    $managerC = new CategoriaManager();
-    $categorie = $managerC->getCategoriesFromName($categoria);
-    $idCategoria = $categorie[0]->getId();
-} else {
-    //toast
-}
+if(isset($_FILES['file']) && $_FILES['file']!= null) {
+    $_FILES['file']['name'];
+    $file = rand(1000,100000)."-".$_FILES['file']['name'];
+    $file_loc = $_FILES['file']['tmp_name'];
+    $file_size = $_FILES['file']['size'];
+    $file_type = $_FILES['file']['type'];
+    $folder="upload/";
 
-if(isset($_POST['file']) && $_POST['file']!= null) {
-    $file = $_POST['file'];
-    echo $file;
-} else {
-    //toast
-}
+    // new file size in KB
+    $new_size = $file_size/1024;
 
+    // new file size in KB
+
+    // make file name in lower case
+    $new_file_name = strtolower($file);
+    // make file name in lower case
+
+    $final_file=str_replace(' ','-',$new_file_name);
+
+    $path = $folder.$final_file;
+
+    move_uploaded_file($file_loc,$folder.$final_file);
+
+} else {
+    //taost;
+}
 
 $data = date("Y-m-d");
+$raiting = 2;
+$idUtente = 1;
 
-//toast e redirect
+$manager = new AppuntiManager();
+$manager->insertAppunti($titolo, $categoria, $descrizione, $raiting, $path, $data, $idUtente);
+header("location: ../view/listaAppunti.php");
 
-//$_SESSION['toast-type'] = "success";
-//$_SESSION['toast-message'] = "Utente aggiornato";
-//redirect
+
 ?>

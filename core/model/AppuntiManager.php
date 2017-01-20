@@ -1,14 +1,7 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: Paolo
- * Date: 12/01/2017
- * Time: 09:43
- */
-
-include_once '../beans/Appunto.php';
-include_once '../control/Connector.php';
+include_once BEANS_DIR . 'Appunti.php';
+include_once 'Connector.php';
 
 class AppuntiManager
 {
@@ -22,7 +15,7 @@ class AppuntiManager
 
 
     public function searchNotes($nameNotes){
-        $GET_NOTES = "SELECT * FROM appunti WHERE LIKE '%s'";
+        $GET_NOTES = "SELECT * FROM APPUNTO WHERE LIKE '%s'";
         $query = sprintf($GET_NOTES,$nameNotes);
         $result = array();
         return $result;
@@ -30,23 +23,35 @@ class AppuntiManager
     }
 
     public function getAllAppunti() {
-        $str = "SELECT * FROM `OBJECTFILE`";
+        $str = "SELECT * FROM `APPUNTO`";
         $res = mysqli_query($this->db->getConnector(), $str);
         $appunti = array();
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
-                $appunto = new Appunto($obj['KEYFILE'], $obj['NOME'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['FILE'], $obj['DATADICARICAMENTO'], $obj['TAG'], $obj['KEYCATEGORIA'], $obj['KEYUTENTE']);
+                $appunto = new Appunti($obj['KEYFILE'], $obj['NOME'], $obj['CATEGORIA'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['PATH'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
                 $appunti[] = $appunto;
             }
         }
         return $appunti;
     }
 
-    public function inserAppunti($nome, $descrizione, $raiting, $file, $data, $tag, $idCategoria, $idUtente) {
-        $str = "INSERT INTO `OBJECTFILE` (`KEYFILE`, `NOME`, `DESCRIZIONE`, `RAITING`, `FILE`, `DATADICARICAMENTO`, `TAG`, `KEYCATEGORIA`, `KEYUTENTE`) 
-                VALUES (NULL, '%s', '%s', '%s', '%s', '%s', '%s, %s', '%s', '%s')";
-        $query = sprintf($str, $nome, $descrizione, $raiting, $file, $data, $tag, $idCategoria, $idUtente);
+    public function insertAppunti($nome, $categoria, $descrizione, $raiting, $path, $data, $idutente) {
+        $str = "INSERT INTO `APPUNTO` (`KEYFILE`, `NOME`, `CATEGORIA`, `DESCRIZIONE`, `RAITING`, `PATH`, `DATADICARICAMENTO`, `KEYUTENTE`) 
+                VALUES (NULL, '%s', '%s', '%s', '%s', '%s', '%s', '%s')";
+        $query = sprintf($str, $nome, $categoria, $descrizione, $raiting, $path, $data, $idutente);
         $res = mysqli_query($this->db->getConnector(), $query);
+    }
+
+    public function getAppunto($id) {
+        $str = "SELECT * FROM `APPUNTO` WHERE `KEYFILE` = $id";
+        $res = mysqli_query($this->db->getConnector(), $str);
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $appunto = new Appunti($obj['KEYFILE'], $obj['NOME'], $obj['CATEGORIA'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['PATH'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
+            }
+        }
+        return $appunto;
+
     }
 
 }

@@ -29,9 +29,8 @@ class Appunti
      * @param $dataDiCaricamento
      * @param $keyUtente
      */
-    public function __construct($keyFile, $nome, $categoria, $descrizione, $raiting, $path, $dataDiCaricamento, $keyUtente)
+    public function __construct($nome, $categoria, $descrizione, $raiting, $path, $dataDiCaricamento, $keyUtente)
     {
-        $this->keyFile = $keyFile;
         $this->nome = $nome;
         $this->categoria = $categoria;
         $this->descrizione = $descrizione;
@@ -40,6 +39,7 @@ class Appunti
         $this->dataDiCaricamento = $dataDiCaricamento;
         $this->keyUtente = $keyUtente;
     }
+
 
     /**
      * @return mixed

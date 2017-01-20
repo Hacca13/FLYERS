@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="style/css/modCustom.css">
+    <link type="text/css" rel="stylesheet" href="<?php echo STYLE_DIR;?>css/modCustom.css">
 </head>
 <body>
 <footer class="text-center">

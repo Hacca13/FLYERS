@@ -25,9 +25,8 @@ class Annuncio
      * @param $dataDiCaricamento
      * @param $keyUtente
      */
-    public function __construct($keyAnnuncio, $titolo, $descrizione, $contatto, $dataDiCaricamento, $keyUtente)
+    public function __construct( $titolo, $descrizione, $contatto, $dataDiCaricamento, $keyUtente)
     {
-        $this->keyAnnuncio = $keyAnnuncio;
         $this->titolo = $titolo;
         $this->descrizione = $descrizione;
         $this->contatto = $contatto;
