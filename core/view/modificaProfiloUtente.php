@@ -43,9 +43,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
-                <form name="<?php echo DOMINIO_SITO;?>/changeData" id="changeForm"  enctype="multipart/form-data">
+                <form action="<?php echo DOMINIO_SITO;?>/changeData" name="modifyUser"  enctype="multipart/form-data">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
 
@@ -55,50 +53,36 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>ID</label>
-                            <input type="text" class="form-control" placeholder="ID" id="id">
+                            <input type="text" class="form-control" placeholder="ID" name="id">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" id="email">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Città</label>
-                            <input type="tel" class="form-control" placeholder="Città" id="citta">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Vecchia Password</label>
-                            <input type="password" class="form-control" placeholder="Vecchia Password" id="oldpssw">
+                            <input type="tel" class="form-control" placeholder="Città" name="citta">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Nuova Password</label>
-                            <input type="password" class="form-control" placeholder="Nuova Password" id="newpssw">
+                            <input type="password" class="form-control" placeholder="Nuova Password" name="newpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Conferma Nuova Password</label>
-                            <input type="password" class="form-control" placeholder="Conferma Password" id="confermnewpssw">
+                            <input type="password" class="form-control" placeholder="Conferma Password" name="confermnewpssw">
                             <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Nuova Immagine del Profilo</label>
-                                <div id="myDropZone" class="dropzone dropzone-wrapper">
-                                </div>
                         </div>
                     </div>
                     <br>
@@ -130,11 +114,5 @@
 
 <!-- Theme JavaScript -->
 <script src="<?php echo STYLE_DIR;?>js/freelancer.min.js"></script>
-
-<!-- Dropzone JS -->
-<script src="<?php echo STYLE_DIR;?>js/dropzone.js"></script>
-
-<!-- Dropzone JS -->
-<script src="<?php echo STYLE_DIR;?>js/dropzoneFunction.js"></script>
 
 </html>
