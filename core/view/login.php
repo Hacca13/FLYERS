@@ -53,7 +53,7 @@
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Username</label>
-                                <input type="text" class="form-control" placeholder="Username" name="Username" id="Username" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                <input type="text" class="form-control" placeholder="Username" name="username" id="Username" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
