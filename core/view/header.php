@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="<?php echo STYLE_DIR;?>css/modCustom.css">
+
 </head>
 <body>
 <nav id="mainNav"class="navbar navbar-default navbar-fixed-top navbar-custom affix-top">
