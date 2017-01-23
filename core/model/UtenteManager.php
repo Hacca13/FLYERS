@@ -84,4 +84,17 @@ class UtenteManager
         }
     }
 
+    function getAllUser() {
+        $str = "SELECT * FROM UTENTE";
+        $res = mysqli_query($this->db->getConnector(), $str);
+        $users = array();
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $utente = new Utente($obj['KEYUTENTE'], $obj['ID'], $obj['EMAIL'], $obj['CITTA'], $obj['PASS']);
+                $users[] = $utente;
+            }
+        }
+        return $users;
+    }
+
 }

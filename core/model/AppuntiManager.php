@@ -23,7 +23,7 @@ class AppuntiManager
     }
 
     public function getAllAppunti() {
-        $str = "SELECT * FROM `APPUNTO`";
+        $str = "SELECT * FROM APPUNTO";
         $res = mysqli_query($this->db->getConnector(), $str);
         $appunti = array();
         if ($res) {
@@ -36,14 +36,14 @@ class AppuntiManager
     }
 
     public function insertAppunti($nome, $categoria, $descrizione, $raiting, $path, $data, $idutente) {
-        $str = "INSERT INTO `APPUNTO` (`KEYFILE`, `NOME`, `CATEGORIA`, `DESCRIZIONE`, `RAITING`, `PATH`, `DATADICARICAMENTO`, `KEYUTENTE`) 
-                VALUES (NULL, '%s', '%s', '%s', '%s', '%s', '%s', '%s')";
+        $str = "INSERT INTO APPUNTO (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
+                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')";
         $query = sprintf($str, $nome, $categoria, $descrizione, $raiting, $path, $data, $idutente);
         $res = mysqli_query($this->db->getConnector(), $query);
     }
 
     public function getAppunto($id) {
-        $str = "SELECT * FROM `APPUNTO` WHERE `KEYFILE` = $id";
+        $str = "SELECT * FROM APPUNTO WHERE KEYFILE = $id";
         $res = mysqli_query($this->db->getConnector(), $str);
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
