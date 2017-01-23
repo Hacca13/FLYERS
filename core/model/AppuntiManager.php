@@ -40,19 +40,16 @@ class AppuntiManager
         return false;
     }
 
-    public function insertAppunti($nome, $categoria, $descrizione, $raiting, $path, $data, $idutente) {
+    public function insertAppunti($appunti) {
         $INSERT_APPUNTI = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
-                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')";
-        $query = sprintf($INSERT_APPUNTI, $nome, $categoria, $descrizione, $raiting, $path, $data, $idutente);
-        $res = mysqli_query(Connector::getConnector(), $query);
-        if ($res) {
-            $result = array();
-            while ($obj = $res->fetch_assoc()) {
-                $appunto = new Appunti($obj['KEYFILE'], $obj['NOME'], $obj['CATEGORIA'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['PATH'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
-                array_push($result,$appunto);
-            }
-            return $result;
-        }
+                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');SELECT LAST_INSERT_ID();";
+        $query = sprintf($INSERT_APPUNTI, $appunti->getNome(), $appunti->getCategoria(), $appunti->getDescrizione(), $appunti->getRaiting(), $appunti->getPath(),$appunti->getDataDiCaricamento() , $appunti->getKeyUtente());
+        $idAppunti = mysqli_query(Connector::getConnector(), $query);
+
+        $tm = new TagManager();
+
+        $tm->insertTagsByAppunti($idAppunti,$appunti->getTags());
+
     }
 
     public function getAppunto($id) {

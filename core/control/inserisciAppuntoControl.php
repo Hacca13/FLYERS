@@ -1,9 +1,10 @@
 <?php
 
 include_once MODEL_DIR . "AppuntiManager.php";
+include_once MODEL_DIR ."Appunti.php";
 
-if(isset($_POST['titolo']) && $_POST['titolo']!= null) {
-    $titolo = $_POST['titolo'];
+if(isset($_POST['nome']) && $_POST['nome']!= null) {
+    $nome = $_POST['nome'];
 } else {
     //toast
 }
@@ -23,7 +24,7 @@ if(isset($_POST['categorie']) && $_POST['categorie']!= null) {
 if(isset($_POST['descrizione']) && $_POST['descrizione']!= null) {
     $descrizione = $_POST['descrizione'];
 } else {
-    //toast
+    $descrizione = "";
 }
 
 
@@ -33,7 +34,7 @@ if(isset($_FILES['file']) && $_FILES['file']!= null) {
     $file_loc = $_FILES['file']['tmp_name'];
     $file_size = $_FILES['file']['size'];
     $file_type = $_FILES['file']['type'];
-    $folder=UPLOADS_DIR;
+    $folder = UPLOADS_DIR;
 
     // new file size in KB
     $new_size = $file_size/1024;
@@ -55,11 +56,11 @@ if(isset($_FILES['file']) && $_FILES['file']!= null) {
 }
 
 $data = date("Y-m-d");
-$raiting = 2;
-$idUtente = 1;
+$raiting = 0;
 
+$appunti = new Appunti(null,$nome,$categoria,$descrizione, $raiting, $path, $data, $idUtente);
 $manager = new AppuntiManager();
-$manager->insertAppunti($titolo, $categoria, $descrizione, $raiting, $path, $data, $idUtente);
+$manager->insertAppunti($appunti);
 include_once CONTROL_DIR ."getAppunti.php";
 
 
