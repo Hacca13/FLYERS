@@ -43,7 +43,7 @@
                 <div class="carousel-caption">
                     <h1>Appunti</h1>
                     <p>Upload e Download di appunti utili al tuo studio.</p>
-                    <p><a class="btn btn-lg btn-primary" href="<?php DOMINIO_SITO;?>/listaAppunti" role="button">Dai uno sguardo</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="<?php DOMINIO_SITO;?>/categorie" role="button">Dai uno sguardo</a></p>
                 </div>
             </div>
         </div>
