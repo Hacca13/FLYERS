@@ -4,7 +4,6 @@
 <head>
     <title>Flyers | Il Tuo Profilo</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
-
 </head>
 
 <body class="index">
@@ -23,14 +22,14 @@
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>ID</h4>
-                        <p>Lorem ipsius</p>
+                        <p><?php $user->getId()?></p>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Email</h4>
-                        <p>Lorem ipsius</p>
+                        <p><?php $user->getEmail()?></p>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
