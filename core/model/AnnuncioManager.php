@@ -18,7 +18,7 @@ class AnnuncioManager
     }
 
     public function getAllAnnunci() {
-        $str = "SELECT * FROM `ANNUNCIO`";
+        $str = "SELECT * FROM ANNUNCIO";
         $res = mysqli_query($this->db->getConnector(), $str);
         $annunci = array();
         if ($res) {
@@ -32,7 +32,8 @@ class AnnuncioManager
 
 
     public function searchAds($nameAd){
-        $GET_ADS = "SELECT * FROM annnunci WHERE LIKE '%s'";
+        $GET_ADS = "SELECT * FROM ANNUNCIO WHERE LIKE '%s'";
+        $nameAd = "%".$nameAd."%";
         $query = sprintf($GET_ADS,$nameAd);
         $result = array();
         return $result;
@@ -40,10 +41,10 @@ class AnnuncioManager
     }
 
     public function insertAnnuncio($titolo, $descrizione, $contatto, $data, $idUtente) {
-        $str = "INSERT INTO `ANNUNCIO` (`KEYANNUNCIO`, `TITOLO`, `DESCRIZIONE`, `CONTATTO`, `DATADICARICAMENTO`, `KEYUTENTE`) 
-                  VALUES (NULL, '%s', '%s', '%s', '%s', '%s')";
+        $str = "INSERT INTO ANNUNCIO( TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
+              VALUES ( '%s', '%s', '%s', '%s', '%s')";
         $query = sprintf($str, $titolo, $descrizione, $contatto, $data, $idUtente);
-        $res = mysqli_query($this->db->getConnector(), $query);
+        mysqli_query($this->db->getConnector(), $query);
     }
 
 }
