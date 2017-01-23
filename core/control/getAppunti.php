@@ -5,11 +5,14 @@ if($isset($_URL) &&$isset($_URL[1])) {
 
     $categoria = (String)testInput($_URL[1]);
 
-    $manager = new AppuntiManager();
+    if($isset($categoria)) {
 
-    $appunti = $manager->getAllAppuntiByCategoria($categoria);
+        $manager = new AppuntiManager();
 
-    include_once VIEW_DIR . "listaAppunti.php";
+        $appunti = $manager->getAllAppuntiByCategoria($categoria);
+
+        include_once VIEW_DIR . "listaAppunti.php";
+    }
 }
 
 

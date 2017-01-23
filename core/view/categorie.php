@@ -23,37 +23,37 @@
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                <a href="<?php DOMINIO_SITO?>/listaAnnunci/biologia" class="portfolio-link" data-toggle="modal">
+                <a href="<?php DOMINIO_SITO?>/getAppunti/biologia" class="portfolio-link" data-toggle="modal">
                     <div align="center"><h4>Biologia</h4></div>
                     <img src="<?php echo DOMINIO_SITO?>/img/categories/biologia.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                <a href="<?php DOMINIO_SITO?>/listaAnnunci/chimica" class="portfolio-link" data-toggle="modal">
+                <a href="<?php DOMINIO_SITO?>/getAppunti/chimica" class="portfolio-link" data-toggle="modal">
                     <div align="center"><h4>Chimica</h4></div>
                     <img src="<?php echo DOMINIO_SITO?>/img/categories/chimica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                <a href="<?php DOMINIO_SITO?>/listaAnnunci/fisica" class="portfolio-link" data-toggle="modal">
+                <a href="<?php DOMINIO_SITO?>/getAppunti/fisica" class="portfolio-link" data-toggle="modal">
                     <div align="center"><h4>Fisica</h4></div>
                     <img src="<?php echo DOMINIO_SITO?>/img/categories/fisica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                <a href="<?php DOMINIO_SITO?>/listaAnnunci/informatica" class="portfolio-link" data-toggle="modal">
+                <a href="<?php DOMINIO_SITO?>/getAppunti/informatica" class="portfolio-link" data-toggle="modal">
                     <div align="center"><h4>Informatica</h4></div>
                     <img src="<?php echo DOMINIO_SITO?>/img/categories/informatica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                <a href="<?php DOMINIO_SITO?>/listaAnnunci/matematica" class="portfolio-link" data-toggle="modal">
+                <a href="<?php DOMINIO_SITO?>/getAppunti/matematica" class="portfolio-link" data-toggle="modal">
                     <div align="center"><h4>Matematica</h4></div>
                     <img src="<?php echo DOMINIO_SITO?>/img/categories/matematica.png" class="img-responsive" alt="">
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                <a href="<?php DOMINIO_SITO?>/listaAnnunci/scienze_ambientali" class="portfolio-link" data-toggle="modal">
+                <a href="<?php DOMINIO_SITO?>/getAppunti/scienze_ambientali" class="portfolio-link" data-toggle="modal">
                     <div align="center"><h4>Scienze Ambientali</h4></div>
                     <img src="<?php echo DOMINIO_SITO?>/img/categories/scienze%20ambientali.png" class="img-responsive" alt="">
                 </a>
