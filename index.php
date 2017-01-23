@@ -59,6 +59,9 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
                 break;
 
             //VIEWS
+            case '':
+                include_once VIEW_DIR . "home.php";
+                break;
             case 'categorie':
                 include_once VIEW_DIR . "categorie.php";
                 break;
