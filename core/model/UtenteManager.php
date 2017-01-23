@@ -57,12 +57,30 @@ class UtenteManager
         return $res;
     }
 
+    function checkLogin($username,$password){
+        $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s' AND PASS = '%s'";
+        $query = sprintf($checkLogin,$username,$password);
+        $res = mysqli_query($this->db->getConnector(), $query);
+
+        return $res;
+    }
+
     function getKeyUtenteByID($idUtente){
-        $GET_KEYUTENTE = "SELECT KEYUTENTE FROM UTENTE WHERE IDUTENTE = '%s'";
+        $GET_KEYUTENTE = "SELECT KEYUTENTE FROM UTENTE WHERE ID = '%s'";
         $query = sprintf($GET_KEYUTENTE,$idUtente);
         $res = mysqli_query($this->db->getConnector(), $query);
         while($r = $res->fetch_assoc()){
             return $r['ID'];
+        }
+    }
+
+    function getyUtenteByID($idUtente){
+        $getUtente = "SELECT * FROM UTENTE WHERE ID = '%s'";
+        $query = sprintf($getUtente,$idUtente);
+        $res = mysqli_query($this->db->getConnector(), $query);
+        while($r = $res->fetch_assoc()){
+            $user = new Utente($r['ID'],$r['EMAIL'],$r['CITTA'],$r['PASS']);
+            return $user;
         }
     }
 
