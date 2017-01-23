@@ -64,6 +64,8 @@
     </div>
 </nav>
 </body>
+<!-- jQuery -->
+<script src="<?php echo STYLE_DIR;?>vendor/jquery/jquery.min.js"></script>
 <!--DropDown menu Search Bar-->
 <script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
 </html>

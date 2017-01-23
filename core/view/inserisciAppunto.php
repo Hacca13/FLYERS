@@ -15,13 +15,13 @@
     <title>Flyers | inserisciAppunto</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="style/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR;?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Theme CSS -->
-    <link href="style/css/freelancer.min.css" rel="stylesheet">
+    <link href="<?php echo STYLE_DIR;?>css/freelancer.min.css" rel="stylesheet">
 
 
     <!-- Custom Fonts -->
-    <link href="style/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo STYLE_DIR;?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
@@ -32,14 +32,12 @@
     <script src="../https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </head>
 
 <body id="page-top" class="index">
 
 <!-- Navigation -->
-<?php include_once 'header.php'?>
+<?php include_once VIEW_DIR . 'header.php'?>
 
 <!-- Header -->
 <section id="contact">
@@ -123,7 +121,7 @@
 
 
 <!-- Footer -->
-<?php include_once 'footer.php'?>
+<?php include_once VIEW_DIR . 'footer.php'?>
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
@@ -135,20 +133,20 @@
 
 
 <!-- jQuery -->
-<script src="style/vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo STYLE_DIR;?>vendor/jquery/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="style/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?php echo STYLE_DIR;?>vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <!-- Contact Form JavaScript -->
-<script src="style/js/jqBootstrapValidation.js"></script>
-<script src="style/js/contact_me.js"></script>
+<script src="<?php echo STYLE_DIR;?>js/jqBootstrapValidation.js"></script>
+<script src="<?php echo STYLE_DIR;?>js/contact_me.js"></script>
 
 <!-- Theme JavaScript -->
-<script src="style/js/freelancer.min.js"></script>
+<script src="<?php echo STYLE_DIR;?>js/freelancer.min.js"></script>
 
 </body>
 

@@ -81,7 +81,7 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
                 include_once VIEW_DIR . "listaAppunti.php";
                 break;
             case 'listaAnnunci':
-                include_once VIEW_DIR . "listAnnnunci.php";
+                include_once VIEW_DIR . "listaAnnunci.php";
                 break;
             case 'login':
                 include_once VIEW_DIR ."login.php";
