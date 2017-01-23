@@ -33,7 +33,7 @@ if(isset($_FILES['file']) && $_FILES['file']!= null) {
     $file_loc = $_FILES['file']['tmp_name'];
     $file_size = $_FILES['file']['size'];
     $file_type = $_FILES['file']['type'];
-    $folder="upload/";
+    $folder=UPLOADS_DIR;
 
     // new file size in KB
     $new_size = $file_size/1024;
@@ -60,7 +60,7 @@ $idUtente = 1;
 
 $manager = new AppuntiManager();
 $manager->insertAppunti($titolo, $categoria, $descrizione, $raiting, $path, $data, $idUtente);
-header("location: ../view/listaAppunti.php");
+include_once CONTROL_DIR ."getAppunti.php";
 
 
 ?>

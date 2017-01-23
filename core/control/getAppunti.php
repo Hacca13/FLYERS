@@ -7,10 +7,6 @@ $appunti = array();
 
 $appunti = $manager->getAllAppunti();
 
-session_start();
-
-$_SESSION['appunti'] = serialize($appunti);
-
-
+include_once VIEW_DIR ."listaAppunti.php";
 
 ?>
