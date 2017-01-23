@@ -1,57 +1,72 @@
 <?php
 
 include_once BEANS_DIR . 'Appunti.php';
-include_once 'Connector.php';
+include_once MODEL_DIR . 'Connector.php';
 
 class AppuntiManager
 {
 
-
-    private $db;
-
     public function __construct() {
-        $this->db = new Connector();
+
     }
 
 
     public function searchNotes($nameNotes){
-        $GET_NOTES = "SELECT * FROM APPUNTO WHERE LIKE '%s'";
+        $GET_NOTES = "SELECT * FROM APPUNTI WHERE LIKE '%s'";
         $query = sprintf($GET_NOTES,$nameNotes);
-        $result = array();
-        return $result;
-
+        $res = mysqli_query(Connector::getConnector(), $query);
+        if ($res) {
+            $result = array();
+            while ($obj = $res->fetch_assoc()) {
+                $appunti = new Appunti($obj['KEYFILE'], $obj['NOME'], $obj['CATEGORIA'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['PATH'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
+                array_push($result,$appunto);
+            }
+            return $result;
+        }
+        return false;
     }
 
-    public function getAllAppunti() {
-        $str = "SELECT * FROM APPUNTO";
-        $res = mysqli_query($this->db->getConnector(), $str);
-        $appunti = array();
+    public function getAllAppuntiByCategoria($categoria) {
+        $ALL_APPUNTI_BY_CATEGORIA= "SELECT * FROM APPUNTI WHERE CATEGORIA = '%s' ORDER BY DATADICARICAMENTO";
+        $query = sprintf($ALL_APPUNTI_BY_CATEGORIA,$categoria);
+        $res = mysqli_query(Connector::getConnector(), $query);
         if ($res) {
+            $result = array();
             while ($obj = $res->fetch_assoc()) {
                 $appunto = new Appunti($obj['KEYFILE'], $obj['NOME'], $obj['CATEGORIA'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['PATH'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
-                $appunti[] = $appunto;
+                array_push($result,$appunto);
             }
+            return $result;
         }
-        return $appunti;
+        return false;
     }
 
-    public function insertAppunti($nome, $categoria, $descrizione, $raiting, $path, $data, $idutente) {
-        $str = "INSERT INTO APPUNTO (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
-                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')";
-        $query = sprintf($str, $nome, $categoria, $descrizione, $raiting, $path, $data, $idutente);
-        $res = mysqli_query($this->db->getConnector(), $query);
+    public function insertAppunti($appunti) {
+        $INSERT_APPUNTI = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
+                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s');SELECT LAST_INSERT_ID();";
+        $query = sprintf($INSERT_APPUNTI, $appunti->getNome(), $appunti->getCategoria(), $appunti->getDescrizione(), $appunti->getRaiting(), $appunti->getPath(),$appunti->getDataDiCaricamento() , $appunti->getKeyUtente());
+        $idAppunti = mysqli_query(Connector::getConnector(), $query);
+
+        $tm = new TagManager();
+
+        $tm->insertTagsByAppunti($idAppunti,$appunti->getTags());
+
     }
 
     public function getAppunto($id) {
-        $str = "SELECT * FROM APPUNTO WHERE KEYFILE = $id";
-        $res = mysqli_query($this->db->getConnector(), $str);
+
+        $GET_APPUNTO_BY_ID = "SELECT * FROM APPUNTI WHERE KEYFILE = '%s'";
+        $query = sprintf($GET_APPUNTO_BY_ID,$id);
+        $res = mysqli_query(Connector::getConnector(), $query);
         if ($res) {
+            $result = array();
             while ($obj = $res->fetch_assoc()) {
                 $appunto = new Appunti($obj['KEYFILE'], $obj['NOME'], $obj['CATEGORIA'], $obj['DESCRIZIONE'], $obj['RAITING'], $obj['PATH'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
+                array_push($result,$appunto);
             }
+            return $result;
         }
-        return $appunto;
-
+        return false;
     }
 
 }

@@ -56,11 +56,4 @@ class AnnuncioManager
 
     }
 
-    public function insertAnnuncio($titolo, $descrizione, $contatto, $data, $idUtente) {
-        $str = "INSERT INTO ANNUNCIO( TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
-              VALUES ( '%s', '%s', '%s', '%s', '%s')";
-        $query = sprintf($str, $titolo, $descrizione, $contatto, $data, $idUtente);
-        $ccc= mysqli_query($this->db->getConnector(), $query);
-    }
-
 }
