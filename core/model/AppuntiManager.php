@@ -27,7 +27,7 @@ class AppuntiManager
     }
 
     public function getAllAppunti() {
-        $ALL_APPUNTI = "SELECT * FROM APPUNTI";
+        $ALL_APPUNTI = "SELECT * FROM APPUNTI ORDER BY DATADICARICAMENTO";
         $res = mysqli_query(Connector::getConnector(), $ALL_APPUNTI);
         if ($res) {
             $result = array();

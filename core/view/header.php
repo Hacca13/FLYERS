@@ -24,7 +24,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="hidden"><a href="#"></a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAnnunci">Annunci</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/listaAppunti">Appunti</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/categorie">Appunti</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/profiloUtente">Profilo</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/help">Help</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO;?>/login">Login</a></li>

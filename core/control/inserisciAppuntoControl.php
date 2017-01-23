@@ -60,6 +60,7 @@ $raiting = 0;
 
 $appunti = new Appunti(null,$nome,$categoria,$descrizione, $raiting, $path, $data, $idUtente);
 $manager = new AppuntiManager();
+
 $manager->insertAppunti($appunti);
 include_once CONTROL_DIR ."getAppunti.php";
 
