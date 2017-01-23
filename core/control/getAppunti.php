@@ -7,7 +7,7 @@ if($isset($_URL) &&$isset($_URL[1])) {
 
     $manager = new AppuntiManager();
 
-    $appunti = $manager->getAllAppuntiByCategoria();
+    $appunti = $manager->getAllAppuntiByCategoria($categoria);
 
     include_once VIEW_DIR . "listaAppunti.php";
 }

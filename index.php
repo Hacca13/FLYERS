@@ -6,7 +6,7 @@
  * Time: 14:56
  */
 define('ROOT_DIR', dirname(__FILE__));
-define('DOMINIO_SITO', '/FLYERS');//da usare se si va online
+define('DOMINIO_SITO', '/FLYERS');
 define('CORE_DIR', ROOT_DIR . '/core/');
 define('VIEW_DIR', CORE_DIR . 'view/');
 define('MODEL_DIR', CORE_DIR . 'model/');
