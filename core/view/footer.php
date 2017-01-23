@@ -68,9 +68,6 @@
 <!-- Contact Form JavaScript -->
 <script src="<?php echo STYLE_DIR;?>js/jqBootstrapValidation.js"></script>
 
-<!-- Theme JavaScript -->
-<script src="<?php echo STYLE_DIR;?>js/freelancer.min.js"></script>
-
 <!--DropDown menu SearchBar-->
 <script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
 </html>
