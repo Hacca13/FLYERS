@@ -26,9 +26,10 @@ class AppuntiManager
         return false;
     }
 
-    public function getAllAppunti() {
-        $ALL_APPUNTI = "SELECT * FROM APPUNTI ORDER BY DATADICARICAMENTO";
-        $res = mysqli_query(Connector::getConnector(), $ALL_APPUNTI);
+    public function getAllAppuntiByCategoria($categoria) {
+        $ALL_APPUNTI_BY_CATEGORIA= "SELECT * FROM APPUNTI WHERE CATEGORIA = '%s' ORDER BY DATADICARICAMENTO";
+        $query = sprintf($ALL_APPUNTI_BY_CATEGORIA,$categoria);
+        $res = mysqli_query(Connector::getConnector(), $query);
         if ($res) {
             $result = array();
             while ($obj = $res->fetch_assoc()) {
