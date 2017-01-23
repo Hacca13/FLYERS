@@ -16,8 +16,9 @@ class Tag
      * @param $keyTag
      * @param $nome
      */
-    public function __construct($nome)
+    public function __construct($keyTag,$nome)
     {
+        $this->keyTag = $keyTag;
         $this->nome = $nome;
     }
 
@@ -29,13 +30,6 @@ class Tag
         return $this->keyTag;
     }
 
-    /**
-     * @param mixed $keyTag
-     */
-    public function setKeyTag($keyTag)
-    {
-        $this->keyTag = $keyTag;
-    }
 
     /**
      * @return mixed
