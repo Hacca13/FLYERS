@@ -14,7 +14,7 @@
     <link href="<?php echo STYLE_DIR; ?>css/freelancer.min.css" rel="stylesheet">
 
     <!--Mod CSS -->
-    <link type="text/css" rel="stylesheet" href="<?php echo STYLE_DIR;?>css/modCustom.css">
+    <link href="<?php echo STYLE_DIR;?>css/modCustom.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="<?php echo STYLE_DIR; ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
