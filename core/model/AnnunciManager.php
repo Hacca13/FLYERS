@@ -8,59 +8,55 @@
  */
 include_once BEANS_DIR .'Annuncio.php';
 include_once MODEL_DIR.'Connector.php';
-include_once MODEL_DIR."TagManager.php";
-
+include_once MODEL_DIR.'TagManager.php';
 class AnnuncioManager
 {
 
 
-    public function __construct() {
+    private $tagManager;
 
+    public function __construct() {
+        $tagManager= new TagManager();
     }
 
     public function insertAnnuncio($annuncio){
-        $annuncio = new Annuncio();
         $insertSql = "INSERT INTO ANNUNCIO( TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
               VALUES ( '%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID()";
-
         $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
         $keyAnnuncio = mysqli_query(Connector::getConnector(), $query);
 
-
+        $tagManager->insertTagsByAnnuncio($keyAnnuncio,$annuncio->getTags());
 
     }
 
-
-
-
-    public function getAllAnnunci() {
-        $str = "SELECT * FROM ANNUNCIO";
-        $res = mysqli_query(Connector::getConnector(), $str);
-        $annunci = array();
+    public function getAllAnnunci(){
+        $selectSql = "SELECT * FROM ANNUNCIO";
+        $res = mysqli_query(Connector::getConnector(), $selectSql);
+        $listAnnunci = array();
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
-                $annuncio = new Annuncio($obj['KEYANNUNCIO'], $obj['TITOLO'], $obj['DESCRIZIONE'], $obj['CONTATTO'], $obj['DATADICARICAMENTO'], $obj['KEYUTENTE']);
-                $annunci[] = $annuncio;
+                $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
+                $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                array_push($listAnnunci,$annuncio)
             }
         }
-        return $annunci;
+        return $listAnnunci;
     }
+
+    
+
+
+/*
 
 
     public function searchAds($nameAd){
-        $GET_ADS = "SELECT * FROM ANNUNCIO WHERE LIKE '%s'";
+        $GET_ADS = "SELECT * FROM ANNUNCIO WHERE TITOLO LIKE '%s'";
         $nameAd = "%".$nameAd."%";
         $query = sprintf($GET_ADS,$nameAd);
         $result = array();
         return $result;
 
-    }
+    }*/
 
-    public function insertAnnuncio($titolo, $descrizione, $contatto, $data, $idUtente) {
-        $str = "INSERT INTO ANNUNCIO( TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
-              VALUES ( '%s', '%s', '%s', '%s', '%s')";
-        $query = sprintf($str, $titolo, $descrizione, $contatto, $data, $idUtente);
-        $ccc= mysqli_query($this->db->getConnector(), $query);
-    }
 
 }
