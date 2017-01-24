@@ -16,7 +16,8 @@ class AnnuncioManager
     private $tagManager;
 
     public function __construct() {
-        $tagManager= new TagManager();
+        $this->tagManager= new TagManager();
+
     }
 
     public function insertAnnuncio($annuncio){
@@ -25,7 +26,7 @@ class AnnuncioManager
         $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
         $keyAnnuncio = mysqli_query(Connector::getConnector(), $query);
 
-        $tagManager->insertTagsByAnnuncio($keyAnnuncio,$annuncio->getTags());
+        $this->tagManager->insertTagsByAnnuncio($keyAnnuncio,$annuncio->getTags());
 
     }
 
@@ -37,13 +38,13 @@ class AnnuncioManager
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
                 $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
-                array_push($listAnnunci,$annuncio)
+                array_push($listAnnunci,$annuncio);
             }
         }
         return $listAnnunci;
     }
 
-    
+
 
 
 /*
