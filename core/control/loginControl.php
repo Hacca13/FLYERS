@@ -15,16 +15,16 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
     $password = $_POST['password'];
 
     if($manager->checkLogin($username,$password)){
-        $user = $manager->getUtenteByID($username);
+        $user = $manager->getUtenteById($username);
         $_SESSION['user']= serialize($user);
     }
     else{
-        header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."login");
+        header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."autenticazione");
     }
 
 }
 else{
-    header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."login");
+    header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."autenticazione");
 }
 
 
