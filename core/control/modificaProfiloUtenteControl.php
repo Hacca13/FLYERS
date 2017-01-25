@@ -6,6 +6,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     if(isset($_POST["modifyUser"])){
 
+        $id ="";
         if(isset($_POST["id"])){
             $id = $_POST["id"];
             $um = new UtenteManager();
@@ -20,6 +21,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             }
         }
 
+        $email = "";
         if(isset($_POST["email"])){
             $email = $_POST["email"];
             $um = new UtenteManager();
@@ -34,19 +36,36 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             }
         }
 
+        $citta = "";
         if(isset($_POST["citta"])){
             $citta = $_POST["citta"];
         }
 
-        if(isset($_POST["newpssw"]) && isset($_POST["confermnewpssw"])){
+        if(isset($_POST["newpssw"]) && isset($_POST["confermnewpssw"]) && $_POST["newpssw"]!="" && $_POST["confermnewpssw"]!=""){
+
             $newpssw = $_POST["newpssw"];
             $confermnewpssw = $_POST["confermnewpssw"];
 
-            if($newpssw == $confermnewpssw){
+            if($newpssw == $confermnewpssw) {
+
                 $user = unserialize($_SESSION['user']);
-                $userModified = new Utente($id,$email,$citta,$newpssw);
-                $um = new UtenteManager();
-                $um->updateUser($user->getKeyUtente(),$userModified);
+
+                    if ($id == "") {
+                        $id = $user->getId();
+                    }
+
+                    if ($email = "") {
+                        $email = $user->getEmail();
+                    }
+
+                    $userModified = new Utente($id, $email, $citta, $newpssw);
+                    $um = new UtenteManager();
+                    $um->updateUser($user->getKeyUtente(), $userModified);
+
+                    $_SESSION['toast-type'] = "success";
+                    $_SESSION['toast-message'] = "Modifiche applicate con successo";
+                    header("Location:" . DOMINIO_SITO . "/modificaProfiloUtente");
+
             }else{
                 $_SESSION['toast-type'] = "error";
                 $_SESSION['toast-message'] = "Errore nell'inserimento della password";
@@ -55,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             }
         }else{
             $_SESSION['toast-type'] = "error";
-            $_SESSION['toast-message'] = "Errore nell'inserimento della password";
+            $_SESSION['toast-message'] = "Password non inserita";
             header("Location:".DOMINIO_SITO."/modificaProfiloUtente");
 
         }

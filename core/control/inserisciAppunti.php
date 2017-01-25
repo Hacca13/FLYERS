@@ -3,30 +3,29 @@
 include_once MODEL_DIR . "AppuntiManager.php";
 include_once MODEL_DIR ."Appunti.php";
 
-if(isset($_POST['nome'])) {
+if(isset($_POST['nome']) && $_POST['nome']!="") {
     $nome = $_POST['nome'];
 } else {
     $_SESSION['toast-type'] = "error";
-    $_SESSION['toast-message'] = "Nome del file non settato";
+    $_SESSION['toast-message'] = "Nome del file non inserito";
     header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
-if(isset($_POST['tags'])){
+if(isset($_POST['tags']) && $_POST['tags']!= ""){
     $tags = $_POST['tags'];
     $result = explode(",",$tags);
 
-
 } else {
     $_SESSION['toast-type'] = "error";
-    $_SESSION['toast-message'] = "Tag/s non settati";
+    $_SESSION['toast-message'] = "Tag/s non inserito/i";
     header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
-if(isset($_POST['categorie'])) {
+if(isset($_POST['categorie']) && $_POST['categorie']!= "") {
     $categoria = $_POST['categorie'];
 } else {
     $_SESSION['toast-type'] = "error";
-    $_SESSION['toast-message'] = "Categorie non settata";
+    $_SESSION['toast-message'] = "Categoria non inserita";
     header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
@@ -62,19 +61,18 @@ if(isset($_FILES['file'])) {
 
 } else {
     $_SESSION['toast-type'] = "error";
-    $_SESSION['toast-message'] = "File non caricato";
+    $_SESSION['toast-message'] = "File non inserito";
     header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
 $data = date("Y-m-d");
 $raiting = 0;
-
-$appunti = new Appunti($nome,$categoria,$descrizione, $raiting, $path, $data, $idUtente,$result);
 $manager = new AppuntiManager();
+$appunti = new Appunti($nome,$categoria,$descrizione, $raiting, $path, $data, $idUtente,$result);
+
 
 $manager->insertAppunti($appunti);
-
-include_once CONTROL_DIR ."getAppunti.php";
-
-
+$_SESSION['toast-type'] = "success";
+$_SESSION['toast-message'] = "File inserito con successo!";
+header("Location:".DOMINIO_SITO."/profiloUtente");
 ?>
