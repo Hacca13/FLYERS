@@ -36,7 +36,8 @@
                             <ul id="list-option" class="dropdown-menu" role="menu">
                                 <li><a>Annunci</a></li>
                                 <li><a>Appunti</a></li>
-                                <li><a>Tag</a></li>
+                                <li><a>Categorie</a></li>
+                                <li><a>Tags</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="search_param" value="appunti" id="search_param">

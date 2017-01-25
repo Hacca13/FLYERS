@@ -44,20 +44,52 @@ class AnnuncioManager
         return $listAnnunci;
     }
 
+    public function getAnnuncioByKey($keyAnnunci){
+        $selectSql = "SELECT * FROM ANNUNCIO WHERE KEYANNUNCIO = '%s'";
+        $query = sprintf($selectSql,$keyAnnunci);
+        $res = mysqli_query(Connector::getConnector(), $query);
+        $listAnnunci = array();
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
+                $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                array_push($listAnnunci,$annuncio);
+            }
+        }
+        return $listAnnunci;
+    }
 
+    public function getAnnunciByTitolo($titolo){
+        $selectSql = "SELECT * FROM ANNUNCIO WHERE LIKE '%s'";
+        $titolo = "%".$titolo."%";
+        $query = sprintf($selectSql,$titolo);
+        $res = mysqli_query(Connector::getConnector(), $query);
+        $listAnnunci = array();
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
+                $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                array_push($listAnnunci,$annuncio);
+            }
+        }
+        return $listAnnunci;
+    }
 
+    public function getAnnunciByUser($idUser){
+        $selectSql = "SELECT * FROM ANNUNCIO WHERE KEYUTENTE = '%s'";
+        $query = sprintf($selectSql,$idUser);
+        $res = mysqli_query(Connector::getConnector(), $query);
+        $listAnnunci = array();
+        if ($res) {
+            while ($obj = $res->fetch_assoc()) {
+                $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
+                $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                array_push($listAnnunci,$annuncio);
+            }
+        }
+        return $listAnnunci;
+    }
 
-/*
-
-
-    public function searchAds($nameAd){
-        $GET_ADS = "SELECT * FROM ANNUNCIO WHERE TITOLO LIKE '%s'";
-        $nameAd = "%".$nameAd."%";
-        $query = sprintf($GET_ADS,$nameAd);
-        $result = array();
-        return $result;
-
-    }*/
 
 
 }

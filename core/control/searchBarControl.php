@@ -19,7 +19,7 @@ if(isset($_POST["search"])){
 
             $paramByUser = $_POST["user_param"];
             $sm = new AppuntiManager();
-            $result = $sm->searchNotes($paramByUser);
+            $result = $sm->getAppuntiByTitolo($paramByUser);
 
             include_once VIEW_DIR ."resultSearch.php";
 
@@ -27,24 +27,26 @@ if(isset($_POST["search"])){
 
             $paramByUser = $_POST["user_param"];
             $sm = new AnnuncioManager();
-            $result = $sm->searchAds($paramByUser);
+            $result = $sm->getAnnunciByTitolo($paramByUser);
 
             include_once VIEW_DIR ."resultSearch.php";
 
         }else if($_POST["search_param"] == "tag"){
-
             $paramByUser = $_POST["user_param"];
-            $sm = new TagManager();
-            $result = $sm->searchByTag($paramByUser);
+            $tagManager = new TagManager();
+
 
             include_once VIEW_DIR ."resultSearch.php";
 
         }else if($_POST["search_param"] == "categoria"){
             $paramByUser = $_POST["user_param"];
-            $sm = new CategoriaManager();
-            $result = $sm->searchNotesByCategory($paramByUser);
+            $sm = new AppuntiManager();
+            $result = $sm->getAppuntiByCategoria($paramByUser);
 
             include_once VIEW_DIR ."resultSearch.php";
+        }
+        else{
+            header ("location: ".DOMINIO_SITO);
         }
 
     }

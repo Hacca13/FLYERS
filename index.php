@@ -72,7 +72,7 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
                 include_once VIEW_DIR . "help.php";
                 break;
             case 'inserisciAnnucio':
-                include_once VIEW_DIR . "inserisciAnnucio.php";
+                include_once VIEW_DIR . "inserisciAnnuncio.php";
                 break;
             case 'inserisciAppunto':
                 include_once VIEW_DIR . "inserisciAppunto.php";
@@ -81,9 +81,9 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
                 include_once VIEW_DIR . "listaAppunti.php";
                 break;
             case 'listaAnnunci':
-                include_once VIEW_DIR . "listAnnnunci.php";
+                include_once VIEW_DIR . "listaAnnunci.php";
                 break;
-            case 'login':
+            case 'autenticazione':
                 include_once VIEW_DIR ."login.php";
                 break;
             case 'modificaProfiloUtente':
