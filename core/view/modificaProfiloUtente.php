@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <form action="<?php echo DOMINIO_SITO;?>/changeData" name="modifyUser"  enctype="multipart/form-data">
+                <form action="<?php echo DOMINIO_SITO;?>/modificaProfiloUtenteControl" name="modifyUser">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
 
@@ -71,6 +71,21 @@
                 </form>
             </div>
         </div>
+
+        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
+
+            $type = unserialize($_SESSION["toast-type"]);
+
+            if ($type == "error") { ?>
+                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
+
+            <?php } else if($type == "success") { ?>
+
+                <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
+
+            <?php }
+        }?>
+
     </div>
 </section>
 <?php include_once VIEW_DIR . "footer.php"?>
@@ -78,5 +93,12 @@
 
 <!--Privacy User-->
 <script src="<?php echo STYLE_DIR;?>js/privacyUser.js"></script>
+
+<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
+    <!--Toast notification-->
+    <link href="<?php echo STYLE_DIR;?>css/toast.css">
+    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
+<?php } ?>
+
 
 </html>

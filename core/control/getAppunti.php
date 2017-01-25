@@ -1,18 +1,18 @@
 <?php
 include_once MODEL_DIR . "AppuntiManager.php";
 
-if($isset($_URL) &&$isset($_URL[1])) {
+
+if(isset($_URL) && isset($_URL[1])) {
 
     $categoria = (String)testInput($_URL[1]);
 
-    if($isset($categoria)) {
+
 
         $manager = new AppuntiManager();
 
-        $appunti = $manager->getAllAppuntiByCategoria($categoria);
+        $appunti = $manager->getAppuntiByCategoria($categoria);
 
         include_once VIEW_DIR . "listaAppunti.php";
-    }
 }
 
 
