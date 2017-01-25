@@ -13,7 +13,7 @@ class TagManager
 
     }
 
-    public function insertTag($tag){
+    private function insertTag($tag){
         $insertTag = "INSERT INTO TAG( NOME) VALUES ( '%s'); SELECT LAST_INSERT_ID()";
         $query = sprintf($insertTag,$tag->getNome());
         $keyTag = mysqli_query(Connector::getConnector(), $query);
@@ -25,7 +25,7 @@ class TagManager
             $tag = $listTags[$i];
 
             if($this->thereAre($tag->getNome())){
-                $tagExists = $this->getTag($tag->getNome());
+                $tagExists = $this->getTagByName($tag->getNome());
             }else{
                 $tagExists = $this->insertTag($tag);
             }
@@ -40,7 +40,7 @@ class TagManager
             $tag = $listTags[$i];
 
             if($this->thereAre($tag->getNome())){
-                $tagExists = $this->getTag($tag->getNome());
+                $tagExists = $this->getTagByName($tag->getNome());
             }else{
                 $tagExists = $this->insertTag($tag);
             }
@@ -63,8 +63,8 @@ class TagManager
 
     }
 
-    public function getTag($nameTag){
-        $selectSql = "SELECT * FROM TAG WHERE NOME = '%s'";
+    public function getTagByName($nameTag){
+        $selectSql = "SELECT * FROM TAG WHERE NOME='%s'";
         $query = sprintf($selectSql,$nameTag);
         $result = mysqli_query(Connector::getConnector(), $query);
         if ($result) {
@@ -76,6 +76,48 @@ class TagManager
         return NULL;
     }
 
+    public function getTagByKey($keyTag){
+        $selectSql = "SELECT * FROM TAG WHERE KEYTAG ='%s'";
+        $query = sprintf($selectSql,$keyTag);
+        $result = mysqli_query(Connector::getConnector(), $query);
+        if ($result) {
+            while ($obj = $result->fetch_assoc()) {
+                $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+            }
+            return $tag;
+        }
+        return NULL;
+    }
+
+    public function getTagByAnnuncio($keyAnnuncio){
+        $selectSql = "SELECT * FROM TAGPERANNUNCIO WHERE KEYANNUNCIO ='%s'";
+        $query = sprintf($selectSql,$keyAnnuncio);
+        $result = mysqli_query(Connector::getConnector(), $query);
+        $listTags = array();
+        if ($result) {
+            while ($obj = $result->fetch_assoc()) {
+                $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                array_push($listTags,$tag);
+            }
+        }
+        return $listTags;
+    }
+    public function getTagByAppunti($keyAppunti){
+        $selectSql = "SELECT * FROM TAGPERAPPUNTI WHERE KEYAAPPUNTI ='%s'";
+        $query = sprintf($selectSql,$keyAppunti);
+        $result = mysqli_query(Connector::getConnector(), $query);
+        $listTags = array();
+        if ($result) {
+            while ($obj = $result->fetch_assoc()) {
+                $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                array_push($listTags,$tag);
+            }
+        }
+        return $listTags;
+    }
+
+
+/*
     public function searchByTag($nameTag){
         $GET_TAG_REFERENCES_OBJECTS = "SELECT * FROM annuncio,tag,appunti WHERE annuncio.id = tag.id_annuncio 
                                         AND appunti.id = tag.id_appunti LIKE '%s'";
@@ -83,5 +125,5 @@ class TagManager
         $result = array();//query
         return $result;
 
-    }
+    }*/
 }

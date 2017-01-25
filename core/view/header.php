@@ -26,25 +26,23 @@
 
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="margin-top: 0.5%;margin-bottom:2%;">
                 <div class="left">
-                    <form action="<?php echo DOMINIO_SITO;?>/search" method="post">
-                        <div class="input-group">
-                            <div class="input-group-btn search-panel">
-                                <button type="button" class="btn btn-default dropdown-toggle"
-                                        data-toggle="dropdown">
-                                    <span id="search_concept">Appunti</span> <span class="caret"></span>
-                                </button>
-                                <ul id="list-option" class="dropdown-menu" role="menu">
-                                    <li><a>Appunti</a></li>
-                                    <li><a>Annunci</a></li>
-                                    <li><a>Tag</a></li>
-                                </ul>
-                            </div>
-
-                            <input type="hidden" name="search_param" value="appunti" id="search_param">
-                            <input type="text" name="user_param" class="form-control"  placeholder="Search">
-
-                            <span class="input-group-btn">
-								<button type="submit" style="width: 100%" class="btn btn-default" type="button">
+                    <div class="input-group">
+                        <div class="input-group-btn search-panel">
+                            <button type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown">
+                                <span id="search_concept">Appunti</span> <span class="caret"></span>
+                            </button>
+                            <ul id="list-option" class="dropdown-menu" role="menu">
+                                <li><a>Annunci</a></li>
+                                <li><a>Appunti</a></li>
+                                <li><a>Categorie</a></li>
+                                <li><a>Tags</a></li>
+                            </ul>
+                        </div>
+                        <input type="hidden" name="search_param" value="appunti" id="search_param">
+                        <input type="text" name="user_param" class="form-control"  placeholder="Search">
+                        <span class="input-group-btn">
+								<button style="width: 100%" class="btn btn-default" type="button">
 									<span class="glyphicon glyphicon-search"></span>
 								</button>
 							</span>

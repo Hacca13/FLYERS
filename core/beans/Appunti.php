@@ -17,10 +17,10 @@ class Appunti
     private $path;
     private $dataDiCaricamento;
     private $keyUtente;
-    private $tags;
+    private $listTags;
 
     /**
-     * File constructor.
+     * Appunti constructor.
      * @param $keyFile
      * @param $nome
      * @param $categoria
@@ -29,8 +29,9 @@ class Appunti
      * @param $path
      * @param $dataDiCaricamento
      * @param $keyUtente
+     * @param $listTags
      */
-    public function __construct($keyFile, $nome, $categoria, $descrizione, $raiting, $path, $dataDiCaricamento, $keyUtente)
+    public function __construct($keyFile, $nome, $categoria, $descrizione, $raiting, $path, $dataDiCaricamento, $keyUtente, $listTags)
     {
         $this->keyFile = $keyFile;
         $this->nome = $nome;
@@ -40,8 +41,8 @@ class Appunti
         $this->path = $path;
         $this->dataDiCaricamento = $dataDiCaricamento;
         $this->keyUtente = $keyUtente;
+        $this->listTags = $listTags;
     }
-
 
     /**
      * @return mixed
@@ -163,12 +164,21 @@ class Appunti
         $this->keyUtente = $keyUtente;
     }
 
-    public function setTags($tags){
-        $this->tags = $tags;
+    /**
+     * @return mixed
+     */
+    public function getListTags()
+    {
+        return $this->listTags;
     }
 
-    public function getTags(){
-        return $this->tags;
+    /**
+     * @param mixed $listTags
+     */
+    public function setListTags($listTags)
+    {
+        $this->listTags = $listTags;
     }
+
 
 }

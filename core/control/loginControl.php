@@ -15,7 +15,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
     $password = $_POST['password'];
 
     if($manager->checkLogin($username,$password)){
-        $user = $manager->getyUtenteByID($username);
+        $user = $manager->getUtenteByID($username);
         $_SESSION['user']= serialize($user);
     }
     else{
