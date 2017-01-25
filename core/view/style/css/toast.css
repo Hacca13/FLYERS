@@ -1,9 +1,9 @@
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
+/* The toast - position it at the bottom and in the middle of the screen */
+#toast {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
+    background-color: rgba(57,255,8,0.5); /* Black background color */
     color: #fff; /* White text color */
     text-align: center; /* Centered text */
     border-radius: 2px; /* Rounded borders */
@@ -14,8 +14,8 @@
     bottom: 30px; /* 30px from the bottom */
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
+/* Show the toast when clicking on a button (class added with JavaScript) */
+#toast.show {
     visibility: visible; /* Show the snackbar */
 
     /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
@@ -24,7 +24,7 @@
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
 }
 
-/* Animations to fade the snackbar in and out */
+/* Animations to fade the toast in and out */
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}

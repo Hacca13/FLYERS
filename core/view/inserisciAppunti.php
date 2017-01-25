@@ -87,13 +87,23 @@
                 </form>
             </div>
         </div>
+
+        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
+
+            $type = unserialize($_SESSION["toast-type"]);
+
+            if ($type == "error") { ?>
+                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo unserialize($_SESSION["toast-message"]); ?> </div>
+
+            <?php } else if($type == "success") { ?>
+
+                <div id="toast"> <?php echo unserialize($_SESSION["toast-message"]); ?> </div>
+
+            <?php }
+        }?>
+
     </div>
 </section>
-
-
-
-
-
 
 <!-- Footer -->
 <?php include_once VIEW_DIR . 'footer.php'?>
@@ -106,6 +116,12 @@
 </div>
 
 </body>
+
+<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
+    <!--Toast notification-->
+    <link href="<?php echo STYLE_DIR;?>css/toast.css">
+    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
+<?php } ?>
 
 </html>
 
