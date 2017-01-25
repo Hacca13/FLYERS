@@ -10,6 +10,8 @@ if(isset($_URL) && isset($_URL[1])) {
     $file = $appunti->getPath();
 
     if (file_exists($file)) {
+        $_SESSION['toast-type'] = "success";
+        $_SESSION['toast-message'] = "Download avvenuto con successo!";
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
         header('Content-Disposition: attachment; filename="' . basename($file) . '"');

@@ -8,7 +8,7 @@ if(isset($_POST['nome']) && $_POST['nome']!="") {
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "Nome del file non inserito";
-    header("Location:".DOMINIO_SITO."/profiloUtente");
+    header("Location:".DOMINIO_SITO."/inserisciAppunti");
 }
 
 if(isset($_POST['tags']) && $_POST['tags']!= ""){
@@ -18,7 +18,7 @@ if(isset($_POST['tags']) && $_POST['tags']!= ""){
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "Tag/s non inserito/i";
-    header("Location:".DOMINIO_SITO."/profiloUtente");
+    header("Location:".DOMINIO_SITO."/inserisciAppunti");
 }
 
 if(isset($_POST['categorie']) && $_POST['categorie']!= "") {
@@ -26,7 +26,7 @@ if(isset($_POST['categorie']) && $_POST['categorie']!= "") {
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "Categoria non inserita";
-    header("Location:".DOMINIO_SITO."/profiloUtente");
+    header("Location:".DOMINIO_SITO."/inserisciAppunti");
 }
 
 if(isset($_POST['descrizione'])) {
@@ -62,7 +62,7 @@ if(isset($_FILES['file'])) {
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "File non inserito";
-    header("Location:".DOMINIO_SITO."/profiloUtente");
+    header("Location:".DOMINIO_SITO."/inserisciAppunti");
 }
 
 $data = date("Y-m-d");
@@ -74,5 +74,5 @@ $appunti = new Appunti($nome,$categoria,$descrizione, $raiting, $path, $data, $i
 $manager->insertAppunti($appunti);
 $_SESSION['toast-type'] = "success";
 $_SESSION['toast-message'] = "File inserito con successo!";
-header("Location:".DOMINIO_SITO."/profiloUtente");
+header("Location:".DOMINIO_SITO."/inserisciAppunti");
 ?>

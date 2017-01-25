@@ -39,8 +39,8 @@
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;">
                             <div class="form-group col-xs-12" style="float: right; margin-top: 2%">
-                                <P><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome() ?></P>
-                                <P><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione() ?> .</P>
+                                <P><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome(); ?></P>
+                                <P><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione(); ?> .</P>
                                 <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
                                 <P><b> Utente:</b>&nbsp <?php ?> </P>
                                 <P><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </P>
@@ -60,13 +60,23 @@
         }
         ?>
 
+        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
+
+                <div id="toast"> <?php echo (string)$_SESSION["toast-message"]; ?> </div>
+
+        <?php }?>
+
 
     </div>
 </section>
 
 <!-- Footer -->
 <?php  include_once VIEW_DIR . "footer.php"; ?>
-
-
 </body>
+
+<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
+    <!--Toast notification-->
+    <link href="<?php echo STYLE_DIR;?>css/toast.css">
+    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
+<?php } ?>
 </html>

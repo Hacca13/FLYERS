@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <form action="<?php echo DOMINIO_SITO;?>/changeData" name="modifyUser"  enctype="multipart/form-data">
+                <form action="<?php echo DOMINIO_SITO;?>/modificaProfiloUtenteControl" name="modifyUser">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
 
@@ -77,11 +77,11 @@
             $type = unserialize($_SESSION["toast-type"]);
 
             if ($type == "error") { ?>
-                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo unserialize($_SESSION["toast-message"]); ?> </div>
+                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
 
             <?php } else if($type == "success") { ?>
 
-                <div id="toast"> <?php echo unserialize($_SESSION["toast-message"]); ?> </div>
+                <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
 
             <?php }
         }?>

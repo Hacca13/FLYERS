@@ -62,6 +62,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'visualizzaFile':
                 include_once CONTROL_DIR . "visualizzaFile.php";
                 break;
+            case 'modificaUtente':
+                include_once CONTROL_DIR . "modificaProfiloUtenteControl.php";
+                break;
             //VIEWS
             case '':
                 include_once VIEW_DIR . "home.php";
