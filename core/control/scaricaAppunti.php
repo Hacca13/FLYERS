@@ -6,8 +6,8 @@ if(isset($_URL) && isset($_URL[1])) {
 
     $manager = new AppuntiManager();
     $id = (int)testInput($_URL[1]);
-    $appunto = $manager->getAppunto($id);
-    $file = $appunto->getPath();
+    $appunti = $manager->getAppuntiByKeyAppunti($id);
+    $file = $appunti->getPath();
 
     if (file_exists($file)) {
         header('Content-Description: File Transfer');

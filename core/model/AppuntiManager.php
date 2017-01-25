@@ -86,6 +86,23 @@ class AppuntiManager
         return $listAppunti;
     }
 
+    public function  getAppuntiByKeyAppunti($keyAppunti){
+        $selectSql = "SELECT * FROM APPUNTI WHERE KEYAPPUTI '%s'";
+        $query = sprintf($selectSql,$keyAppunti);
+        $res = mysqli_query(Connector::getConnector(),$query);
+
+        if($res){
+
+            while($obj =$res->fetch_assoc()){
+                $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                return $appunti;
+            }
+        }
+
+        return null;
+
+    }
 
 
 }

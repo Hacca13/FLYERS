@@ -47,7 +47,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'insertAnnuncio':
                 include_once CONTROL_DIR . "inserisciAnnucio.php";
                 break;
-            case 'insertAppunto':
+            case 'insertAppunti':
                 include_once CONTROL_DIR . "inserisciAppunti.php";
                 break;
             case 'profiloUtente':
