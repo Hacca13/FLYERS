@@ -60,6 +60,8 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
             case 'profiloUtente':
                 include_once CONTROL_DIR ."getProfiloUtente.php";
                 break;
+            case 'getAppunti':
+                include_once CONTROL_DIR ."getAppunti.php";
             //VIEWS
             case '':
                 include_once VIEW_DIR . "home.php";
