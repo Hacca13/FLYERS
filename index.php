@@ -16,7 +16,6 @@ define('UPLOADS_DIR', DOMINIO_SITO . '/uploads/');
 define('STYLE_DIR', DOMINIO_SITO . '/core/view/style/');
 define('IMG_DIR', DOMINIO_SITO .'/img/');
 define('UTILS_DIR', CORE_DIR . 'utils/');
-define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
 
     /*
      * URL Parsing, in pratica qualsiasi richiesta al sito arriva a questo file,
@@ -49,7 +48,7 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
                 include_once CONTROL_DIR . "inserisciAnnucio.php";
                 break;
             case 'insertAppunto':
-                include_once CONTROL_DIR . "inserisciAppunto.php";
+                include_once CONTROL_DIR . "inserisciAppunti.php";
                 break;
             case 'profiloUtente':
                 include_once CONTROL_DIR ."getProfiloUtente.php";

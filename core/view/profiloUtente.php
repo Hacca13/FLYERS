@@ -51,6 +51,11 @@
                                 I Miei Appunti
                             </button>
                         </a>
+                        <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
+                            <button type="submit" class="btn btn-success btn-lg" style="float: right;">
+                                Aggiungi nuovi appunti +
+                            </button>
+                        </a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <a href="<?php DOMINIO_SITO?>/myannunci">

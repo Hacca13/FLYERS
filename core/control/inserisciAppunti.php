@@ -3,32 +3,41 @@
 include_once MODEL_DIR . "AppuntiManager.php";
 include_once MODEL_DIR ."Appunti.php";
 
-if(isset($_POST['nome']) && $_POST['nome']!= null) {
+if(isset($_POST['nome'])) {
     $nome = $_POST['nome'];
 } else {
-    //toast
+    $_SESSION['toast-type'] = "error";
+    $_SESSION['toast-message'] = "Nome del file non settato";
+    header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
-if(isset($_POST['tags']) && $_POST['tags']!= null) {
+if(isset($_POST['tags'])){
     $tags = $_POST['tags'];
+    $result = explode(",",$tags);
+
+
 } else {
-    //toast
+    $_SESSION['toast-type'] = "error";
+    $_SESSION['toast-message'] = "Tag/s non settati";
+    header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
-if(isset($_POST['categorie']) && $_POST['categorie']!= null) {
+if(isset($_POST['categorie'])) {
     $categoria = $_POST['categorie'];
 } else {
-    //toast
+    $_SESSION['toast-type'] = "error";
+    $_SESSION['toast-message'] = "Categorie non settata";
+    header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
-if(isset($_POST['descrizione']) && $_POST['descrizione']!= null) {
+if(isset($_POST['descrizione'])) {
     $descrizione = $_POST['descrizione'];
 } else {
     $descrizione = "";
 }
 
 
-if(isset($_FILES['file']) && $_FILES['file']!= null) {
+if(isset($_FILES['file'])) {
     $_FILES['file']['name'];
     $file = rand(1000,100000)."-".$_FILES['file']['name'];
     $file_loc = $_FILES['file']['tmp_name'];
@@ -52,16 +61,19 @@ if(isset($_FILES['file']) && $_FILES['file']!= null) {
     move_uploaded_file($file_loc,$folder.$final_file);
 
 } else {
-    //taost;
+    $_SESSION['toast-type'] = "error";
+    $_SESSION['toast-message'] = "File non caricato";
+    header("Location:".DOMINIO_SITO."/profiloUtente");
 }
 
 $data = date("Y-m-d");
 $raiting = 0;
 
-$appunti = new Appunti(null,$nome,$categoria,$descrizione, $raiting, $path, $data, $idUtente);
+$appunti = new Appunti($nome,$categoria,$descrizione, $raiting, $path, $data, $idUtente,$result);
 $manager = new AppuntiManager();
 
 $manager->insertAppunti($appunti);
+
 include_once CONTROL_DIR ."getAppunti.php";
 
 
