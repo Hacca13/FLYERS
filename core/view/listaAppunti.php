@@ -1,3 +1,4 @@
+<?php include_once BEANS_DIR . "Appunti.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@
             <div class="col-lg-12 text-center">
                 <h2>Lista appunti </h2>
                 <hr class="star-primary">
-                <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunto">
+                <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
                 <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi appunti +</button>
                 </a>
             </div>
@@ -46,11 +47,11 @@
                                 <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
                                 <P><b> Utente:</b>&nbsp <?php ?> </P>
                                 <P><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </P>
-                                <a href="../control/scaricaAppunti.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>">
+                                <a href="<?php echo DOMINIO_SITO;?>/scaricaAppunti/<?php echo $appunti[$i]->getKeyFile(); ?>">
                                 <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
                                 <i class="fa fa-download"></i></button>
                                 </a>
-                                <a href="../control/visualizzaFile.php?id=<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
+                                <a href="<?php echo DOMINIO_SITO;?>/visualizzaFile/<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
                                 <i class="fa fa-file-pdf-o"></i></button></a>
 
                             </div>

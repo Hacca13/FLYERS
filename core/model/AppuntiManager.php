@@ -6,7 +6,6 @@ include_once MODEL_DIR.'TagManager.php';
 class AppuntiManager
 {
 
-    public function __construct() {
 
     private $tagManager;
 
