@@ -1,12 +1,26 @@
 <?php
 include_once MODEL_DIR . "AppuntiManager.php";
 
-$manager = new AppuntiManager();
+if($isset($_URL) &&$isset($_URL[1])) {
 
-$appunti = array();
+    $categoria = (String)testInput($_URL[1]);
 
-$appunti = $manager->getAllAppunti();
+    if($isset($categoria)) {
 
-include_once VIEW_DIR ."listaAppunti.php";
+        $manager = new AppuntiManager();
 
+        $appunti = $manager->getAllAppuntiByCategoria($categoria);
+
+        include_once VIEW_DIR . "listaAppunti.php";
+    }
+}
+
+
+function testInput($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>

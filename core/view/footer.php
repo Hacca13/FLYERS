@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="<?php echo STYLE_DIR;?>css/modCustom.css">
 </head>
 <body>
 <footer class="text-center">
@@ -54,4 +53,21 @@
     </div>
 </footer>
 </body>
+<!-- jQuery -->
+<script src="<?php echo STYLE_DIR; ?>vendor/jquery/jquery.min.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="<?php echo STYLE_DIR; ?>js/freelancer.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="<?php echo STYLE_DIR;?>vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="<?php echo STYLE_DIR;?>js/jqBootstrapValidation.js"></script>
+
+<!--DropDown menu SearchBar-->
+<script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
 </html>

@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="<?php echo STYLE_DIR;?>css/modCustom.css">
 </head>
 <body>
 <nav id="mainNav"class="navbar navbar-default navbar-fixed-top navbar-custom affix-top">
@@ -12,20 +11,20 @@
             <!-- LOGO -->
 
 
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                 <a class="navbar-brand" href="<?php echo DOMINIO_SITO . "/home"?>">Flyers</a>
                 <div class="navbar-header page-scroll">
                     <button type="button" class="navbar-toggle" data-toggle="collapse"
                             data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i
-                                class="fa fa-bars"></i>
+                            class="fa fa-bars"></i>
                     </button>
                 </div>
             </div>
 
             <!-- SEARCHBAR -->
 
-            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12" style="margin-top: 0.5%">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="margin-top: 0.5%;margin-bottom:2%;">
                 <div class="left">
                     <div class="input-group">
                         <div class="input-group-btn search-panel">
@@ -47,19 +46,22 @@
 									<span class="glyphicon glyphicon-search"></span>
 								</button>
 							</span>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 
             <!-- LINK -->
 
-            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                 <div class="collapse navbar-collapse"
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/homeAnnunci"?>">Annunci</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/homeAppunti"?>">Appunti</a></li>
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO ."/profiloUtente"?>">Profilo</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/listaAnnunci"?>">Annunci</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie"?>">Appunti</a></li>
+                        <?php if(isset($_SESSION["user"])){?>
+                            <li class="page-scroll"><a href="<?php echo DOMINIO_SITO ."/profiloUtente"?>">Profilo</a></li>
+                        <?php } ?>
                         <li class="page-scroll"><a href="#">Help</a></li>
                         <li><a href="<?php echo DOMINIO_SITO . "/login"?>">Login</a></li>
                     </ul>

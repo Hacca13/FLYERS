@@ -6,7 +6,7 @@
  * Time: 14:56
  */
 define('ROOT_DIR', dirname(__FILE__));
-define('DOMINIO_SITO', '/FLYERS');//da usare se si va online
+define('DOMINIO_SITO', '/FLYERS');
 define('CORE_DIR', ROOT_DIR . '/core/');
 define('VIEW_DIR', CORE_DIR . 'view/');
 define('MODEL_DIR', CORE_DIR . 'model/');
@@ -57,7 +57,11 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
             case 'insertAppunto':
                 include_once CONTROL_DIR . "inserisciAppunto.php";
                 break;
-
+            case 'profiloUtente':
+                include_once CONTROL_DIR ."getProfiloUtente.php";
+                break;
+            case 'getAppunti':
+                include_once CONTROL_DIR ."getAppunti.php";
             //VIEWS
             case '':
                 include_once VIEW_DIR . "home.php";

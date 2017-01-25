@@ -6,6 +6,7 @@ include_once MODEL_DIR.'TagManager.php';
 class AppuntiManager
 {
 
+    public function __construct() {
 
     private $tagManager;
 
@@ -42,11 +43,13 @@ class AppuntiManager
         $res = mysqli_query(Connector::getConnector(), $query);
         $listAppunti = array();
         if ($res) {
+            $result = array();
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
                 $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
+            return $result;
         }
         return $listAppunti;
     }
@@ -73,11 +76,13 @@ class AppuntiManager
         $res = mysqli_query(Connector::getConnector(), $query);
         $listAppunti = array();
         if ($res) {
+            $result = array();
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
                 $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
+            return $result;
         }
         return $listAppunti;
     }

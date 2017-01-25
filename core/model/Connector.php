@@ -3,7 +3,7 @@
 class Connector
 {
 
-    public function getConnector() {
+    public static function getConnector() {
         $host = 'localhost';
         $user = 'root';
         $pass = '';
