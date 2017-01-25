@@ -16,7 +16,6 @@ define('UPLOADS_DIR', DOMINIO_SITO . '/uploads/');
 define('STYLE_DIR', DOMINIO_SITO . '/core/view/style/');
 define('IMG_DIR', DOMINIO_SITO .'/img/');
 define('UTILS_DIR', CORE_DIR . 'utils/');
-define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
 
     /*
      * URL Parsing, in pratica qualsiasi richiesta al sito arriva a questo file,
@@ -45,23 +44,27 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
             case 'search':
                 include_once CONTROL_DIR . "searchBarControl.php";
                 break;
-            case 'caricaCategorie':
-                include_once CONTROL_DIR . "caricaCategorie.php";
-                break;
-            case 'homeAnnunci':
-                include_once CONTROL_DIR . "homeAnnunci.php";
-                break;
             case 'insertAnnuncio':
                 include_once CONTROL_DIR . "inserisciAnnucio.php";
                 break;
-            case 'insertAppunto':
-                include_once CONTROL_DIR . "inserisciAppunto.php";
+            case 'insertAppunti':
+                include_once CONTROL_DIR . "inserisciAppunti.php";
                 break;
             case 'profiloUtente':
                 include_once CONTROL_DIR ."getProfiloUtente.php";
                 break;
             case 'getAppunti':
                 include_once CONTROL_DIR ."getAppunti.php";
+                break;
+            case 'scaricaAppunti':
+                include_once CONTROL_DIR . "scaricaAppunti.php";
+                break;
+            case 'visualizzaFile':
+                include_once CONTROL_DIR . "visualizzaFile.php";
+                break;
+            case 'modificaUtente':
+                include_once CONTROL_DIR . "modificaProfiloUtenteControl.php";
+                break;
             //VIEWS
             case '':
                 include_once VIEW_DIR . "home.php";
@@ -78,8 +81,8 @@ define('FILES_UPLOADED', UPLOADS_DIR. 'files_uploaded/');
             case 'inserisciAnnucio':
                 include_once VIEW_DIR . "inserisciAnnuncio.php";
                 break;
-            case 'inserisciAppunto':
-                include_once VIEW_DIR . "inserisciAppunto.php";
+            case 'inserisciAppunti':
+                include_once VIEW_DIR . "inserisciAppunti.php";
                 break;
             case 'listaAppunti':
                 include_once VIEW_DIR . "listaAppunti.php";
