@@ -20,7 +20,7 @@ class AnnuncioManager
 
     public function insertAnnuncio($annuncio){
         $insertSql = "INSERT INTO ANNUNCIO(TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
-              VALUES ('%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID();";
+              VALUES ('%s', '%s', '%s', '%s', '%s');";
         $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
         $keyAnnuncio = mysqli_query(Connector::getConnector(), $query);
         $this->tagManager->insertTagsByAnnuncio($keyAnnuncio,$annuncio->getTags());
