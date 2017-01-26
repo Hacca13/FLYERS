@@ -100,6 +100,10 @@
                 <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
 
             <?php }
+
+            unset($_SESSION["toast-type"]);
+            unset($_SESSION["toast-message"]);
+
         }?>
 
     </div>

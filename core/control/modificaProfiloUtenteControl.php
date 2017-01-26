@@ -6,17 +6,17 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
     if(isset($_POST["modifyUser"])){
 
-        $id ="";
-        if(isset($_POST["id"])){
-            $id = $_POST["id"];
+        $username ="";
+        if(isset($_POST["username"])){
+            $username = $_POST["username"];
             $um = new UtenteManager();
-            $flag= $um->existUsername($id);
+            $flag= $um->existUsername($username);
 
             if($flag){
-                $id = $_POST["id"];
+                $username= $_POST["username"];
             }else{
                 $_SESSION['toast-type'] = "error";
-                $_SESSION['toast-message'] = "Id già esistente!";
+                $_SESSION['toast-message'] = "Username già esistente!";
                 header("Location:".DOMINIO_SITO."/modificaProfiloUtente");
             }
         }
@@ -50,15 +50,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
                 $user = unserialize($_SESSION['user']);
 
-                    if ($id == "") {
-                        $id = $user->getId();
+                    if ($username == "") {
+                        $username = $user->getId();
                     }
 
                     if ($email = "") {
                         $email = $user->getEmail();
                     }
 
-                    $userModified = new Utente($id, $email, $citta, $newpssw);
+                    $userModified = new Utente($username, $email, $citta, $newpssw);
                     $um = new UtenteManager();
                     $um->updateUser($user->getKeyUtente(), $userModified);
 

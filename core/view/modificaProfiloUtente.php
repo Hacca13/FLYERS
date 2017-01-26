@@ -29,7 +29,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>ID</label>
-                            <input type="text" class="form-control" placeholder="ID" name="id">
+                            <input type="text" class="form-control" placeholder="Username" name="username">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -84,6 +84,10 @@
                 <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
 
             <?php }
+
+            unset($_SESSION["toast-type"]);
+            unset($_SESSION["toast-message"]);
+
         }?>
 
     </div>
