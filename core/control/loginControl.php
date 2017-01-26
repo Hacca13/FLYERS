@@ -19,7 +19,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
         $_SESSION['user']= serialize($user);
 
         $_SESSION['toast-type'] = "success";
-        $_SESSION['toast-message'] = "Benvenuto ".$user->getId()." !";
+        $_SESSION['toast-message'] = "Bentornato ".$user->getId()." !";
         header ("location: ".DOMINIO_SITO."/home");
 
     }

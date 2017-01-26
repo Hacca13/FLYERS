@@ -8,4 +8,4 @@
 
 session_destroy();
 
-header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."login");
+header ("location: ".DOMINIO_SITO."/autenticazione");

@@ -16,6 +16,8 @@ if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['citta'])
         if(!($manager->existEmail($email)) && !($manager->existUsername($username))){
             $user = new Utente($username,$email,$citta,$password);
             $manager->insertUser($user);
+            $_SESSION['toast-type'] = "success";
+            $_SESSION['toast-message'] = "Benvenuto ".$username." !";
             header ("location: ".DOMINIO_SITO);
 
         }else{

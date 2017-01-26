@@ -31,6 +31,9 @@ $contatto = 2;
 $idUtente = 1;
 $manager->insertAnnuncio($titolo, $descrizione, $contatto, $data, $idUtente);
 
+$_SESSION['toast-type'] = "success";
+$_SESSION['toast-message'] = "Annuncio inserito con successo!";
+
 include_once CONTROL_DIR ."getAnnunci.php";
 
 ?>

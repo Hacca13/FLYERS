@@ -56,6 +56,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'getAppunti':
                 include_once CONTROL_DIR ."getAppunti.php";
                 break;
+            case 'getAnnunci':
+                include_once CONTROL_DIR ."getAnnunci.php";
+                break;
             case 'scaricaAppunti':
                 include_once CONTROL_DIR . "scaricaAppunti.php";
                 break;
@@ -87,17 +90,11 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'help':
                 include_once VIEW_DIR . "help.php";
                 break;
-            case 'inserisciAnnucio':
+            case 'inserisciAnnuncio':
                 include_once VIEW_DIR . "inserisciAnnuncio.php";
                 break;
             case 'inserisciAppunti':
                 include_once VIEW_DIR . "inserisciAppunti.php";
-                break;
-            case 'listaAppunti':
-                include_once VIEW_DIR . "listaAppunti.php";
-                break;
-            case 'listaAnnunci':
-                include_once VIEW_DIR . "listaAnnunci.php";
                 break;
             case 'autenticazione':
                 include_once VIEW_DIR . "autenticazione.php";

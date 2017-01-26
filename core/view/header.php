@@ -57,7 +57,7 @@
                 <div class="collapse navbar-collapse"
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/listaAnnunci";?>">Annunci</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/getAnnunci";?>">Annunci</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie";?>">Appunti</a></li>
 
                         <?php if(isset($_SESSION["user"])){?>

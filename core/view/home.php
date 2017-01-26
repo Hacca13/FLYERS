@@ -52,7 +52,7 @@
                 <div class="carousel-caption">
                     <h1>Annunci</h1>
                     <p>Consulta oppure pubblica un annuncio universitario.</p>
-                    <p><a class="btn btn-lg btn-primary" href="<?php echo DOMINIO_SITO;?>/listaAnnunci" role="button">Consulta gli annunci</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="<?php echo DOMINIO_SITO;?>/getAnnunci" role="button">Consulta gli annunci</a></p>
                 </div>
             </div>
         </div>
