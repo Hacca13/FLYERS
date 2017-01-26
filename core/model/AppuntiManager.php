@@ -4,6 +4,7 @@ include_once BEANS_DIR.'Appunti.php';
 include_once MODEL_DIR.'Connector.php';
 include_once MODEL_DIR.'TagManager.php';
 class AppuntiManager
+
 {
 
 
@@ -15,7 +16,7 @@ class AppuntiManager
 
     public function insertAppunti($appunti){
         $insertSql = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
-                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID()" ;
+                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID();" ;
         $query = sprintf($insertSql,$appunti->getNome(),$appunti->getCategoria(),$appunti->getDescrizione(),$appunti->getRaiting(),$appunti->getPath(),$appunti->getDataDiCaricamento(),$appunti->getKeyUtente());
         $keyAppunto = mysqli_query(Connector::getConnector(), $query);
         $this->tagManager->getTagByAppunti($keyAppunto,$appunti->getListTags());

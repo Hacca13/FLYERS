@@ -14,7 +14,7 @@ class TagManager
     }
 
     private function insertTag($tag){
-        $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s'); SELECT LAST_INSERT_ID()";
+        $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s'); SELECT LAST_INSERT_ID();";
         $query = sprintf($insertTag,$tag);
         $keyTag = mysqli_query(Connector::getConnector(), $query);
         return $keyTag;
@@ -36,16 +36,17 @@ class TagManager
     }
 
     public function insertTagsByAnnuncio($keyAnnuncio,$listTags){
-        for($i=0;$i<count($listTags);$i++) {
-            $tag = $listTags[$i];
 
-            if($this->checkExist($tag)){
-                $tagExists = $this->getTagByName($tag);
+        for($i=0;$i<count($listTags);$i++) {
+            $nameTagSelected = $listTags[$i];
+
+            if($this->checkExist($nameTagSelected)){
+                $tagExists = $this->getTagByName($nameTagSelected);
                 $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
                 $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAnnuncio);
                 mysqli_query(Connector::getConnector(), $query);
             }else{
-                $keyTag = $this->insertTag($tag);
+                $keyTag = $this->insertTag($nameTagSelected);
                 $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
                 $query = sprintf($insertSql,$keyTag,$keyAnnuncio);
                 mysqli_query(Connector::getConnector(), $query);

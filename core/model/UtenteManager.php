@@ -15,7 +15,7 @@ class UtenteManager
     }
 
     function insertUser($user){
-        $insertSql = "INSERT INTO UTENTE (ID, EMAIL, CITTA, PASS) VALUES ('%s', '%s', '%s', '%s')";
+        $insertSql = "INSERT INTO UTENTE (ID, EMAIL, CITTA, PASS) VALUES ('%s', '%s', '%s', '%s');";
         $query = sprintf($insertSql,$user->getId(),$user->getEmail(),$user->getCitta(),$user->getPassword());
         mysqli_query(Connector::getConnector(), $query);
     }

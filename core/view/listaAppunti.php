@@ -16,17 +16,19 @@
 
 
 <!-- Header -->
-<section id="contact">
+<section>
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>Lista appunti </h2>
                 <hr class="star-primary">
+
                 <?php if(isset($_SESSION["user"])){ ?>
                     <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
                         <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi Appunti +</button>
                     </a>
                 <?php } ?>
+
             </div>
         </div>
 
@@ -57,6 +59,13 @@
 
 <!-- Footer -->
 <?php  include_once VIEW_DIR . "footer.php"; ?>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
 </body>
 <script>
 
@@ -90,6 +99,6 @@
     unset($_SESSION["toast-message"]);
     }?>
 
-</script>s
+</script>
 
 </html>
