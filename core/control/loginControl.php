@@ -17,6 +17,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
     if($manager->checkLogin($username,$password)){
         $user = $manager->getUtenteById($username);
         $_SESSION['user']= serialize($user);
+        header ("location: ".DOMINIO_SITO);
     }
     else{
         header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."autenticazione");

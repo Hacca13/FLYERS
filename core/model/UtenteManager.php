@@ -39,15 +39,55 @@ class UtenteManager
         return false;
     }
 
+    function getUtenteById($id){
+        $selectSql ="SELECT * FROM UTENTE WHERE ID = '%s'";
+        $query = sprintf($selectSql,$id);
+        $res = mysqli_query(Connector::getConnector(), $query);
+        if ($res) {
+            while ($r = $res->fetch_assoc()) {
+                $user = new Utente($r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
+                return $user;
+            }
+        }
+        return false;
+    }
+
 
     function checkLogin($username,$password){
         $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s' AND PASS = '%s'";
         $query = sprintf($checkLogin,$username,$password);
         $res = mysqli_query(Connector::getConnector(), $query);
-
-        return $res;
+        if ($res) {
+            while ($r = $res->fetch_assoc()) {
+                return true;
+            }
+        }
+        return false;
     }
 
+    function existEmail($email){
+        $checkLogin ="SELECT * FROM UTENTE WHERE EMAIL ='%s'";
+        $query = sprintf($checkLogin,$email);
+        $res = mysqli_query(Connector::getConnector(), $query);
+        if ($res) {
+            while ($r = $res->fetch_assoc()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function existUsername($username){
+        $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s'";
+        $query = sprintf($checkLogin,$username);
+        $res = mysqli_query(Connector::getConnector(), $query);
+        if ($res) {
+            while ($r = $res->fetch_assoc()) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }
