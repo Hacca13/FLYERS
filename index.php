@@ -91,7 +91,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 include_once VIEW_DIR . "listaAnnunci.php";
                 break;
             case 'autenticazione':
-                include_once VIEW_DIR ."login.php";
+                include_once VIEW_DIR . "autenticazione.php";
                 break;
             case 'modificaProfiloUtente':
                 include_once VIEW_DIR . "modificaProfiloUtente.php";
