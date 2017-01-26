@@ -98,11 +98,5 @@
 <!--Privacy User-->
 <script src="<?php echo STYLE_DIR;?>js/privacyUser.js"></script>
 
-<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
-    <!--Toast notification-->
-    <link href="<?php echo STYLE_DIR;?>css/toast.css">
-    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
-<?php } ?>
-
 
 </html>

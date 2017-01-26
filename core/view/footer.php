@@ -70,4 +70,8 @@
 
 <!--DropDown menu SearchBar-->
 <script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
+
+<!--ToastJS-->
+<script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
+
 </html>

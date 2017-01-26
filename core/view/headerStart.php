@@ -16,6 +16,9 @@
     <!--Mod CSS -->
     <link href="<?php echo STYLE_DIR;?>css/modCustom.css" rel="stylesheet">
 
+    <!--Toast-->
+    <link href="<?php echo STYLE_DIR;?>css/toast.css">
+
     <!-- Custom Fonts -->
     <link href="<?php echo STYLE_DIR; ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">

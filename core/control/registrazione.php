@@ -11,22 +11,29 @@ if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['citta'])
     $password = $_POST['password'];
     $confermaPassword = $_POST['confermaPassword'];
     $manager = new UtenteManager();
-
+    $user = null;
     if($password == $confermaPassword){
         if(!($manager->existEmail($email)) && !($manager->existUsername($username))){
             $user = new Utente($username,$email,$citta,$password);
             $manager->insertUser($user);
+            header ("location: ".DOMINIO_SITO);
 
         }else{
-            header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."autenticazione");
+            $_SESSION['toast-type'] = "error";
+            $_SESSION['toast-message'] = "Dati già esistenti!";
+            header ("location: ".DOMINIO_SITO."/autenticazione");
         }
 
     }else{
-        header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."autenticazione");
+        $_SESSION['toast-type'] = "error";
+        $_SESSION['toast-message'] = "Mancano dei campi!";
+        header ("location: ".DOMINIO_SITO . "/autenticazione");
     }
 
 }else{
-    header ("location: ".DOMINIO_SITO.DIRECTORY_SEPARATOR."autenticazione");
+    $_SESSION['toast-type'] = "error";
+    $_SESSION['toast-message'] = "Mancano dei campi!";
+    header ("location: ".DOMINIO_SITO . "/autenticazione");
 }
 
 

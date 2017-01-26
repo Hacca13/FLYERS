@@ -60,6 +60,24 @@
     <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> </div>
 
 
+<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
+
+    $type = $_SESSION["toast-type"];
+
+    if ($type == "error") { ?>
+        <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
+
+    <?php } else if($type == "success") { ?>
+
+        <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
+
+    <?php }
+
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+
+}?>
+
 <!-- Footer -->
 <?php include_once VIEW_DIR .'footer.php'?>
 

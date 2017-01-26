@@ -21,34 +21,34 @@
                 </div>
             </div>
             <div class="row">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <form action="<?php echo DOMINIO_SITO;?>/login" method="post">
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Username</label>
-                                <input type="text" class="form-control" placeholder="Username" name="username" id="Username" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
-                                <p class="help-block text-danger"></p>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <form action="<?php echo DOMINIO_SITO;?>/login" method="post">
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Username</label>
+                                    <input type="text" class="form-control" placeholder="Username" name="username" id="Username" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row control-group">
-                            <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <label>Password</label>
-                                <input type="password" class="form-control" placeholder="Password" name="password" id="password" required="" data-validation-required-message="Please enter your password." aria-invalid="false">
-                                <p class="help-block text-danger"></p>
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" placeholder="Password" name="password" id="password" required="" data-validation-required-message="Please enter your password." aria-invalid="false">
+                                    <p class="help-block text-danger"></p>
+                                </div>
                             </div>
-                        </div>
-                        <br>
-                        <div id="success"></div>
-                        <div class="row">
-                            <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg">Accedi</button>
+                            <br>
+                            <div id="success"></div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <button type="submit" class="btn btn-success btn-lg">Accedi</button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         <div class="col-lg-6 col-md-6">
             <div class="row">
@@ -114,33 +114,40 @@
             </div>
         </div>
 
+
         <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
 
             $type = $_SESSION["toast-type"];
+            ?>
+            <div id="toast" class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <div class="modal-fade">
 
-            if ($type == "error") { ?>
-                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
 
-            <?php } else if($type == "success") { ?>
+                        <?php if ($type == "error") { ?>
 
-                <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
+                            <div  style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
 
-            <?php }
+                        <?php } else if($type == "success") { ?>
 
-            unset($_SESSION["toast-type"]);
-            unset($_SESSION["toast-message"]);
+                            <div><?php echo (String)$_SESSION["toast-message"]; ?></div>
 
-        }?>
+                        <?php }
+
+                        unset($_SESSION["toast-type"]);
+                        unset($_SESSION["toast-message"]); ?>
+                    </div>
+                </div>
+
+            </div>
+
+        <?php }?>
 
     </div>
 </section>
 <?php include_once VIEW_DIR . "footer.php"?>
 </body>
+<!--Toast notification-->
 
-<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
-    <!--Toast notification-->
-    <link href="<?php echo STYLE_DIR;?>css/toast.css">
-    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
-<?php } ?>
 
 </html>

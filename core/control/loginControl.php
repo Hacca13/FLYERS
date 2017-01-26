@@ -19,20 +19,20 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
         $_SESSION['user']= serialize($user);
 
         $_SESSION['toast-type'] = "success";
-        $_SESSION['toast-message'] = "Bentornato ".$user->getId()." !";
-        header ("location: ".DOMINIO_SITO);
+        $_SESSION['toast-message'] = "Benvenuto ".$user->getId()." !";
+        header ("location: ".DOMINIO_SITO."/home");
 
     }
     else{
         $_SESSION['toast-type'] = "error";
-        $_SESSION['toast-message'] = "Username e/o Password Sbagliat!";
+        $_SESSION['toast-message'] = "Username e/o Password Sbagliati!";
         header ("location: ".DOMINIO_SITO."/autenticazione");
     }
 
 }
 else{
     $_SESSION['toast-type'] = "error";
-    $_SESSION['toast-message'] = "Username e/o Password Sbagliat!";
+    $_SESSION['toast-message'] = "Username e/o Password Sbagliati!";
     header ("location: ".DOMINIO_SITO."/autenticazione");
 }
 
