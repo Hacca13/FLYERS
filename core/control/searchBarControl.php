@@ -15,7 +15,7 @@ if(isset($_POST["search"])){
 
     if(isset($_POST["search_param"]) && isset($_POST["user_param"])){
 
-        if($_POST["search_param"] == "appunti"){
+        if($_POST["search_param"] == "Appunti"){
 
             $paramByUser = $_POST["user_param"];
             $sm = new AppuntiManager();
@@ -23,7 +23,7 @@ if(isset($_POST["search"])){
 
             include_once VIEW_DIR ."resultSearch.php";
 
-        }else if($_POST["search_param"] == "annunci"){
+        }else if($_POST["search_param"] == "Annunci"){
 
             $paramByUser = $_POST["user_param"];
             $sm = new AnnuncioManager();
@@ -31,14 +31,21 @@ if(isset($_POST["search"])){
 
             include_once VIEW_DIR ."resultSearch.php";
 
-        }else if($_POST["search_param"] == "tag"){
+        }else if($_POST["search_param"] == "Tag-Annunci") {
             $paramByUser = $_POST["user_param"];
             $tagManager = new TagManager();
 
+            $result = $tagManager->searchAnnunciByTag($paramByUser);
+            include_once VIEW_DIR . "resultSearch.php";
 
-            include_once VIEW_DIR ."resultSearch.php";
+        }else if ($_POST["search_param"] == "Tag-Appunti"){
+            $paramByUser = $_POST["user_param"];
+            $tagManager = new TagManager();
 
-        }else if($_POST["search_param"] == "categoria"){
+            $result = $tagManager->searchAppuntiByTag($paramByUser);
+            include_once VIEW_DIR . "resultSearch.php";
+
+        }else if($_POST["search_param"] == "Categoria"){
             $paramByUser = $_POST["user_param"];
             $sm = new AppuntiManager();
             $result = $sm->getAppuntiByCategoria($paramByUser);
@@ -50,8 +57,4 @@ if(isset($_POST["search"])){
         }
 
     }
-
 }
-//stub
-$result = array();
-include_once VIEW_DIR ."resultSearch.php";

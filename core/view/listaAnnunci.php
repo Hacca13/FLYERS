@@ -1,16 +1,20 @@
-<?php include_once BEANS_DIR ."Annuncio.php"?>
+<?php include_once BEANS_DIR . "Annuncio.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Flyers | Lista Annunci</title>
+    <title>Flyers | Lista Appunti</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
+
 </head>
+
 
 <body>
 
 <!-- Navigation -->
-<?php  include_once VIEW_DIR . "header.php"; ?>
+<?php  include_once VIEW_DIR ."header.php"; ?>
 <!-- Header -->
+
+
 
 <section>
     <div class="container" style="margin-top: 10%;">
@@ -60,7 +64,6 @@
         <i class="fa fa-chevron-up"></i>
     </a>
 </div>
-
 </body>
 <script>
 

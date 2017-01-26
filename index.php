@@ -40,7 +40,6 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
 
     if (!defined("TESTING")) {
         switch (isset($_URL[0]) ? $_URL[0] : '') {
-            //CONTROL
             case 'search':
                 include_once CONTROL_DIR . "searchBarControl.php";
                 break;
@@ -77,7 +76,6 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'logout':
                 include_once CONTROL_DIR . "logoutControl.php";
                 break;
-            //VIEWS
             case '':
                 include_once VIEW_DIR . "home.php";
                 break;

@@ -1,7 +1,8 @@
 <?php
 
 include_once MODEL_DIR . "AppuntiManager.php";
-include_once MODEL_DIR ."Appunti.php";
+include_once BEANS_DIR ."Appunti.php";
+include_once BEANS_DIR ."Utente.php";
 
 if(isset($_POST['nome']) && $_POST['nome']!="") {
     $nome = $_POST['nome'];
@@ -67,8 +68,11 @@ if(isset($_FILES['file'])) {
 
 $data = date("Y-m-d");
 $raiting = 0;
+$user = unserialize($_SESSION["user"]);
+$keyUtente = $user->getKeyUtente();
+
 $manager = new AppuntiManager();
-$appunti = new Appunti($nome,$categoria,$descrizione, $raiting, $path, $data, $idUtente,$result);
+$appunti = new Appunti(null,$nome,$categoria,$descrizione, $raiting, $path, $data, $keyUtente ,$result);
 
 
 $manager->insertAppunti($appunti);
