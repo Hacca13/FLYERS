@@ -40,7 +40,6 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
 
     if (!defined("TESTING")) {
         switch (isset($_URL[0]) ? $_URL[0] : '') {
-            //CONTROL
             case 'search':
                 include_once CONTROL_DIR . "searchBarControl.php";
                 break;
@@ -55,6 +54,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 break;
             case 'getAppunti':
                 include_once CONTROL_DIR ."getAppunti.php";
+                break;
+            case 'getAnnunci':
+                include_once CONTROL_DIR ."getAnnunci.php";
                 break;
             case 'scaricaAppunti':
                 include_once CONTROL_DIR . "scaricaAppunti.php";
@@ -74,7 +76,6 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'logout':
                 include_once CONTROL_DIR . "logoutControl.php";
                 break;
-            //VIEWS
             case '':
                 include_once VIEW_DIR . "home.php";
                 break;
@@ -87,17 +88,11 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'help':
                 include_once VIEW_DIR . "help.php";
                 break;
-            case 'inserisciAnnucio':
+            case 'inserisciAnnuncio':
                 include_once VIEW_DIR . "inserisciAnnuncio.php";
                 break;
             case 'inserisciAppunti':
                 include_once VIEW_DIR . "inserisciAppunti.php";
-                break;
-            case 'listaAppunti':
-                include_once VIEW_DIR . "listaAppunti.php";
-                break;
-            case 'listaAnnunci':
-                include_once VIEW_DIR . "listaAnnunci.php";
                 break;
             case 'autenticazione':
                 include_once VIEW_DIR . "autenticazione.php";
@@ -106,7 +101,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 include_once VIEW_DIR . "modificaProfiloUtente.php";
                 break;
             default:
-                include_once VIEW_DIR ."404.php";
+                include_once VIEW_DIR ."404.html";
                 break;
         }
 

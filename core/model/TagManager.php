@@ -1,5 +1,7 @@
 <?php
-
+include_once BEANS_DIR . "Tag.php";
+include_once BEANS_DIR . "Annuncio.php";
+include_once BEANS_DIR . "Appunti.php";
 /**
  * Created by PhpStorm.
  * User: Paolo
@@ -14,8 +16,8 @@ class TagManager
     }
 
     private function insertTag($tag){
-        $insertTag = "INSERT INTO TAG( NOME) VALUES ( '%s'); SELECT LAST_INSERT_ID()";
-        $query = sprintf($insertTag,$tag->getNome());
+        $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s'); SELECT LAST_INSERT_ID();";
+        $query = sprintf($insertTag,$tag);
         $keyTag = mysqli_query(Connector::getConnector(), $query);
         return $keyTag;
     }
@@ -36,30 +38,39 @@ class TagManager
     }
 
     public function insertTagsByAnnuncio($keyAnnuncio,$listTags){
-        for($i=0;$i<count($listTags);$i++) {
-            $tag = $listTags[$i];
 
-            if($this->thereAre($tag->getNome())){
-                $tagExists = $this->getTagByName($tag->getNome());
+        for($i=0;$i<count($listTags);$i++) {
+            $nameTagSelected = $listTags[$i];
+
+            if($this->checkExist($nameTagSelected)){
+                $tagExists = $this->getTagByName($nameTagSelected);
+                $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
+                $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAnnuncio);
+                mysqli_query(Connector::getConnector(), $query);
             }else{
-                $tagExists = $this->insertTag($tag);
+                $keyTag = $this->insertTag($nameTagSelected);
+                $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
+                $query = sprintf($insertSql,$keyTag,$keyAnnuncio);
+                mysqli_query(Connector::getConnector(), $query);
             }
-            $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
-            $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAnnuncio);
-            mysqli_query(Connector::getConnector(), $query);
+
         }
     }
 
-    public function thereAre($nameTag){
-        $selectSql = "SELECT COUNT(*) FROM TAG WHERE NOME = '%s'";
+    public function checkExist($nameTag){
+        $selectSql = "SELECT * FROM TAG WHERE NOME = '%s'";
         $query = sprintf($selectSql,$nameTag);
-        $count = mysqli_query(Connector::getConnector(), $query);
+        $result = mysqli_query(Connector::getConnector(), $query);
 
-        if($count==1){
+        if($result->num_rows >0 ){
+
             return true;
-        }elseif($count==0){
+
+        }else{
+
             return false;
         }
+
 
     }
 
@@ -70,10 +81,11 @@ class TagManager
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
                 $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                return $tag;
             }
-            return $tag;
+
         }
-        return NULL;
+        return null;
     }
 
     public function getTagByKey($keyTag){
@@ -83,14 +95,17 @@ class TagManager
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
                 $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                return $tag;
             }
-            return $tag;
+
         }
         return NULL;
     }
 
     public function getTagByAnnuncio($keyAnnuncio){
-        $selectSql = "SELECT * FROM TAGPERANNUNCIO WHERE KEYANNUNCIO ='%s'";
+        $selectSql = "SELECT * FROM TAG,TAGPERANNUNCIO,ANNUNCIO WHERE TAGPERANNUNCIO.KEYANNUNCIO ='%s' 
+                      AND TAGPERANNUNCIO.KEYANNUNCIO = ANNUNCIO.KEYANNUNCIO
+                      AND TAGPERANNUNCIO.TAG = TAG.KEYTAG";
         $query = sprintf($selectSql,$keyAnnuncio);
         $result = mysqli_query(Connector::getConnector(), $query);
         $listTags = array();
@@ -103,7 +118,9 @@ class TagManager
         return $listTags;
     }
     public function getTagByAppunti($keyAppunti){
-        $selectSql = "SELECT * FROM TAGPERAPPUNTI WHERE KEYAAPPUNTI ='%s'";
+        $selectSql = "SELECT * FROM TAG,TAGPERAPPUNTI,APPUNTI WHERE TAGPERAPPUNTI.KEYAPPUNTI ='%s' 
+                      AND TAGPERAPPUNTI.KEYAPPUNTI = APPUNTI.KEYAPPUNTI
+                      AND TAGPERAPPUNTI.TAG = TAG.KEYTAG";
         $query = sprintf($selectSql,$keyAppunti);
         $result = mysqli_query(Connector::getConnector(), $query);
         $listTags = array();
@@ -117,13 +134,40 @@ class TagManager
     }
 
 
-/*
-    public function searchByTag($nameTag){
-        $GET_TAG_REFERENCES_OBJECTS = "SELECT * FROM annuncio,tag,appunti WHERE annuncio.id = tag.id_annuncio 
-                                        AND appunti.id = tag.id_appunti LIKE '%s'";
+    public function searchAppuntiByTag($nameTag){
+        $GET_TAG_REFERENCES_OBJECTS = "SELECT APPUNTI FROM TAG,TAGPERAPPUNTI,APPUNTI 
+                                        WHERE TAG.NOME = '%s' AND 
+                                        TAG.KEYTAG = TAPERAPPUNTI.KEYTAG 
+                                        AND APPUNTI.KEYAPPUNTI = TAGPERAPPUNTI.KEYAPPUNTI";
         $query = sprintf($GET_TAG_REFERENCES_OBJECTS,$nameTag);
-        $result = array();//query
-        return $result;
+        $result = mysqli_query(Connector::getConnector(),$query);
+        $listAppunti = array();
+        if($result){
+            while ($obj = $result->fetch_assoc()) {
+                $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                array_push($listAppunti,$appunti);
+            }
+        }
+        return $listAppunti;
+    }
 
-    }*/
+
+    public function searchAnnunciByTag($nameTag){
+        $GET_TAG_REFERENCES_OBJECTS = "SELECT ANNUNCIO FROM TAG,TAGPERANNUNCIO,ANNUNCIO
+                                        WHERE TAG.NOME = '%s' AND 
+                                        TAG.KEYTAG = TAGPERANNUNCIO.KEYTAG 
+                                        AND ANNUNCIO.KEYANNUNCIO = TAGPERANNUNCIO.KEYANNUNCIO";
+        $query = sprintf($GET_TAG_REFERENCES_OBJECTS,$nameTag);
+        $result = mysqli_query(Connector::getConnector(),$query);
+        $listAnnunci = array();
+        if($result){
+            while ($obj = $result->fetch_assoc()) {
+                $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
+                $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                array_push($listAnnunci,$annuncio);
+            }
+        }
+        return $listAnnunci;
+    }
 }

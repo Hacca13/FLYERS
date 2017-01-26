@@ -52,13 +52,12 @@
                 <div class="carousel-caption">
                     <h1>Annunci</h1>
                     <p>Consulta oppure pubblica un annuncio universitario.</p>
-                    <p><a class="btn btn-lg btn-primary" href="<?php echo DOMINIO_SITO;?>/listaAnnunci" role="button">Consulta gli annunci</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="<?php echo DOMINIO_SITO;?>/getAnnunci" role="button">Consulta gli annunci</a></p>
                 </div>
             </div>
         </div>
     </div>
     <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> </div>
-
 
 <!-- Footer -->
 <?php include_once VIEW_DIR .'footer.php'?>
@@ -71,5 +70,38 @@
 </div>
 
 </body>
+<script>
+
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
+
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr["<?php echo $_SESSION["toast-type"];?>"]("<?php echo $_SESSION["toast-message"];?>")
+
+    });
+
+
+    <?php
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+    }?>
+
+</script>
 
 </html>

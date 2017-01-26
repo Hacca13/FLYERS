@@ -35,8 +35,9 @@
                             <ul id="list-option" class="dropdown-menu" role="menu">
                                 <li><a>Annunci</a></li>
                                 <li><a>Appunti</a></li>
-                                <li><a>Categorie</a></li>
-                                <li><a>Tags</a></li>
+                                <li><a>Categoria</a></li>
+                                <li><a>Tag-Appunti</a></li>
+                                <li><a>Tag-Annunci</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="search_param" value="appunti" id="search_param">
@@ -57,13 +58,19 @@
                 <div class="collapse navbar-collapse"
                      id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/listaAnnunci";?>">Annunci</a></li>
+                        <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/getAnnunci";?>">Annunci</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie";?>">Appunti</a></li>
                         <?php if(isset($_SESSION["user"])){?>
                             <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/profiloUtente";?>">Profilo</a></li>
                         <?php } ?>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO ."/help";?>">Help</a></li>
-                        <li><a href="<?php echo DOMINIO_SITO . "/autenticazione";?>">Login</a></li>
+                        <li>
+                            <?php if(isset($_SESSION["user"])){?>
+                            <a href="<?php echo DOMINIO_SITO;?>/logout">Logout</a>
+                        <?php }else{ ?>
+                            <a href="<?php echo DOMINIO_SITO;?>/autenticazione">Login</a>
+                        <?php } ?>
+                        </li>
                     </ul>
                 </div>
             </div>

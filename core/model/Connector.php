@@ -7,8 +7,8 @@ class Connector
         $host = 'localhost';
         $user = 'root';
         $pass = '';
-        $db = 'Flyers';
-        return mysqli_connect($host, $user, $pass, $db);
+        $db = 'flyers';
+        return new mysqli($host, $user, $pass, $db);
     }
 
 }

@@ -15,68 +15,90 @@
 <!-- Header -->
 
 
-<!-- Header -->
-<section id="contact">
+
+<section>
     <div class="container" style="margin-top: 10%;">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>Lista appunti </h2>
                 <hr class="star-primary">
+
+                <?php if(isset($_SESSION["user"])){ ?>
+                    <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
+                        <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovi Appunti +</button>
+                    </a>
+                <?php } ?>
+
             </div>
         </div>
 
 
         <?php
-
         for ($i = 0; $i < count($appunti); $i++) {
             ?>
 
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                        <br>
-                        <div class="row" style="  position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;">
-                            <div class="form-group col-xs-12" style="float: right; margin-top: 2%">
-                                <P><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome(); ?></P>
-                                <P><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione(); ?> .</P>
-                                <P><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </P>
-                                <P><b> Utente:</b>&nbsp <?php ?> </P>
-                                <P><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </P>
-                                <a href="<?php echo DOMINIO_SITO;?>/scaricaAppunti/<?php echo $appunti[$i]->getKeyFile(); ?>">
-                                <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
-                                <i class="fa fa-download"></i></button>
-                                </a>
-                                <a href="<?php echo DOMINIO_SITO;?>/visualizzaFile/<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi
-                                <i class="fa fa-file-pdf-o"></i></button></a>
-
-                            </div>
-                        </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <p><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome(); ?></p>
+                    <p><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione(); ?> .</p>
+                    <p><b> Tag:</b>&nbsp Affitto &nbsp Camera &nbsp Singola </p>
+                    <p><b> Utente:</b>&nbsp <?php ?> </p>
+                    <p><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </p>
+                    <a href="<?php echo DOMINIO_SITO;?>/scaricaAppunti/<?php echo $appunti[$i]->getKeyFile(); ?>">
+                        <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
+                            <i class="fa fa-download"></i></button>
+                    </a>
+                    <a href="<?php echo DOMINIO_SITO;?>/visualizzaFile/<?php echo $appunti[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi<i class="fa fa-file-pdf-o"></i></button></a>
                 </div>
             </div>
-
             <?php
         }
         ?>
-
-        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
-
-                <div id="toast"> <?php echo (string)$_SESSION["toast-message"]; ?> </div>
-
-        <?php }?>
-
-
     </div>
 </section>
 
 <!-- Footer -->
 <?php  include_once VIEW_DIR . "footer.php"; ?>
-</body>
 
-<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
-    <!--Toast notification-->
-    <link href="<?php echo STYLE_DIR;?>css/toast.css">
-    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
-<?php } ?>
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+</body>
+<script>
+
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
+
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr["<?php echo $_SESSION["toast-type"];?>"]("<?php echo $_SESSION["toast-message"];?>")
+
+    });
+
+
+    <?php
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+    }?>
+
+</script>
+
 </html>

@@ -29,7 +29,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>ID</label>
-                            <input type="text" class="form-control" placeholder="ID" name="id">
+                            <input type="text" class="form-control" placeholder="Username" name="username">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -71,21 +71,6 @@
                 </form>
             </div>
         </div>
-
-        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
-
-            $type = unserialize($_SESSION["toast-type"]);
-
-            if ($type == "error") { ?>
-                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
-
-            <?php } else if($type == "success") { ?>
-
-                <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
-
-            <?php }
-        }?>
-
     </div>
 </section>
 <?php include_once VIEW_DIR . "footer.php"?>
@@ -93,12 +78,38 @@
 
 <!--Privacy User-->
 <script src="<?php echo STYLE_DIR;?>js/privacyUser.js"></script>
+<script>
 
-<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
-    <!--Toast notification-->
-    <link href="<?php echo STYLE_DIR;?>css/toast.css">
-    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
-<?php } ?>
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
 
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr["<?php echo $_SESSION["toast-type"];?>"]("<?php echo $_SESSION["toast-message"];?>")
+
+    });
+
+
+    <?php
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+    }?>
+
+</script>
 
 </html>

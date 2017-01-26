@@ -46,21 +46,26 @@
             <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="<?php DOMINIO_SITO;?>/myappunti">
+                        <a href="<?php echo DOMINIO_SITO;?>/myappunti">
                             <button id="my-appunti"class="btn btn-success btn-lg">
                                 I Miei Appunti
                             </button>
                         </a>
                         <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
-                            <button type="submit" class="btn btn-success btn-lg" style="float: right;">
+                            <button type="submit" class="btn btn-success btn-lg">
                                 Aggiungi nuovi appunti +
                             </button>
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="<?php DOMINIO_SITO;?>/myannunci">
+                        <a href="<?php echo DOMINIO_SITO;?>/myannunci">
                             <button id="my-annunci" class="btn btn-success btn-lg">
                                 I Miei Annunci
+                            </button>
+                        </a>
+                        <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                Aggiungi nuovo Annuncio +
                             </button>
                         </a>
                     </div>

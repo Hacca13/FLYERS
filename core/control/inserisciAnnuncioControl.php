@@ -1,36 +1,52 @@
 <?php
+include_once BEANS_DIR ."Annuncio.php";
+include_once MODEL_DIR . "AnnuncioManager.php";
+include_once BEANS_DIR . "Utente.php";
 
-include_once MODEL_DIR . "AnnunciManager.php";
-
-if(isset($_POST['titolo']) && $_POST['titolo']!= null) {
+if(isset($_POST['titolo'])){
     $titolo = $_POST['titolo'];
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "Inserisci il titolo";
+    header("Location:". DOMINIO_SITO."/inserisciAnnuncio");
 }
 
-if(isset($_POST['tags']) && $_POST['tags']!= null) {
+if(isset($_POST['tags'])) {
     $tags = $_POST['tags'];
+    $result = explode(",",$tags);
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "Inserisci almeno un tag";
+    header("Location:". DOMINIO_SITO."/inserisciAnnuncio");
 }
 
-
-if(isset($_POST['descrizione']) && $_POST['descrizione']!= null) {
+if(isset($_POST['descrizione'])){
     $descrizione = $_POST['descrizione'];
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "Inserisci la descrizione";
+    header("Location:". DOMINIO_SITO."/inserisciAnnuncio");
 }
 
+if(isset($_POST['contatto'])) {
+    $contatto = $_POST['contatto'];
+}else{
+    $_SESSION['toast-type'] = "error";
+    $_SESSION['toast-message'] = "Inserisci un contatto";
+    header("Location:". DOMINIO_SITO."/inserisciAnnuncio");
+}
+
+$user = unserialize($_SESSION["user"]);
+$keyUtente = $user->getKeyUtente();
 
 $data = date("Y-m-d");
 $manager = new AnnuncioManager();
-$contatto = 2;
-$idUtente = 1;
-$manager->insertAnnuncio($titolo, $descrizione, $contatto, $data, $idUtente);
+$annuncio = new Annuncio(null,$titolo, $descrizione, $contatto, $data, $keyUtente,$result);
+$manager->insertAnnuncio($annuncio);
 
-include_once CONTROL_DIR ."getAnnunci.php";
+$_SESSION['toast-type'] = "success";
+$_SESSION['toast-message'] = "Annuncio inserito con successo!";
+
+header("Location:". DOMINIO_SITO."/getAnnunci");
 
 ?>

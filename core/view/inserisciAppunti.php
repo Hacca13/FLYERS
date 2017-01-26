@@ -87,22 +87,6 @@
                 </form>
             </div>
         </div>
-
-        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
-
-            $type = $_SESSION["toast-type"];
-
-            if ($type == "error") { ?>
-                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
-
-            <?php } else if($type == "success") { ?>
-
-                <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
-
-            <?php }
-        }?>
-
-    </div>
 </section>
 
 <!-- Footer -->
@@ -116,12 +100,39 @@
 </div>
 
 </body>
+<script>
 
-<?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])){?>
-    <!--Toast notification-->
-    <link href="<?php echo STYLE_DIR;?>css/toast.css">
-    <script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
-<?php } ?>
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
+
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr["<?php echo $_SESSION["toast-type"];?>"]("<?php echo $_SESSION["toast-message"];?>")
+
+    });
+
+
+    <?php
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+    }?>
+
+</script>
 
 </html>
 

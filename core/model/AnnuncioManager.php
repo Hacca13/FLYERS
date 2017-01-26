@@ -11,23 +11,19 @@ include_once MODEL_DIR.'Connector.php';
 include_once MODEL_DIR.'TagManager.php';
 class AnnuncioManager
 {
-
-
     private $tagManager;
 
     public function __construct() {
-        $this->tagManager= new TagManager();
 
+        $this->tagManager = new TagManager();
     }
 
     public function insertAnnuncio($annuncio){
-        $insertSql = "INSERT INTO ANNUNCIO( TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
-              VALUES ( '%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID()";
+        $insertSql = "INSERT INTO ANNUNCIO(TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
+              VALUES ('%s', '%s', '%s', '%s', '%s');";
         $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
         $keyAnnuncio = mysqli_query(Connector::getConnector(), $query);
-
         $this->tagManager->insertTagsByAnnuncio($keyAnnuncio,$annuncio->getTags());
-
     }
 
     public function getAllAnnunci(){
