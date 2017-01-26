@@ -71,7 +71,7 @@
 <!--DropDown menu SearchBar-->
 <script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
 
-<!--ToastJS-->
-<script src="<?php echo STYLE_DIR;?>js/toastJS.js"></script>
+<!--Plugin toastr-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 </html>

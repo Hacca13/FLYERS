@@ -74,14 +74,13 @@
 
         <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
 
-            $type = unserialize($_SESSION["toast-type"]);
+            $type = $_SESSION["toast-type"];
 
             if ($type == "error") { ?>
-                <div id="toast" style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
+
 
             <?php } else if($type == "success") { ?>
 
-                <div id="toast"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
 
             <?php }
 

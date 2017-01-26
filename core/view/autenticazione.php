@@ -98,8 +98,6 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-
-
                             <br>
                             <div id="success"></div>
                             <div class="row">
@@ -113,41 +111,39 @@
                 </div>
             </div>
         </div>
-
-
-        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
-
-            $type = $_SESSION["toast-type"];
-            ?>
-            <div id="toast" class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                    <div class="modal-fade">
-
-
-                        <?php if ($type == "error") { ?>
-
-                            <div  style="background-color:rgba(255,20,20,0.5)"> <?php echo (String)$_SESSION["toast-message"]; ?> </div>
-
-                        <?php } else if($type == "success") { ?>
-
-                            <div><?php echo (String)$_SESSION["toast-message"]; ?></div>
-
-                        <?php }
-
-                        unset($_SESSION["toast-type"]);
-                        unset($_SESSION["toast-message"]); ?>
-                    </div>
-                </div>
-
-            </div>
-
-        <?php }?>
-
     </div>
 </section>
+
+
 <?php include_once VIEW_DIR . "footer.php"?>
 </body>
-<!--Toast notification-->
 
+<script type="text/javascript">
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
+
+    $type = $_SESSION["toast-type"];
+
+    if ($type == "error") { ?>
+
+
+    $(document).ready(function(){
+        toastr.options.timeout = 2000;
+        toastr.error("<?php echo $_SESSION["toast-message"];?>")
+    });
+
+    <?php } else if($type == "success") { ?>
+
+
+
+    <?php }
+
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+
+    ?>
+
+
+    <?php }?>
+</script>
 
 </html>
