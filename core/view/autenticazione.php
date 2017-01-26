@@ -116,34 +116,41 @@
 
 
 <?php include_once VIEW_DIR . "footer.php"?>
+
 </body>
 
-<script type="text/javascript">
-    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
+<script>
 
-    $type = $_SESSION["toast-type"];
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
 
-    if ($type == "error") { ?>
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr["<?php echo $_SESSION["toast-type"];?>"]("<?php echo $_SESSION["toast-message"];?>")
 
-
-    $(document).ready(function(){
-        toastr.options.timeout = 2000;
-        toastr.error("<?php echo $_SESSION["toast-message"];?>")
     });
 
-    <?php } else if($type == "success") { ?>
 
+    <?php
+        unset($_SESSION["toast-type"]);
+        unset($_SESSION["toast-message"]);
+    }?>
 
-
-    <?php }
-
-    unset($_SESSION["toast-type"]);
-    unset($_SESSION["toast-message"]);
-
-    ?>
-
-
-    <?php }?>
 </script>
 
 </html>

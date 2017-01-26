@@ -72,6 +72,6 @@
 <script src="<?php echo STYLE_DIR;?>js/searchBarDropDown.js"></script>
 
 <!--Plugin toastr-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="<?php echo STYLE_DIR;?>toastr/toastr.js"></script>
 
 </html>

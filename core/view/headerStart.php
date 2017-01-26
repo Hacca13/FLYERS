@@ -15,9 +15,9 @@
 
     <!--Mod CSS -->
     <link href="<?php echo STYLE_DIR;?>css/modCustom.css" rel="stylesheet">
-    <!--Plugin toastr-->
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" type="text/css">
+    <!--Plugin toastr-->
+    <link href="<?php echo STYLE_DIR;?>toastr/toastr.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="<?php echo STYLE_DIR; ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">

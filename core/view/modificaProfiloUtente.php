@@ -71,24 +71,6 @@
                 </form>
             </div>
         </div>
-
-        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {
-
-            $type = $_SESSION["toast-type"];
-
-            if ($type == "error") { ?>
-
-
-            <?php } else if($type == "success") { ?>
-
-
-            <?php }
-
-            unset($_SESSION["toast-type"]);
-            unset($_SESSION["toast-message"]);
-
-        }?>
-
     </div>
 </section>
 <?php include_once VIEW_DIR . "footer.php"?>
@@ -96,6 +78,38 @@
 
 <!--Privacy User-->
 <script src="<?php echo STYLE_DIR;?>js/privacyUser.js"></script>
+<script>
 
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
+
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr["<?php echo $_SESSION["toast-type"];?>"]("<?php echo $_SESSION["toast-message"];?>")
+
+    });
+
+
+    <?php
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+    }?>
+
+</script>
 
 </html>

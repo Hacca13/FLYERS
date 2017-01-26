@@ -59,23 +59,44 @@
             <?php
         }
         ?>
-
-        <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
-
-                <div id="toast"> <?php echo (string)$_SESSION["toast-message"]; ?> </div>
-
-
-        <?php
-            unset($_SESSION["toast-type"]);
-            unset($_SESSION["toast-message"]);
-        }?>
-
-
     </div>
 </section>
 
 <!-- Footer -->
 <?php  include_once VIEW_DIR . "footer.php"; ?>
 </body>
+<script>
+
+    <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
+
+    $(document).ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        };
+        toastr["<?php echo $_SESSION["toast-type"];?>"]("<?php echo $_SESSION["toast-message"];?>")
+
+    });
+
+
+    <?php
+    unset($_SESSION["toast-type"]);
+    unset($_SESSION["toast-message"]);
+    }?>
+
+</script>s
 
 </html>
