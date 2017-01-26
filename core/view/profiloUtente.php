@@ -22,14 +22,14 @@
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>ID</h4>
-                        <p><?php $user->getId()?></p>
+                        <p><?php echo $user->getId();?></p>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Email</h4>
-                        <p><?php $user->getEmail()?></p>
+                        <p><?php echo $user->getEmail();?></p>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
             <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="<?php DOMINIO_SITO?>/myappunti">
+                        <a href="<?php DOMINIO_SITO;?>/myappunti">
                             <button id="my-appunti"class="btn btn-success btn-lg">
                                 I Miei Appunti
                             </button>
@@ -58,7 +58,7 @@
                         </a>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="<?php DOMINIO_SITO?>/myannunci">
+                        <a href="<?php DOMINIO_SITO;?>/myannunci">
                             <button id="my-annunci" class="btn btn-success btn-lg">
                                 I Miei Annunci
                             </button>

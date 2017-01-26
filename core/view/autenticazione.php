@@ -91,6 +91,14 @@
                                 </div>
                             </div>
 
+                            <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-form-group controls">
+                                    <label>Conferma Password</label>
+                                    <input type="password" class="form-control" placeholder="Conferma Password" name="confermaPassword" id="password" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
 
                             <br>
                             <div id="success"></div>

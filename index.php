@@ -45,7 +45,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 include_once CONTROL_DIR . "searchBarControl.php";
                 break;
             case 'insertAnnuncio':
-                include_once CONTROL_DIR . "inserisciAnnucio.php";
+                include_once CONTROL_DIR . "inserisciAnnuncioControl.php";
                 break;
             case 'insertAppunti':
                 include_once CONTROL_DIR . "inserisciAppunti.php";
@@ -64,6 +64,15 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 break;
             case 'modificaUtente':
                 include_once CONTROL_DIR . "modificaProfiloUtenteControl.php";
+                break;
+            case 'registrazione':
+                include_once CONTROL_DIR . "registrazione.php";
+                break;
+            case 'login':
+                include_once CONTROL_DIR . "loginControl.php";
+                break;
+            case 'logout':
+                include_once CONTROL_DIR . "logoutControl.php";
                 break;
             //VIEWS
             case '':
@@ -91,13 +100,10 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 include_once VIEW_DIR . "listaAnnunci.php";
                 break;
             case 'autenticazione':
-                include_once VIEW_DIR ."login.php";
+                include_once VIEW_DIR . "autenticazione.php";
                 break;
             case 'modificaProfiloUtente':
                 include_once VIEW_DIR . "modificaProfiloUtente.php";
-                break;
-            case 'profiloUtente':
-                include_once VIEW_DIR . "profiloUtente.php";
                 break;
             default:
                 include_once VIEW_DIR ."404.php";
