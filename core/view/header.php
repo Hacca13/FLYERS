@@ -59,11 +59,24 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/listaAnnunci";?>">Annunci</a></li>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/categorie";?>">Appunti</a></li>
+
                         <?php if(isset($_SESSION["user"])){?>
+
                             <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/profiloUtente";?>">Profilo</a></li>
+
                         <?php } ?>
+
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO ."/help";?>">Help</a></li>
-                        <li><a href="<?php echo DOMINIO_SITO . "/autenticazione";?>">Login</a></li>
+
+                        <?php if(isset($_SESSION["user"])){?>
+
+                            <li><a href="<?php echo DOMINIO_SITO . "/logout";?>">Logout</a></li>
+
+                        <?php }else{ ?>
+                            <li><a href="<?php echo DOMINIO_SITO . "/autenticazione";?>">Login</a></li>
+
+
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

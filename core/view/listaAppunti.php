@@ -64,7 +64,11 @@
 
                 <div id="toast"> <?php echo (string)$_SESSION["toast-message"]; ?> </div>
 
-        <?php }?>
+
+        <?php
+            unset($_SESSION["toast-type"]);
+            unset($_SESSION["toast-message"]);
+        }?>
 
 
     </div>
