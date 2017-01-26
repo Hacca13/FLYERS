@@ -26,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <form action="<?php echo DOMINIO_SITO;?>/inserisciAnnuncioControl" method="post">
+                <form action="<?php echo DOMINIO_SITO;?>/insertAnnuncio" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Titolo</label>
@@ -46,6 +46,13 @@
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Descrizione</label>
                             <textarea rows="5" class="form-control" placeholder="Descrizione" id="descrizione" name="descrizione" required data-validation-required-message="Inserisci una descrizione."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Contatto</label>
+                            <input type="text" class="form-control" placeholder="Contatto" id="contatto" name="contatto" required data-validation-required-message="Inserisci almeno un tag.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

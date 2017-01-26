@@ -1,5 +1,5 @@
 <?php
-
+include_once BEANS_DIR . "Tag.php";
 /**
  * Created by PhpStorm.
  * User: Paolo
@@ -14,8 +14,8 @@ class TagManager
     }
 
     private function insertTag($tag){
-        $insertTag = "INSERT INTO TAG( NOME) VALUES ( '%s'); SELECT LAST_INSERT_ID()";
-        $query = sprintf($insertTag,$tag->getNome());
+        $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s'); SELECT LAST_INSERT_ID()";
+        $query = sprintf($insertTag,$tag);
         $keyTag = mysqli_query(Connector::getConnector(), $query);
         return $keyTag;
     }
@@ -39,27 +39,35 @@ class TagManager
         for($i=0;$i<count($listTags);$i++) {
             $tag = $listTags[$i];
 
-            if($this->thereAre($tag->getNome())){
-                $tagExists = $this->getTagByName($tag->getNome());
+            if($this->checkExist($tag)){
+                $tagExists = $this->getTagByName($tag);
+                $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
+                $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAnnuncio);
+                mysqli_query(Connector::getConnector(), $query);
             }else{
-                $tagExists = $this->insertTag($tag);
+                $keyTag = $this->insertTag($tag);
+                $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
+                $query = sprintf($insertSql,$keyTag,$keyAnnuncio);
+                mysqli_query(Connector::getConnector(), $query);
             }
-            $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
-            $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAnnuncio);
-            mysqli_query(Connector::getConnector(), $query);
+
         }
     }
 
-    public function thereAre($nameTag){
-        $selectSql = "SELECT COUNT(*) FROM TAG WHERE NOME = '%s'";
+    public function checkExist($nameTag){
+        $selectSql = "SELECT * FROM TAG WHERE NOME = '%s'";
         $query = sprintf($selectSql,$nameTag);
-        $count = mysqli_query(Connector::getConnector(), $query);
+        $result = mysqli_query(Connector::getConnector(), $query);
 
-        if($count==1){
+        if($result->num_rows >0 ){
+
             return true;
-        }elseif($count==0){
+
+        }else{
+
             return false;
         }
+
 
     }
 
@@ -70,10 +78,11 @@ class TagManager
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
                 $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                return $tag;
             }
-            return $tag;
+
         }
-        return NULL;
+        return null;
     }
 
     public function getTagByKey($keyTag){
@@ -83,8 +92,9 @@ class TagManager
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
                 $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                return $tag;
             }
-            return $tag;
+
         }
         return NULL;
     }

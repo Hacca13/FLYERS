@@ -8,7 +8,7 @@ class Connector
         $user = 'root';
         $pass = '';
         $db = 'Flyers';
-        return mysqli_connect($host, $user, $pass, $db);
+        return new mysqli($host, $user, $pass, $db);
     }
 
 }

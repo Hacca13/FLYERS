@@ -8,15 +8,12 @@
 
 </head>
 
-
 <body>
 
 <!-- Navigation -->
 <?php  include_once VIEW_DIR . "header.php"; ?>
 <!-- Header -->
 
-
-<!-- Header -->
 <section id="contact">
     <div class="container" style="margin-top: 10%;">
         <div class="row">
