@@ -64,11 +64,11 @@
                             <li class="page-scroll"><a href="<?php echo DOMINIO_SITO . "/profiloUtente";?>">Profilo</a></li>
                         <?php } ?>
                         <li class="page-scroll"><a href="<?php echo DOMINIO_SITO ."/help";?>">Help</a></li>
-                        <li>
+                        <li class="page-scroll">
                             <?php if(isset($_SESSION["user"])){?>
-                            <a href="<?php echo DOMINIO_SITO;?>/logout">Logout</a>
+                            <a href="<?php echo DOMINIO_SITO. "/logout";?>">Logout</a>
                         <?php }else{ ?>
-                            <a href="<?php echo DOMINIO_SITO;?>/autenticazione">Login</a>
+                            <a href="<?php echo DOMINIO_SITO."/autenticazione";?>">Login</a>
                         <?php } ?>
                         </li>
                     </ul>

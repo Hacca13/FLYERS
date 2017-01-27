@@ -52,7 +52,7 @@
                                 <option value="Chimica">Chimica</option>
                                 <option value="Fisica">Fisica</option>
                                 <option value="Informatica">Informatica</option>
-                                <option value="Scienze Ambientali">Scienze Ambientali</option>
+                                <option value="Scienze Ambientali">Scienze_Ambientali</option>
 
                             </select>
 

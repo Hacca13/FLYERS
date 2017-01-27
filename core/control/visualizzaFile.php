@@ -7,7 +7,7 @@ if(isset($_URL) && isset($_URL[1])) {
 
     $manager = new AppuntiManager();
     $id = (int)testInput($_URL[1]);
-    $appunti = $manager->getAppunto($id);
+    $appunti = $manager->getAppuntiByKeyAppunti($id);
     $file = $appunti->getPath();
     $directory = getcwd();
     $full = $directory . "/" . $file;

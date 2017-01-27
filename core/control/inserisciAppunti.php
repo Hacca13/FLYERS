@@ -14,7 +14,7 @@ if(isset($_POST['nome']) && $_POST['nome']!="") {
 
 if(isset($_POST['tags']) && $_POST['tags']!= ""){
     $tags = $_POST['tags'];
-    $result = explode(",",$tags);
+    $result = explode(" ",$tags);
 
 } else {
     $_SESSION['toast-type'] = "error";
@@ -70,10 +70,9 @@ $data = date("Y-m-d");
 $raiting = 0;
 $user = unserialize($_SESSION["user"]);
 $keyUtente = $user->getKeyUtente();
-
+$keyAppunti = 0;
 $manager = new AppuntiManager();
-$appunti = new Appunti(null,$nome,$categoria,$descrizione, $raiting, $path, $data, $keyUtente ,$result);
-
+$appunti = new Appunti($keyAppunti,$nome,$categoria,$descrizione, $raiting, $path, $data, $keyUtente ,$result);
 
 $manager->insertAppunti($appunti);
 $_SESSION['toast-type'] = "success";
