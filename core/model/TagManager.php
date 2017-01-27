@@ -28,17 +28,26 @@ class TagManager
     }
 
     public function insertTagsByAppunti($keyAppunti,$listTags){
-        for($i=0;$i<count($listTags);$i++) {
-            $tag = $listTags[$i];
 
-            if($this->thereAre($tag->getNome())){
-                $tagExists = $this->getTagByName($tag->getNome());
+        for($i=0;$i<count($listTags);$i++) {
+            $nameTagSelected = $listTags[$i];
+
+            if($this->checkExist($nameTagSelected)){
+
+                $tagExists = $this->getTagByName($nameTagSelected);
+                $insertSql = "INSERT INTO TAGPERAPPUNTI (KEYTAG , KEYAPPUNTI) VALUES ('%s' ,'%s'); ";
+                $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAppunti);
+                mysqli_query(Connector::getConnector(), $query);
+
             }else{
-                $tagExists = $this->insertTag($tag);
+
+                $keyTag = $this->insertTag($nameTagSelected);
+                $insertSql = "INSERT INTO TAGPERAPPUNTI (KEYTAG , KEYAPPUNTI) VALUES ('%s' ,'%s'); ";
+                $query = sprintf($insertSql,$keyTag,$keyAppunti);
+                mysqli_query(Connector::getConnector(), $query);
+
             }
-            $insertSql = "INSERT INTO TAGPERAPPUNTI (KEYTAG , KEYAPPUNTI) VALUES ('%s' ,'%s'); ";
-            $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAppunti);
-            mysqli_query(Connector::getConnector(), $query);
+
         }
     }
 
@@ -48,15 +57,19 @@ class TagManager
             $nameTagSelected = $listTags[$i];
 
             if($this->checkExist($nameTagSelected)){
+
                 $tagExists = $this->getTagByName($nameTagSelected);
                 $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
                 $query = sprintf($insertSql,$tagExists->getKeyTag(),$keyAnnuncio);
                 mysqli_query(Connector::getConnector(), $query);
+
             }else{
+
                 $keyTag = $this->insertTag($nameTagSelected);
                 $insertSql = "INSERT INTO TAGPERANNUNCIO (KEYTAG , KEYANNUNCIO) VALUES ('%s' ,'%s'); ";
                 $query = sprintf($insertSql,$keyTag,$keyAnnuncio);
                 mysqli_query(Connector::getConnector(), $query);
+
             }
 
         }
@@ -67,7 +80,7 @@ class TagManager
         $query = sprintf($selectSql,$nameTag);
         $result = mysqli_query(Connector::getConnector(), $query);
 
-        if($result->num_rows >0 ){
+        if($result->num_rows>0 ){
 
             return true;
 
@@ -80,7 +93,7 @@ class TagManager
     }
 
     public function getTagByName($nameTag){
-        $selectSql = "SELECT * FROM TAG WHERE NOME='%s'";
+        $selectSql = "SELECT * FROM TAG WHERE NOME = '%s'";
         $query = sprintf($selectSql,$nameTag);
         $result = mysqli_query(Connector::getConnector(), $query);
         if ($result) {
@@ -94,7 +107,7 @@ class TagManager
     }
 
     public function getTagByKey($keyTag){
-        $selectSql = "SELECT * FROM TAG WHERE KEYTAG ='%s'";
+        $selectSql = "SELECT * FROM TAG WHERE KEYTAG = '%s'";
         $query = sprintf($selectSql,$keyTag);
         $result = mysqli_query(Connector::getConnector(), $query);
         if ($result) {
@@ -104,13 +117,13 @@ class TagManager
             }
 
         }
-        return NULL;
+        return null;
     }
 
     public function getTagByAnnuncio($keyAnnuncio){
         $selectSql = "SELECT * FROM TAG,TAGPERANNUNCIO,ANNUNCIO WHERE TAGPERANNUNCIO.KEYANNUNCIO ='%s' 
                       AND TAGPERANNUNCIO.KEYANNUNCIO = ANNUNCIO.KEYANNUNCIO
-                      AND TAGPERANNUNCIO.TAG = TAG.KEYTAG";
+                      AND TAGPERANNUNCIO.KEYTAG = TAG.KEYTAG";
         $query = sprintf($selectSql,$keyAnnuncio);
         $result = mysqli_query(Connector::getConnector(), $query);
         $listTags = array();
@@ -125,7 +138,7 @@ class TagManager
     public function getTagByAppunti($keyAppunti){
         $selectSql = "SELECT * FROM TAG,TAGPERAPPUNTI,APPUNTI WHERE TAGPERAPPUNTI.KEYAPPUNTI ='%s' 
                       AND TAGPERAPPUNTI.KEYAPPUNTI = APPUNTI.KEYAPPUNTI
-                      AND TAGPERAPPUNTI.TAG = TAG.KEYTAG";
+                      AND TAGPERAPPUNTI.KEYTAG= TAG.KEYTAG";
         $query = sprintf($selectSql,$keyAppunti);
         $result = mysqli_query(Connector::getConnector(), $query);
         $listTags = array();
