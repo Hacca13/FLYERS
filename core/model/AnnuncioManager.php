@@ -19,16 +19,25 @@ class AnnuncioManager
         $this->tagManager = new TagManager();
     }
 
-    public function insertAnnuncio($annuncio){
-        $insertSql = "INSERT INTO ANNUNCIO(TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
-              VALUES ('%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID();";
-        $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
-        $result_query = mysqli_query(Connector::getConnector(), $query);
-        if($result_query) {
-                $tmp = $result_query->fetch_assoc();
-                $keyAnnuncio = $tmp["LAST_INSERT_ID()"];
-                $this->tagManager->insertTagsByAnnuncio($keyAnnuncio, $annuncio->getTags());
+    private function lastInsertKey(){
+        $lastInsert = "SELECT LAST_INSERT_ID() FROM ANNUNCIO";
+        $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
+        if($result_query){
+            while($r = $result_query->fetch_assoc()){
+                $keyAnnuncio = $r["LAST_INSERT_ID()"];
+                return $keyAnnuncio;
             }
+        }
+    }
+
+    public function insertAnnuncio($annuncio){
+
+        $insertSql = "INSERT INTO ANNUNCIO(TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
+              VALUES ('%s', '%s', '%s', '%s', '%s');";
+        $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
+        mysqli_query(Connector::getConnector(), $query);
+        $keyAnnuncio = $this->lastInsertKey();
+        $this->tagManager->insertTagsByAnnuncio($keyAnnuncio, $annuncio->getTags());
     }
 
     public function getAllAnnunci(){

@@ -3,7 +3,7 @@ include_once BEANS_DIR ."Annuncio.php";
 include_once MODEL_DIR . "AnnuncioManager.php";
 include_once BEANS_DIR . "Utente.php";
 
-$titolo = null;
+
 if(isset($_POST['titolo'])){
     $titolo = $_POST['titolo'];
 } else {
@@ -11,16 +11,16 @@ if(isset($_POST['titolo'])){
     $_SESSION['toast-message'] = "Inserisci il titolo";
     header("Location:". DOMINIO_SITO."/inserisciAnnuncio");
 }
-$result = null;
+
 if(isset($_POST['tags'])) {
     $tags = $_POST['tags'];
-    $result = explode(",",$tags);
+    $result = explode(" ",$tags);
 } else {
     $_SESSION['toast-type'] = "error";
     $_SESSION['toast-message'] = "Inserisci almeno un tag";
     header("Location:". DOMINIO_SITO."/inserisciAnnuncio");
 }
-$descrizione = null;
+
 if(isset($_POST['descrizione'])){
     $descrizione = $_POST['descrizione'];
 } else {
@@ -28,7 +28,7 @@ if(isset($_POST['descrizione'])){
     $_SESSION['toast-message'] = "Inserisci la descrizione";
     header("Location:". DOMINIO_SITO."/inserisciAnnuncio");
 }
-$contatto = null;
+
 if(isset($_POST['contatto'])) {
     $contatto = $_POST['contatto'];
 }else{

@@ -14,24 +14,33 @@ class UtenteManager
     public function __construct() {
     }
 
-    function insertUser($user){
-        $insertSql = "INSERT INTO UTENTE (ID, EMAIL, CITTA, PASS) VALUES ('%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID();";
-        $query = sprintf($insertSql,$user->getId(),$user->getEmail(),$user->getCitta(),$user->getPassword());
-        $result_query = mysqli_query(Connector::getConnector(), $query);
-        if($result_query) {
-            $tmp = $result_query->fetch_assoc();
-            $keyUtente = $tmp["LAST_INSERT_ID()"];
-            return $keyUtente;
+
+    private function lastInsertKey(){
+        $lastInsert = "SELECT LAST_INSERT_ID() FROM UTENTE";
+        $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
+        if($result_query){
+            while($r = $result_query->fetch_assoc()){
+                $keyUtente = $r["LAST_INSERT_ID()"];
+                return $keyUtente;
+            }
         }
     }
 
-    function updateUser($keyUtente,$utente){
+    public function insertUser($user){
+        $insertSql = "INSERT INTO UTENTE (ID, EMAIL, CITTA, PASS) VALUES ('%s', '%s', '%s', '%s');";
+        $query = sprintf($insertSql,$user->getId(),$user->getEmail(),$user->getCitta(),$user->getPassword());
+        mysqli_query(Connector::getConnector(), $query);
+        $keyUtente = $this->lastInsertKey();
+        return $keyUtente;
+    }
+
+    public function updateUser($keyUtente,$utente){
         $updateSql = "UPDATE UTENTE SET (ID='%s', EMAIL='%s', CITTA='%s', PASS='%s') WHERE KEYUTENTE = '%s'";
         $query = sprintf($updateSql,$utente->getId(),$utente->getEmail(),$utente->getCitta(),$utente->getPassword(), $keyUtente);
         mysqli_query(Connector::getConnector(), $query);
     }
 
-    function getUtenteByKeyUtente($keyUtente){
+    public function getUtenteByKeyUtente($keyUtente){
         $selectSql ="SELECT * FROM UTENTE WHERE KEYUTENTE = '%s'";
         $query = sprintf($selectSql,$keyUtente);
         $res = mysqli_query(Connector::getConnector(), $query);
@@ -44,7 +53,7 @@ class UtenteManager
         return false;
     }
 
-    function getUtenteById($id){
+    public function getUtenteById($id){
         $selectSql ="SELECT * FROM UTENTE WHERE ID = '%s'";
         $query = sprintf($selectSql,$id);
         $res = mysqli_query(Connector::getConnector(), $query);
@@ -58,7 +67,7 @@ class UtenteManager
     }
 
 
-    function checkLogin($username,$password){
+    public function checkLogin($username,$password){
         $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s' AND PASS = '%s'";
         $query = sprintf($checkLogin,$username,$password);
         $res = mysqli_query(Connector::getConnector(), $query);
@@ -70,7 +79,7 @@ class UtenteManager
         return false;
     }
 
-    function existEmail($email){
+    public function existEmail($email){
         $checkLogin ="SELECT * FROM UTENTE WHERE EMAIL ='%s'";
         $query = sprintf($checkLogin,$email);
         $res = mysqli_query(Connector::getConnector(), $query);
@@ -82,7 +91,7 @@ class UtenteManager
         return false;
     }
 
-    function existUsername($username){
+    public function existUsername($username){
         $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s'";
         $query = sprintf($checkLogin,$username);
         $res = mysqli_query(Connector::getConnector(), $query);

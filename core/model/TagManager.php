@@ -15,16 +15,23 @@ class TagManager
 
     }
 
-    private function insertTag($tag){
-        $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s'); SELECT LAST_INSERT_ID();";
-        $query = sprintf($insertTag,$tag);
-        $result_query = mysqli_query(Connector::getConnector(), $query);
-        if($result_query) {
-            $tmp = $result_query->fetch_assoc();
-            $keyTag = $tmp["LAST_INSERT_ID()"];
-            return $keyTag;
+    private function lastInsertKey(){
+        $lastInsert = "SELECT LAST_INSERT_ID() FROM TAG";
+        $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
+        if($result_query){
+            while($r = $result_query->fetch_assoc()){
+                $keyTag = $r["LAST_INSERT_ID()"];
+                return $keyTag;
+            }
         }
-        return null;
+    }
+
+    private function insertTag($tag){
+        $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s');";
+        $query = sprintf($insertTag,$tag);
+        mysqli_query(Connector::getConnector(), $query);
+        $keyTag = $this->lastInsertKey();
+        return $keyTag;
     }
 
     public function insertTagsByAppunti($keyAppunti,$listTags){
