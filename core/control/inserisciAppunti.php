@@ -36,7 +36,6 @@ if(isset($_POST['descrizione'])) {
     $descrizione = "";
 }
 
-
 if(isset($_FILES['file'])) {
     $_FILES['file']['name'];
     $file = rand(1000,100000)."-".$_FILES['file']['name'];
@@ -73,8 +72,9 @@ $keyUtente = $user->getKeyUtente();
 $keyAppunti = 0;
 $manager = new AppuntiManager();
 $appunti = new Appunti($keyAppunti,$nome,$categoria,$descrizione, $raiting, $path, $data, $keyUtente ,$result);
-
 $manager->insertAppunti($appunti);
+
+
 $_SESSION['toast-type'] = "success";
 $_SESSION['toast-message'] = "File inserito con successo!";
 header("Location:".DOMINIO_SITO."/inserisciAppunti");

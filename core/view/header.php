@@ -26,6 +26,7 @@
 
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12" style="margin-top: 0.5%;margin-bottom:2%;">
                 <div class="left">
+                    <form action="<?php DOMINIO_SITO;?>/search" method="post">
                     <div class="input-group">
                         <div class="input-group-btn search-panel">
                             <button type="button" class="btn btn-default dropdown-toggle"
@@ -36,8 +37,7 @@
                                 <li><a>Annunci</a></li>
                                 <li><a>Appunti</a></li>
                                 <li><a>Categoria</a></li>
-                                <li><a>Tag-Appunti</a></li>
-                                <li><a>Tag-Annunci</a></li>
+                                <li><a>Tag</a></li>
                             </ul>
                         </div>
                         <input type="hidden" name="search_param" value="appunti" id="search_param">

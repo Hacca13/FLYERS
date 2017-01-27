@@ -31,18 +31,11 @@ if(isset($_POST["search"])){
 
             include_once VIEW_DIR ."resultSearch.php";
 
-        }else if($_POST["search_param"] == "Tag-Annunci") {
+        }else if($_POST["search_param"] == "Tag") {
             $paramByUser = $_POST["user_param"];
             $tagManager = new TagManager();
 
-            $result = $tagManager->searchAnnunciByTag($paramByUser);
-            include_once VIEW_DIR . "resultSearch.php";
-
-        }else if ($_POST["search_param"] == "Tag-Appunti"){
-            $paramByUser = $_POST["user_param"];
-            $tagManager = new TagManager();
-
-            $result = $tagManager->searchAppuntiByTag($paramByUser);
+            $result = $tagManager->searchByTag($paramByUser);
             include_once VIEW_DIR . "resultSearch.php";
 
         }else if($_POST["search_param"] == "Categoria"){

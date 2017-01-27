@@ -159,7 +159,7 @@ class TagManager
     }
 
 
-    public function searchAppuntiByTag($nameTag){
+    private function searchAppuntiByTag($nameTag){
         $GET_TAG_REFERENCES_OBJECTS = "SELECT APPUNTI FROM TAG,TAGPERAPPUNTI,APPUNTI 
                                         WHERE TAG.NOME = '%s' AND 
                                         TAG.KEYTAG = TAPERAPPUNTI.KEYTAG 
@@ -178,7 +178,7 @@ class TagManager
     }
 
 
-    public function searchAnnunciByTag($nameTag){
+    private function searchAnnunciByTag($nameTag){
         $GET_TAG_REFERENCES_OBJECTS = "SELECT ANNUNCIO FROM TAG,TAGPERANNUNCIO,ANNUNCIO
                                         WHERE TAG.NOME = '%s' AND 
                                         TAG.KEYTAG = TAGPERANNUNCIO.KEYTAG 
@@ -195,4 +195,14 @@ class TagManager
         }
         return $listAnnunci;
     }
+
+
+    public function searchByTag($nameTag){
+
+        $resultAppunti = $this->searchAppuntiByTag($nameTag);
+        $resultAnnunci = $this->searchAnnunciByTag($nameTag);
+
+       return array_merge($resultAnnunci,$resultAppunti);
+    }
+
 }
