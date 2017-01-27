@@ -7,8 +7,9 @@
  * Time: 09:51
  */
 include_once BEANS_DIR .'Annuncio.php';
-include_once MODEL_DIR.'Connector.php';
-include_once MODEL_DIR.'TagManager.php';
+include_once MODEL_DIR . 'Connector.php';
+include_once MODEL_DIR . 'TagManager.php';
+include_once BEANS_DIR . 'Tag.php';
 class AnnuncioManager
 {
     private $tagManager;
@@ -20,10 +21,14 @@ class AnnuncioManager
 
     public function insertAnnuncio($annuncio){
         $insertSql = "INSERT INTO ANNUNCIO(TITOLO, DESCRIZIONE, CONTATTO, DATADICARICAMENTO, KEYUTENTE) 
-              VALUES ('%s', '%s', '%s', '%s', '%s');";
+              VALUES ('%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID();";
         $query = sprintf($insertSql, $annuncio->getTitolo(), $annuncio->getDescrizione(), $annuncio->getContatto(), $annuncio->getDataDiCaricamento(), $annuncio->getKeyUtente());
-        $keyAnnuncio = mysqli_query(Connector::getConnector(), $query);
-        $this->tagManager->insertTagsByAnnuncio($keyAnnuncio,$annuncio->getTags());
+        $result_query = mysqli_query(Connector::getConnector(), $query);
+        if($result_query) {
+                $tmp = $result_query->fetch_assoc();
+                $keyAnnuncio = $tmp["LAST_INSERT_ID()"];
+                $this->tagManager->insertTagsByAnnuncio($keyAnnuncio, $annuncio->getTags());
+            }
     }
 
     public function getAllAnnunci(){

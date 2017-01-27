@@ -18,8 +18,13 @@ class TagManager
     private function insertTag($tag){
         $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s'); SELECT LAST_INSERT_ID();";
         $query = sprintf($insertTag,$tag);
-        $keyTag = mysqli_query(Connector::getConnector(), $query);
-        return $keyTag;
+        $result_query = mysqli_query(Connector::getConnector(), $query);
+        if($result_query) {
+            $tmp = $result_query->fetch_assoc();
+            $keyTag = $tmp["LAST_INSERT_ID()"];
+            return $keyTag;
+        }
+        return null;
     }
 
     public function insertTagsByAppunti($keyAppunti,$listTags){

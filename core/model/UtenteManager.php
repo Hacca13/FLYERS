@@ -15,9 +15,14 @@ class UtenteManager
     }
 
     function insertUser($user){
-        $insertSql = "INSERT INTO UTENTE (ID, EMAIL, CITTA, PASS) VALUES ('%s', '%s', '%s', '%s');";
+        $insertSql = "INSERT INTO UTENTE (ID, EMAIL, CITTA, PASS) VALUES ('%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID();";
         $query = sprintf($insertSql,$user->getId(),$user->getEmail(),$user->getCitta(),$user->getPassword());
-        mysqli_query(Connector::getConnector(), $query);
+        $result_query = mysqli_query(Connector::getConnector(), $query);
+        if($result_query) {
+            $tmp = $result_query->fetch_assoc();
+            $keyUtente = $tmp["LAST_INSERT_ID()"];
+            return $keyUtente;
+        }
     }
 
     function updateUser($keyUtente,$utente){
@@ -32,7 +37,7 @@ class UtenteManager
         $res = mysqli_query(Connector::getConnector(), $query);
         if ($res) {
             while ($r = $res->fetch_assoc()) {
-                $user = new Utente($r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
+                $user = new Utente($r['KEYUTENTE'],$r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
                 return $user;
             }
         }
@@ -45,7 +50,7 @@ class UtenteManager
         $res = mysqli_query(Connector::getConnector(), $query);
         if ($res) {
             while ($r = $res->fetch_assoc()) {
-                $user = new Utente($r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
+                $user = new Utente($r['KEYUTENTE'],$r['ID'], $r['EMAIL'], $r['CITTA'], $r['PASS']);
                 return $user;
             }
         }
