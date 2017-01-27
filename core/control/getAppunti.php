@@ -11,7 +11,6 @@ if(isset($_URL) && isset($_URL[1])) {
 
     $appunti = $manager->getAppuntiByCategoria($categoria);
 
-
     $um = new UtenteManager();
 
     $usersNameAds = array();

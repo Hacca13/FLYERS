@@ -4,7 +4,7 @@ include_once MODEL_DIR . "AppuntiManager.php";
 include_once BEANS_DIR ."Appunti.php";
 include_once BEANS_DIR ."Utente.php";
 
-if(isset($_POST['nome']) && $_POST['nome']!="") {
+if(isset($_POST['nome'])) {
     $nome = $_POST['nome'];
 } else {
     $_SESSION['toast-type'] = "error";
@@ -12,7 +12,7 @@ if(isset($_POST['nome']) && $_POST['nome']!="") {
     header("Location:".DOMINIO_SITO."/inserisciAppunti");
 }
 
-if(isset($_POST['tags']) && $_POST['tags']!= ""){
+if(isset($_POST['tags'])){
     $tags = $_POST['tags'];
     $result = explode(" ",$tags);
 
@@ -22,7 +22,7 @@ if(isset($_POST['tags']) && $_POST['tags']!= ""){
     header("Location:".DOMINIO_SITO."/inserisciAppunti");
 }
 
-if(isset($_POST['categorie']) && $_POST['categorie']!= "") {
+if(isset($_POST['categorie'])) {
     $categoria = $_POST['categorie'];
 } else {
     $_SESSION['toast-type'] = "error";
