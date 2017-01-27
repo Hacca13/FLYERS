@@ -22,6 +22,8 @@ if(isset($_URL) && isset($_URL[1])) {
         header('Pragma: public');
         header('Content-Length: ' . filesize($file));
         readfile($file);
+
+        header('Location:'.DOMINIO_SITO."/getAppunti/".$appunti->getCategoria());
     }
 }
 

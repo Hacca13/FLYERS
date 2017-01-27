@@ -28,8 +28,8 @@
                 <form action="<?php echo DOMINIO_SITO;?>/insertAppunti" method="post" enctype="multipart/form-data">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Titolo</label>
-                            <input type="text" class="form-control" placeholder="Titolo" id="titolo" name="titolo" required data-validation-required-message="Inserisci un titolo.">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" placeholder="Nome" id="nome" name="nome" required data-validation-required-message="Inserisci un nome.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                                 <option value="Chimica">Chimica</option>
                                 <option value="Fisica">Fisica</option>
                                 <option value="Informatica">Informatica</option>
-                                <option value="Scienze Ambientali">Scienze Ambientali</option>
+                                <option value="Scienze Ambientali">Scienze_Ambientali</option>
 
                             </select>
 

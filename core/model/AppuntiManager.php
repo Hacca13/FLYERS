@@ -14,12 +14,24 @@ class AppuntiManager
         $this->tagManager = new TagManager();
     }
 
+    private function lastInsertKey(){
+        $lastInsert = "SELECT MAX(KEYAPPUNTI) FROM APPUNTI";
+        $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
+        if($result_query){
+            while($r = $result_query->fetch_assoc()){
+                $keyAppunti = $r["MAX(KEYAPPUNTI)"];
+                return $keyAppunti;
+            }
+        }
+    }
+
     public function insertAppunti($appunti){
         $insertSql = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
-                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s'); SELECT LAST_INSERT_ID();" ;
+                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')" ;
         $query = sprintf($insertSql,$appunti->getNome(),$appunti->getCategoria(),$appunti->getDescrizione(),$appunti->getRaiting(),$appunti->getPath(),$appunti->getDataDiCaricamento(),$appunti->getKeyUtente());
-        $keyAppunto = mysqli_query(Connector::getConnector(), $query);
-        $this->tagManager->getTagByAppunti($keyAppunto,$appunti->getListTags());
+        mysqli_query(Connector::getConnector(), $query);
+        $keyAppunti = $this->lastInsertKey();
+        $this->tagManager->insertTagsByAppunti($keyAppunti,$appunti->getListTags());
     }
 
 
@@ -43,13 +55,11 @@ class AppuntiManager
         $res = mysqli_query(Connector::getConnector(), $query);
         $listAppunti = array();
         if ($res) {
-            $result = array();
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
                 $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
-            return $result;
         }
         return $listAppunti;
     }
@@ -76,19 +86,17 @@ class AppuntiManager
         $res = mysqli_query(Connector::getConnector(), $query);
         $listAppunti = array();
         if ($res) {
-            $result = array();
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
                 $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
-            return $result;
         }
         return $listAppunti;
     }
 
     public function  getAppuntiByKeyAppunti($keyAppunti){
-        $selectSql = "SELECT * FROM APPUNTI WHERE KEYAPPUTI '%s'";
+        $selectSql = "SELECT * FROM APPUNTI WHERE KEYAPPUNTI = '%s'";
         $query = sprintf($selectSql,$keyAppunti);
         $res = mysqli_query(Connector::getConnector(),$query);
 

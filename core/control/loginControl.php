@@ -16,7 +16,7 @@ if(isset($_POST['username'])&&isset($_POST['password'])){
 
     if($manager->checkLogin($username,$password)){
         $user = $manager->getUtenteById($username);
-        $_SESSION['user']= serialize($user);
+        $_SESSION['user'] = serialize($user);
 
         $_SESSION['toast-type'] = "success";
         $_SESSION['toast-message'] = "Bentornato ".$user->getId()." !";
