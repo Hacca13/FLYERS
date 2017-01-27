@@ -161,15 +161,16 @@ class TagManager
 
     private function searchAppuntiByTag($nameTag){
         $GET_TAG_REFERENCES_OBJECTS = "SELECT APPUNTI FROM TAG,TAGPERAPPUNTI,APPUNTI 
-                                        WHERE TAG.NOME = '%s' AND 
+                                        WHERE TAG.NOME LIKE '%s' AND 
                                         TAG.KEYTAG = TAPERAPPUNTI.KEYTAG 
                                         AND APPUNTI.KEYAPPUNTI = TAGPERAPPUNTI.KEYAPPUNTI";
+        $nameTag = "%".$nameTag."%";
         $query = sprintf($GET_TAG_REFERENCES_OBJECTS,$nameTag);
         $result = mysqli_query(Connector::getConnector(),$query);
         $listAppunti = array();
         if($result){
             while ($obj = $result->fetch_assoc()) {
-                $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
+                $listTag = $this->getTagByAppunti($obj['KEYAPPUNTI']);
                 $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
@@ -180,15 +181,16 @@ class TagManager
 
     private function searchAnnunciByTag($nameTag){
         $GET_TAG_REFERENCES_OBJECTS = "SELECT ANNUNCIO FROM TAG,TAGPERANNUNCIO,ANNUNCIO
-                                        WHERE TAG.NOME = '%s' AND 
+                                        WHERE TAG.NOME LIKE '%s' AND 
                                         TAG.KEYTAG = TAGPERANNUNCIO.KEYTAG 
                                         AND ANNUNCIO.KEYANNUNCIO = TAGPERANNUNCIO.KEYANNUNCIO";
+        $nameTag = "%".$nameTag."%";
         $query = sprintf($GET_TAG_REFERENCES_OBJECTS,$nameTag);
         $result = mysqli_query(Connector::getConnector(),$query);
         $listAnnunci = array();
         if($result){
             while ($obj = $result->fetch_assoc()) {
-                $listTag = $this->tagManager->getTagByAnnuncio($obj['KEYANNUNCIO']);
+                $listTag = $this->getTagByAnnuncio($obj['KEYANNUNCIO']);
                 $annuncio = new Annuncio($obj['KEYANNUNCIO'],$obj['TITOLO'],$obj['DESCRIZIONE'],$obj['CONTATTO'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAnnunci,$annuncio);
             }

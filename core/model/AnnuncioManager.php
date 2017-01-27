@@ -70,8 +70,8 @@ class AnnuncioManager
     }
 
     public function getAnnunciByTitolo($titolo){
-        $selectSql = "SELECT * FROM ANNUNCIO WHERE LIKE '%s'";
-        $titolo = "%".$titolo."%";
+        $selectSql = "SELECT * FROM ANNUNCIO WHERE TITOLO LIKE '%s'";
+        $titolo = "%s".$titolo."%s";
         $query = sprintf($selectSql,$titolo);
         $res = mysqli_query(Connector::getConnector(), $query);
         $listAnnunci = array();
