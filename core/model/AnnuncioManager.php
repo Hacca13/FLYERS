@@ -20,11 +20,11 @@ class AnnuncioManager
     }
 
     private function lastInsertKey(){
-        $lastInsert = "SELECT LAST_INSERT_ID() FROM ANNUNCIO";
+        $lastInsert = "SELECT MAX(KEYANNUNCIO) FROM ANNUNCIO;";
         $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
         if($result_query){
             while($r = $result_query->fetch_assoc()){
-                $keyAnnuncio = $r["LAST_INSERT_ID()"];
+                $keyAnnuncio = $r["MAX(KEYANNUNCIO)"];
                 return $keyAnnuncio;
             }
         }

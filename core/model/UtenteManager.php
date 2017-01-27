@@ -16,11 +16,11 @@ class UtenteManager
 
 
     private function lastInsertKey(){
-        $lastInsert = "SELECT LAST_INSERT_ID() FROM UTENTE";
+        $lastInsert = "SELECT MAX(KEYUTENTE) FROM UTENTE";
         $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
         if($result_query){
             while($r = $result_query->fetch_assoc()){
-                $keyUtente = $r["LAST_INSERT_ID()"];
+                $keyUtente = $r["MAX(KEYUTENTE)"];
                 return $keyUtente;
             }
         }

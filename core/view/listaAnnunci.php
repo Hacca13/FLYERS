@@ -43,7 +43,7 @@
                     <p><b> Tag:</b>&nbsp <?php $tags = $annunci[$i]->getTags();
 
                                             for($j=0;$j<count($tags);$j++){
-                                                echo $tags[$j]->getNome();
+                                                echo $tags[$j]->getNome()." ";
                                             }
                                     ?></p>
                     <p><b> Utente:</b>&nbsp <?php echo $usersNameAds[$i] ?> </p>

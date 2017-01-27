@@ -16,11 +16,11 @@ class TagManager
     }
 
     private function lastInsertKey(){
-        $lastInsert = "SELECT LAST_INSERT_ID() FROM TAG";
+        $lastInsert = "SELECT MAX(KEYTAG) FROM TAG";
         $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
         if($result_query){
             while($r = $result_query->fetch_assoc()){
-                $keyTag = $r["LAST_INSERT_ID()"];
+                $keyTag = $r["MAX(KEYTAG)"];
                 return $keyTag;
             }
         }

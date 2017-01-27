@@ -15,11 +15,11 @@ class AppuntiManager
     }
 
     private function lastInsertKey(){
-        $lastInsert = "SELECT LAST_INSERT_ID() FROM APPUNTI";
+        $lastInsert = "SELECT MAX(KEYAPPUNTI) FROM APPUNTI";
         $result_query = mysqli_query(Connector::getConnector(),$lastInsert);
         if($result_query){
             while($r = $result_query->fetch_assoc()){
-                $keyAppunti = $r["LAST_INSERT_ID()"];
+                $keyAppunti = $r["MAX(KEYAPPUNTI)"];
                 return $keyAppunti;
             }
         }
