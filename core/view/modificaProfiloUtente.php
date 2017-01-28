@@ -12,13 +12,13 @@
 <section class="main-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>Modifica Profilo</h2>
                 <hr class="star-primary">
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <form action="<?php echo DOMINIO_SITO;?>/modificaUtente" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
@@ -36,7 +36,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" name="email">
+                            <input type="text" class="form-control" placeholder="Email" name="email">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -49,6 +49,47 @@
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Password</label>
+                            <input type="password" class="form-control" placeholder="Password" name="pssw">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Conferma Password</label>
+                            <input type="password" class="form-control" placeholder="Conferma Password" name="confermpssw">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12 text-center">
+                            <button type="submit" class="btn btn-success btn-lg">Invia</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h2>Cambia Password</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <form action="<?php echo DOMINIO_SITO;?>/cambiaPassword" method="post">
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Vecchia Password</label>
+                            <input type="password" class="form-control" placeholder="Vecchia Password" name="oldpssw">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Nuova Password</label>
                             <input type="password" class="form-control" placeholder="Nuova Password" name="newpssw">
                             <p class="help-block text-danger"></p>
@@ -56,7 +97,7 @@
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Conferma Nuova Password</label>
+                            <label>Conferma Password</label>
                             <input type="password" class="form-control" placeholder="Conferma Password" name="confermnewpssw">
                             <p class="help-block text-danger"></p>
                         </div>
@@ -65,7 +106,7 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12 text-center">
-                            <button id="sendButton" class="btn btn-success btn-lg">Invia</button>
+                            <button type="submit" class="btn btn-success btn-lg">Invia</button>
                         </div>
                     </div>
                 </form>
