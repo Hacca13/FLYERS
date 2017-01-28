@@ -36,7 +36,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Email</label>
-                            <input type="text" class="form-control" placeholder="Email" name="email">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
