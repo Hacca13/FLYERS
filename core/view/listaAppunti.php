@@ -76,7 +76,7 @@
 
     <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
 
-    $(document).ready(function () {
+    $(document).click(function () {
         toastr.options = {
             "closeButton": true,
             "debug": false,
