@@ -50,14 +50,14 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Password" name="pssw">
+                            <input type="password" pattern=".{6,}" class="form-control" placeholder="Password" name="pssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Conferma Password</label>
-                            <input type="password" class="form-control" placeholder="Conferma Password" name="confermpssw">
+                            <input type="password" pattern=".{6,}" class="form-control" placeholder="Conferma Password" name="confermpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -84,21 +84,21 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Vecchia Password</label>
-                            <input type="password" class="form-control" placeholder="Vecchia Password" name="oldpssw">
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Vecchia Password" name="oldpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Nuova Password</label>
-                            <input type="password" class="form-control" placeholder="Nuova Password" name="newpssw">
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Nuova Password" name="newpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Conferma Password</label>
-                            <input type="password" class="form-control" placeholder="Conferma Password" name="confermnewpssw">
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Conferma Password" name="confermnewpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
