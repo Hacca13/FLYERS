@@ -10,6 +10,8 @@ include_once MODEL_DIR . 'AnnuncioManager.php';
 include_once MODEL_DIR . 'AppuntiManager.php';
 include_once MODEL_DIR . 'TagManager.php';
 include_once MODEL_DIR . 'UtenteManager.php';
+include_once BEANS_DIR . "Annuncio.php";
+include_once BEANS_DIR . "Appunti.php";
 
 
     if(isset($_POST["search_param"]) && isset($_POST["user_param"])) {
@@ -17,30 +19,62 @@ include_once MODEL_DIR . 'UtenteManager.php';
         if ($_POST["search_param"] == "Appunti") {
 
             $paramByUser = $_POST["user_param"];
-            $sm = new AppuntiManager();
-            $result = $sm->getAppuntiByTitolo($paramByUser);
+            $am = new AppuntiManager();
+            $result = $am->getAppuntiByTitolo($paramByUser);
+
+            $usersNameAds = array();
+            $um = new UtenteManager();
+            for($k=0; $k<count($result); $k++){
+
+                $keyUser = $result[$k]->getKeyUtente();
+                $user = $um->getUtenteByKeyUtente($keyUser);
+
+                array_push($usersNameAds,$user->getId());
+            }
 
             include_once VIEW_DIR . "resultSearch.php";
 
         } else if ($_POST["search_param"] == "Annunci") {
 
             $paramByUser = $_POST["user_param"];
-            $sm = new AnnuncioManager();
-            $result = $sm->getAnnunciByTitolo($paramByUser);
+            $am = new AnnuncioManager();
+            $result = $am->getAnnunciByTitolo($paramByUser);
+            $um = new UtenteManager();
+            $usersNameAds = array();
+            for($k=0; $k<count($result); $k++){
+
+                $keyUser = $result[$k]->getKeyUtente();
+                $user = $um->getUtenteByKeyUtente($keyUser);
+
+                array_push($usersNameAds,$user->getId());
+            }
 
             include_once VIEW_DIR . "resultSearch.php";
 
         } else if ($_POST["search_param"] == "Categorie") {
+
             $paramByUser = $_POST["user_param"];
-            $sm = new AppuntiManager();
-            $result = $sm->getAppuntiByCategoria($paramByUser);
+            $am = new AppuntiManager();
+            $result = $am->getAppuntiByCategoria($paramByUser);
+            $um = new UtenteManager();
+            $usersNameAds = array();
+            for($k=0; $k<count($result); $k++){
+
+                $keyUser = $result[$k]->getKeyUtente();
+                $user = $um->getUtenteByKeyUtente($keyUser);
+
+                array_push($usersNameAds,$user->getId());
+            }
 
             include_once VIEW_DIR . "resultSearch.php";
+
         } else if ($_POST["search_param"] == "Tags") {
             $paramByUser = $_POST["user_param"];
-            $tagManager = new TagManager();
+            $tm = new TagManager();
 
-            $result = $tagManager->searchByTag($paramByUser);
+            $result = $tm->searchByTag($paramByUser);
+            $um = new UtenteManager();
+
             include_once VIEW_DIR . "resultSearch.php";
 
         } else {

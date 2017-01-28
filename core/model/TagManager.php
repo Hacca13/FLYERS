@@ -164,7 +164,7 @@ class TagManager
                                         WHERE TAG.NOME LIKE '%s' AND 
                                         TAG.KEYTAG = TAPERAPPUNTI.KEYTAG 
                                         AND APPUNTI.KEYAPPUNTI = TAGPERAPPUNTI.KEYAPPUNTI";
-        $nameTag = "%".$nameTag."%";
+        $nameTag = "%%".$nameTag."%%";
         $query = sprintf($GET_TAG_REFERENCES_OBJECTS,$nameTag);
         $result = mysqli_query(Connector::getConnector(),$query);
         $listAppunti = array();
@@ -184,7 +184,7 @@ class TagManager
                                         WHERE TAG.NOME LIKE '%s' AND 
                                         TAG.KEYTAG = TAGPERANNUNCIO.KEYTAG 
                                         AND ANNUNCIO.KEYANNUNCIO = TAGPERANNUNCIO.KEYANNUNCIO";
-        $nameTag = "%".$nameTag."%";
+        $nameTag = "%%".$nameTag."%%";
         $query = sprintf($GET_TAG_REFERENCES_OBJECTS,$nameTag);
         $result = mysqli_query(Connector::getConnector(),$query);
         $listAnnunci = array();
