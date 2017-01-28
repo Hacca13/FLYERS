@@ -35,7 +35,7 @@ class UtenteManager
     }
 
     public function updateUser($keyUtente,$utente){
-        $updateSql = "UPDATE UTENTE SET (ID='%s', EMAIL='%s', CITTA='%s', PASS='%s') WHERE KEYUTENTE = '%s'";
+        $updateSql = "UPDATE UTENTE SET ID='%s', EMAIL='%s', CITTA='%s', PASS='%s' WHERE KEYUTENTE = '%s'";
         $query = sprintf($updateSql,$utente->getId(),$utente->getEmail(),$utente->getCitta(),$utente->getPassword(), $keyUtente);
         mysqli_query(Connector::getConnector(), $query);
     }
@@ -71,36 +71,34 @@ class UtenteManager
         $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s' AND PASS = '%s'";
         $query = sprintf($checkLogin,$username,$password);
         $res = mysqli_query(Connector::getConnector(), $query);
-        if ($res) {
-            while ($r = $res->fetch_assoc()) {
-                return true;
-            }
+
+        if($res->num_rows >0){
+            return true;
+        }else {
+            return false;
         }
-        return false;
     }
 
     public function existEmail($email){
         $checkLogin ="SELECT * FROM UTENTE WHERE EMAIL ='%s'";
         $query = sprintf($checkLogin,$email);
         $res = mysqli_query(Connector::getConnector(), $query);
-        if ($res) {
-            while ($r = $res->fetch_assoc()) {
-                return true;
-            }
+        if($res->num_rows >0){
+            return true;
+        }else {
+            return false;
         }
-        return false;
     }
 
     public function existUsername($username){
         $checkLogin ="SELECT * FROM UTENTE WHERE ID ='%s'";
         $query = sprintf($checkLogin,$username);
         $res = mysqli_query(Connector::getConnector(), $query);
-        if ($res) {
-            while ($r = $res->fetch_assoc()) {
-                return true;
-            }
+        if($res->num_rows >0){
+            return true;
+        }else {
+            return false;
         }
-        return false;
     }
 
 

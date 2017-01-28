@@ -21,7 +21,7 @@
             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 text-center">
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group">
-                        <h4>ID</h4>
+                        <h4>Username</h4>
                         <p><?php echo $user->getId();?></p>
                         <p class="help-block text-danger"></p>
                     </div>
@@ -30,6 +30,13 @@
                     <div class="form-group col-xs-12 floating-label-form-group">
                         <h4>Email</h4>
                         <p><?php echo $user->getEmail();?></p>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group">
+                        <h4>Città</h4>
+                        <p><?php echo $user->getCitta();?></p>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>

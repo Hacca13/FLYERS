@@ -4,15 +4,13 @@ include_once BEANS_DIR . "Utente.php";
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-    if(isset($_POST["modifyUser"])){
-
         $username ="";
         if(isset($_POST["username"])){
             $username = $_POST["username"];
             $um = new UtenteManager();
             $flag= $um->existUsername($username);
 
-            if($flag){
+            if(!$flag){
                 $username= $_POST["username"];
             }else{
                 $_SESSION['toast-type'] = "error";
@@ -27,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $um = new UtenteManager();
             $flag= $um->existEmail($email);
 
-            if($flag){
+            if(!$flag){
                 $email = $_POST["email"];
             }else{
                 $_SESSION['toast-type'] = "error";
@@ -58,9 +56,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
                         $email = $user->getEmail();
                     }
 
-                    $userModified = new Utente($username, $email, $citta, $newpssw);
+                    $userModified = new Utente($user->getKeyUtente(),$username, $email, $citta, $newpssw);
                     $um = new UtenteManager();
                     $um->updateUser($user->getKeyUtente(), $userModified);
+
+                    unset($_SESSION['user']);
+                    $_SESSION['user'] = serialize($userModified);
 
                     $_SESSION['toast-type'] = "success";
                     $_SESSION['toast-message'] = "Modifiche applicate con successo";
@@ -78,7 +79,4 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             header("Location:".DOMINIO_SITO."/modificaProfiloUtente");
 
         }
-
-    }
-
 }
