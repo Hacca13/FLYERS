@@ -102,7 +102,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 include_once VIEW_DIR . "modificaProfiloUtente.php";
                 break;
             default:
-                include_once VIEW_DIR ."404.html";
+                include_once VIEW_DIR ."404.php";
                 break;
         }
 

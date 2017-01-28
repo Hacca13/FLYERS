@@ -47,7 +47,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <a href="<?php echo DOMINIO_SITO;?>/myappunti">
-                            <button id="my-appunti"class="btn btn-success btn-lg">
+                            <button disabled id="my-appunti"class="btn btn-success btn-lg">
                                 I Miei Appunti
                             </button>
                         </a>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <a href="<?php echo DOMINIO_SITO;?>/myannunci">
-                            <button id="my-annunci" class="btn btn-success btn-lg">
+                            <button disabled id="my-annunci" class="btn btn-success btn-lg">
                                 I Miei Annunci
                             </button>
                         </a>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                     <div id="container-things">
-                        <p>Lorem ipsius eccc.....</p>
+                        <p>Sezione in allestimento...</p>
                     </div>
                 </div>
             </div>
