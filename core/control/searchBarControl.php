@@ -92,6 +92,7 @@ if(isset($_POST["search_param"]) && isset($_POST["user_param"])) {
         include_once VIEW_DIR . "resultSearch.php";
 
     } else if ($_POST["search_param"] == "Tags") {
+
         $paramByUser = $_POST["user_param"];
         $tm = new TagManager();
 
@@ -110,24 +111,8 @@ if(isset($_POST["search_param"]) && isset($_POST["user_param"])) {
         }
 
         include_once VIEW_DIR . "resultSearch.php";
-
     }else{
-        //default
-        $am = new AppuntiManager();
-        $result = $am->getAllAppunti();
-
-        $usersNameAds = array();
-        $um = new UtenteManager();
-        for($k=0; $k<count($result); $k++){
-
-            $keyUser = $result[$k]->getKeyUtente();
-            $user = $um->getUtenteByKeyUtente($keyUser);
-
-            array_push($usersNameAds,$user->getId());
-        }
-
-        include_once VIEW_DIR . "resultSearch.php";
-
+        header("Location:".DOMINIO_SITO);
     }
 
 }else{

@@ -40,7 +40,7 @@
                                 <li><a>Tags</a></li>
                             </ul>
                         </div>
-                        <input type="hidden" name="search_param" value="appunti" id="search_param">
+                        <input type="hidden" name="search_param" value="Appunti" id="search_param">
                         <input type="text" name="user_param" class="form-control"  placeholder="Search">
                         <span class="input-group-btn">
 								<button style="width: 100%" class="btn btn-default" type="submit">
