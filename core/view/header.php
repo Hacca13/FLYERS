@@ -34,8 +34,8 @@
                                 <span id="search_concept">Appunti</span> <span class="caret"></span>
                             </button>
                             <ul id="list-option" class="dropdown-menu" role="menu">
-                                <li><a>Annunci</a></li>
                                 <li><a>Appunti</a></li>
+                                <li><a>Annunci</a></li>
                                 <li><a>Categorie</a></li>
                                 <li><a>Tags</a></li>
                             </ul>

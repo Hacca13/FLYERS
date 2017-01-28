@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <?php
-
+                if(isset($result) && count($result)>0){
                     for($i=0; $i<count($result);$i++){
                         if($result[$i] instanceof Appunti ){
                             ?>
@@ -73,7 +73,13 @@
 
                         <?php }?>
 
-                    <?php } ?>
+                    <?php }
+                }else{?>
+                    <div>
+                        <p><b>La ricerca non prodotto alcun risultato.</b></p>
+                    </div>
+
+                <?php }?>
             </div>
         </div>
     </div>

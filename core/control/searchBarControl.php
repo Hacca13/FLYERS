@@ -14,70 +14,122 @@ include_once BEANS_DIR . "Annuncio.php";
 include_once BEANS_DIR . "Appunti.php";
 
 
-    if(isset($_POST["search_param"]) && isset($_POST["user_param"])) {
+if(isset($_POST["search_param"]) && isset($_POST["user_param"])) {
 
-        if ($_POST["search_param"] == "Appunti") {
+    if ($_POST["search_param"] == "Appunti") {
 
-            $paramByUser = $_POST["user_param"];
+        $paramByUser = $_POST["user_param"];
+
+        if($paramByUser !="" && $paramByUser!=" ") {
             $am = new AppuntiManager();
             $result = $am->getAppuntiByTitolo($paramByUser);
+        }else{
+            $am = new AppuntiManager();
+            $result = $am->getAllAppunti();
+        }
 
-            $usersNameAds = array();
-            $um = new UtenteManager();
-            for($k=0; $k<count($result); $k++){
+        $usersNameAds = array();
+        $um = new UtenteManager();
+        for($k=0; $k<count($result); $k++){
 
-                $keyUser = $result[$k]->getKeyUtente();
-                $user = $um->getUtenteByKeyUtente($keyUser);
+            $keyUser = $result[$k]->getKeyUtente();
+            $user = $um->getUtenteByKeyUtente($keyUser);
 
-                array_push($usersNameAds,$user->getId());
-            }
+            array_push($usersNameAds,$user->getId());
+        }
 
-            include_once VIEW_DIR . "resultSearch.php";
+        include_once VIEW_DIR . "resultSearch.php";
 
-        } else if ($_POST["search_param"] == "Annunci") {
+    } else if ($_POST["search_param"] == "Annunci") {
 
-            $paramByUser = $_POST["user_param"];
+        $paramByUser = $_POST["user_param"];
+
+        if($paramByUser !="" && $paramByUser!=" ") {
             $am = new AnnuncioManager();
             $result = $am->getAnnunciByTitolo($paramByUser);
-            $um = new UtenteManager();
-            $usersNameAds = array();
-            for($k=0; $k<count($result); $k++){
+        }else{
+            $am = new AnnuncioManager();
+            $result = $am->getAllAnnunci();
+        }
 
-                $keyUser = $result[$k]->getKeyUtente();
-                $user = $um->getUtenteByKeyUtente($keyUser);
+        $um = new UtenteManager();
+        $usersNameAds = array();
 
-                array_push($usersNameAds,$user->getId());
-            }
+        for($k=0; $k<count($result); $k++){
 
-            include_once VIEW_DIR . "resultSearch.php";
+            $keyUser = $result[$k]->getKeyUtente();
+            $user = $um->getUtenteByKeyUtente($keyUser);
 
-        } else if ($_POST["search_param"] == "Categorie") {
+            array_push($usersNameAds,$user->getId());
+        }
 
-            $paramByUser = $_POST["user_param"];
+        include_once VIEW_DIR . "resultSearch.php";
+
+    } else if ($_POST["search_param"] == "Categorie") {
+
+        $paramByUser = $_POST["user_param"];
+
+        if($paramByUser !="" && $paramByUser!=" ") {
             $am = new AppuntiManager();
             $result = $am->getAppuntiByCategoria($paramByUser);
-            $um = new UtenteManager();
-            $usersNameAds = array();
-            for($k=0; $k<count($result); $k++){
-
-                $keyUser = $result[$k]->getKeyUtente();
-                $user = $um->getUtenteByKeyUtente($keyUser);
-
-                array_push($usersNameAds,$user->getId());
-            }
-
-            include_once VIEW_DIR . "resultSearch.php";
-
-        } else if ($_POST["search_param"] == "Tags") {
-            $paramByUser = $_POST["user_param"];
-            $tm = new TagManager();
-
-            $result = $tm->searchByTag($paramByUser);
-            $um = new UtenteManager();
-
-            include_once VIEW_DIR . "resultSearch.php";
-
-        } else {
-            header("location: " . DOMINIO_SITO);
+        }else{
+            $am = new AppuntiManager();
+            $result = $am->getAllAppunti();
         }
+
+        $um = new UtenteManager();
+
+        $usersNameAds = array();
+
+        for($k=0; $k<count($result); $k++){
+
+            $keyUser = $result[$k]->getKeyUtente();
+            $user = $um->getUtenteByKeyUtente($keyUser);
+
+            array_push($usersNameAds,$user->getId());
+        }
+
+        include_once VIEW_DIR . "resultSearch.php";
+
+    } else if ($_POST["search_param"] == "Tags") {
+        $paramByUser = $_POST["user_param"];
+        $tm = new TagManager();
+
+        $result = $tm->searchByTag($paramByUser);
+
+        $um = new UtenteManager();
+
+        $usersNameAds = array();
+
+        for($k=0; $k<count($result); $k++){
+
+            $keyUser = $result[$k]->getKeyUtente();
+            $user = $um->getUtenteByKeyUtente($keyUser);
+
+            array_push($usersNameAds,$user->getId());
+        }
+
+        include_once VIEW_DIR . "resultSearch.php";
+
+    }else{
+        //default
+        $am = new AppuntiManager();
+        $result = $am->getAllAppunti();
+
+        $usersNameAds = array();
+        $um = new UtenteManager();
+        for($k=0; $k<count($result); $k++){
+
+            $keyUser = $result[$k]->getKeyUtente();
+            $user = $um->getUtenteByKeyUtente($keyUser);
+
+            array_push($usersNameAds,$user->getId());
+        }
+
+        include_once VIEW_DIR . "resultSearch.php";
+
     }
+
+}else{
+    header("Location:".DOMINIO_SITO);
+}
