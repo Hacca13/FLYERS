@@ -38,15 +38,20 @@
                                         ?></p>
                                     <p><b> Utente:</b>&nbsp <?php echo  $usersNameAds[$i]?> </p>
                                     <p><b> Data:</b>&nbsp <?php echo $result[$i]->getDataDiCaricamento(); ?> </p>
-                                    <a href="<?php echo DOMINIO_SITO;?>/scaricaAppunti/<?php echo $result[$i]->getKeyFile(); ?>">
-                                        <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
-                                            <i class="fa fa-download"></i></button>
-                                    </a>
-                                    <?php $pathFile = $result[$i]->getPath();
-                                    //cerca la stringa .pdf all'interno del nome...
-                                    if (strpos($pathFile, '.pdf') !== false) {?>
-                                        <a href="<?php echo DOMINIO_SITO;?>/visualizzaFile/<?php echo $result[$i]->getKeyFile(); ?>"><button class="btn btn-success btn-lg" style="float: right;">Leggi<i class="fa fa-file-pdf-o"></i></button></a>
-                                    <?php }
+                                    <?php if(isset($_SESSION['user'])) { ?>
+                                        <a href="<?php echo DOMINIO_SITO; ?>/scaricaAppunti/<?php echo $appunti[$i]->getKeyFile(); ?>">
+                                            <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
+                                                <i class="fa fa-download"></i></button>
+                                        </a>
+                                        <?php $pathFile = $appunti[$i]->getPath();
+                                        //cerca la stringa .pdf all'interno del nome...
+                                        if (strpos($pathFile, '.pdf') !== false) { ?>
+                                            <a href="<?php echo DOMINIO_SITO; ?>/visualizzaFile/<?php echo $appunti[$i]->getKeyFile(); ?>">
+                                                <button class="btn btn-success btn-lg" style="float: right;">Leggi<i
+                                                        class="fa fa-file-pdf-o"></i></button>
+                                            </a>
+                                        <?php }
+                                    }
                                     ?>
 
                                 </div>
@@ -65,7 +70,9 @@
                                         }
                                         ?></p>
                                     <p><b> Utente:</b>&nbsp <?php echo $usersNameAds[$i] ?> </p>
-                                    <p><b> Contatto:</b>&nbsp <?php echo $result[$i]->getContatto();?></p>
+                                    <?php if(isset($_SESSION['user'])){?>
+                                        <p><b> Contatto:</b>&nbsp <?php echo $annunci[$i]->getContatto();?></p>
+                                    <?php } ?>
                                     <p><b> Data:</b>&nbsp <?php echo $result[$i]->getDataDiCaricamento();?></p>
                                 </div>
                             </div>
