@@ -117,8 +117,6 @@
 <?php include_once VIEW_DIR . "footer.php"?>
 </body>
 
-<!--Privacy User-->
-<script src="<?php echo STYLE_DIR;?>js/privacyUser.js"></script>
 <script>
 
     <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>
