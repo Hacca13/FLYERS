@@ -45,17 +45,29 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Categorie</label>
-                            <select class="form-control" name="categorie">
-                                <option value="" disabled selected>Seleziona una Categoria</option>
-                                <option value="Matematica">Matematica</option>
-                                <option value="Biologia">Biologia</option>
-                                <option value="Chimica">Chimica</option>
-                                <option value="Fisica">Fisica</option>
-                                <option value="Informatica">Informatica</option>
-                                <option value="Scienze Ambientali">Scienze_Ambientali</option>
+                            <input type="text" placeholder="Categorie" name="categorie" disabled/>
+                        </div>
+                        <div class="form-group col-xs-12 controls">
+                            <fieldset>
 
-                            </select>
+                                <input id="mat" type="radio" name="categorie" value="Matematica"/>
+                                <label for="mat">Matematica</label><br>
 
+                                <input id="bio" type="radio" name="categorie" value="Biologia"/>
+                                <label for="bio">Biologia</label><br>
+
+                                <input id="chi" type="radio" name="categorie" value="Chimica"/>
+                                <label for="chi">Chimica</label><br>
+
+                                <input id="fis" type="radio" name="categorie" value="Fisica"/>
+                                <label for="fis">Fisica</label><br>
+
+                                <input id="inf" type="radio" name="categorie" value="Informatica"/>
+                                <label for="inf">Informatica</label><br>
+
+                                <input id="sci" type="radio" name="categorie" value="Scienze_Ambientali"/>
+                                <label for="sci">Scienze Ambientali</label>
+                            </fieldset>
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
