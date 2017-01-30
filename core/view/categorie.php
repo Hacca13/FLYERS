@@ -66,7 +66,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                <a href="<?php echo DOMINIO_SITO;?>/getAppunti/Scienze_Ambientali" class="portfolio-link" data-toggle="modal">
+                <a href="<?php echo DOMINIO_SITO;?>/getAppunti/Scienze Ambientali" class="portfolio-link" data-toggle="modal">
                     <div align="center"><h4>Scienze Ambientali</h4></div>
                     <img src="<?php echo DOMINIO_SITO;?>/img/categories/scienze%20ambientali.png" class="img-responsive" alt="">
                 </a>

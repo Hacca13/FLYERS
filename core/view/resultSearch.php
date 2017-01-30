@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <div class="col-lg 12 col-md-12 col-sm-12 col-xs-12">
                 <?php
                 if(isset($result) && count($result)>0){
                     for($i=0; $i<count($result);$i++){
@@ -29,12 +29,11 @@
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <p><b> Titolo:</b>&nbsp <?php echo $result[$i]->getNome(); ?></p>
-                                    <p><b> Descrizione: </b>&nbsp <?php echo $result[$i]->getDescrizione(); ?> .</p>
-                                    <p><b> Raiting: <?php echo $result[$i]->getRaiting();?></b></p>
+                                    <p><b> Descrizione: </b>&nbsp <?php echo $result[$i]->getDescrizione(); ?></p>
                                     <p><b> Categoria: &nbsp <?php echo  $result[$i]->getCategoria()?> </b></p>
                                     <p><b> Tag:</b>&nbsp <?php $tags = $result[$i]->getListTags();
                                         for($j=0; $j<count($tags) ;$j++){
-                                            echo $tags[$j]->getNome();
+                                            echo $tags[$j]->getNome()." ";
                                         }
                                         ?></p>
                                     <p><b> Utente:</b>&nbsp <?php echo  $usersNameAds[$i]?> </p>
@@ -44,7 +43,7 @@
                                             <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
                                                 <i class="fa fa-download"></i></button>
                                         </a>
-                                        <?php $pathFile = $appunti[$i]->getPath();
+                                        <?php $pathFile = $result[$i]->getPath();
                                         //cerca la stringa .pdf all'interno del nome...
                                         if (strpos($pathFile, '.pdf') !== false) { ?>
                                             <a href="<?php echo DOMINIO_SITO; ?>/visualizzaFile/<?php echo $result[$i]->getKeyFile(); ?>">

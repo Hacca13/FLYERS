@@ -25,8 +25,8 @@
 
                 <?php if(isset($_SESSION["user"])){ ?>
                     <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
-                    <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovo Annuncio +</button>
-                </a>
+                        <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovo Annuncio +</button>
+                    </a>
                 <?php } ?>
 
             </div>
@@ -34,28 +34,36 @@
 
 
         <?php
-        for ($i = 0; $i < count($annunci); $i++) {
-            ?>
-            <div class="row">
-                <div class="col-lg-12 col-md 12- col-sm-12 col-xs-12">
-                    <p><b> Titolo:</b>&nbsp <?php echo $annunci[$i]->getTitolo();?></p>
-                    <p><b> Descrizione: </b>&nbsp <?php echo $annunci[$i]->getDescrizione();?></p>
-                    <p><b> Tag:</b>&nbsp <?php $tags = $annunci[$i]->getTags();
+        if(isset($annunci)) {
+            if(count($annunci)){
+                for ($i = 0; $i < count($annunci); $i++) {
+                    ?>
+                    <div class="row">
+                        <div class="col-lg-12 col-md 12- col-sm-12 col-xs-12">
+                            <p><b> Titolo:</b>&nbsp <?php echo $annunci[$i]->getTitolo(); ?></p>
+                            <p><b> Descrizione: </b>&nbsp <?php echo $annunci[$i]->getDescrizione(); ?></p>
+                            <p><b> Tag:</b>&nbsp <?php $tags = $annunci[$i]->getTags();
 
-                                            for($j=0;$j<count($tags);$j++){
-                                                echo $tags[$j]->getNome()." ";
-                                            }
-                                    ?></p>
-                    <p><b> Utente:</b>&nbsp <?php echo $usersNameAds[$i] ?> </p>
-                    <?php if(isset($_SESSION['user'])){?>
-                    <p><b> Contatto:</b>&nbsp <?php echo $annunci[$i]->getContatto();?></p>
-                    <?php } ?>
-                    <p><b> Data:</b>&nbsp <?php echo $annunci[$i]->getDataDiCaricamento();?></p>
+                                for ($j = 0; $j < count($tags); $j++) {
+                                    echo $tags[$j]->getNome() . " ";
+                                }
+                                ?></p>
+                            <p><b> Utente:</b>&nbsp <?php echo $usersNameAds[$i] ?> </p>
+                            <?php if (isset($_SESSION['user'])) { ?>
+                                <p><b> Contatto:</b>&nbsp <?php echo $annunci[$i]->getContatto(); ?></p>
+                            <?php } ?>
+                            <p><b> Data:</b>&nbsp <?php echo $annunci[$i]->getDataDiCaricamento(); ?></p>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <?php
+                }
+            }else{ ?>
+                <div>
+                    <p><b>Non ci sono annunci.</b></p>
                 </div>
-            </div>
-            <hr>
-
-            <?php
+            <?php }
         }
         ?>
     </div>

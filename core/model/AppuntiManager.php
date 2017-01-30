@@ -26,9 +26,9 @@ class AppuntiManager
     }
 
     public function insertAppunti($appunti){
-        $insertSql = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
-                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')" ;
-        $query = sprintf($insertSql,$appunti->getNome(),$appunti->getCategoria(),$appunti->getDescrizione(),$appunti->getRaiting(),$appunti->getPath(),$appunti->getDataDiCaricamento(),$appunti->getKeyUtente());
+        $insertSql = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, PATH, DATADICARICAMENTO, KEYUTENTE) 
+                VALUES ('%s', '%s', '%s', '%s','%s', '%s')" ;
+        $query = sprintf($insertSql,$appunti->getNome(),$appunti->getCategoria(),$appunti->getDescrizione(),$appunti->getPath(),$appunti->getDataDiCaricamento(),$appunti->getKeyUtente());
         mysqli_query(Connector::getConnector(), $query);
         $keyAppunti = $this->lastInsertKey();
         $this->tagManager->insertTagsByAppunti($keyAppunti,$appunti->getListTags());
@@ -42,7 +42,7 @@ class AppuntiManager
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
         }
@@ -57,7 +57,7 @@ class AppuntiManager
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
         }
@@ -72,7 +72,7 @@ class AppuntiManager
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
         }
@@ -88,7 +88,7 @@ class AppuntiManager
         if ($res) {
             while ($obj = $res->fetch_assoc()) {
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
         }
@@ -104,7 +104,7 @@ class AppuntiManager
 
             while($obj =$res->fetch_assoc()){
                 $listTag = $this->tagManager->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 return $appunti;
             }
         }

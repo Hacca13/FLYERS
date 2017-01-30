@@ -1,9 +1,11 @@
+<?php if(!(isset($_SESSION['user']))){
+    header("Location:".DOMINIO_SITO);
+}?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
 
     <title>Flyers | Inserisci Annuncio</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
@@ -38,7 +40,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Tags</label>
-                            <input type="text" class="form-control" placeholder="Tags" id="tags" name="tags" required data-validation-required-message="Inserisci almeno un tag.">
+                            <input type="text" class="form-control" placeholder="Tags...Inserisci i tag separandoli da uno spazio" id="tags" name="tags" required data-validation-required-message="Inserisci almeno un tag.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

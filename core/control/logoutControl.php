@@ -6,6 +6,13 @@
  * Time: 09:42
  */
 
-session_destroy();
+if(isset($_SESSION['user'])) {
+    session_destroy();
 
-header ("location: ".DOMINIO_SITO."/autenticazione");
+    header("Location: " . DOMINIO_SITO . "/autenticazione");
+
+}else{
+
+    header("Location:".DOMINIO_SITO);
+
+}
