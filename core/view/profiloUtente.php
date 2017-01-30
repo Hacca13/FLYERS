@@ -52,34 +52,49 @@
             </div>
             <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center">
                 <div class="row">
+                    <br>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="<?php echo DOMINIO_SITO;?>/myappunti">
-                            <button disabled id="my-appunti"class="btn btn-success btn-lg">
-                                I Miei Appunti
-                            </button>
-                        </a>
-                        <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
-                            <button type="submit" class="btn btn-success btn-lg">
-                                Aggiungi nuovi appunti +
-                            </button>
-                        </a>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <a href="<?php echo DOMINIO_SITO;?>/myappunti">
+                                    <button id="my-appunti"class="btn btn-success btn-lg">
+                                        I Miei Appunti
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
+                                    <button class="btn btn-success btn-lg">
+                                        Aggiungi nuovi appunti +
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <br>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <a href="<?php echo DOMINIO_SITO;?>/myannunci">
-                            <button disabled id="my-annunci" class="btn btn-success btn-lg">
-                                I Miei Annunci
-                            </button>
-                        </a>
-                        <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
-                            <button type="submit" class="btn btn-success btn-lg">
-                                Aggiungi nuovo Annuncio +
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                    <div id="container-things">
-                        <p>Sezione in allestimento...</p>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <a href="<?php echo DOMINIO_SITO;?>/myannunci">
+                                    <button id="my-annunci" class="btn btn-success btn-lg">
+                                        I Miei Annunci
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
+                                    <button class="btn btn-success btn-lg">
+                                        Aggiungi nuovo Annuncio +
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

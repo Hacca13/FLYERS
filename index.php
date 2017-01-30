@@ -80,6 +80,12 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'logout':
                 include_once CONTROL_DIR . "logoutControl.php";
                 break;
+            case 'myAppunti':
+                include_once CONTROL_DIR ."myAppuntiControl.php";
+                break;
+            case 'myAnnunci':
+                include_once CONTROL_DIR ."myAnnunciControl.php";
+                break;
             case '':
                 include_once VIEW_DIR . "home.php";
                 break;

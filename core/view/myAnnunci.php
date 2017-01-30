@@ -20,16 +20,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>I Miei Annunci</h2>
                 <hr class="star-primary">
-
-                <?php if(isset($_SESSION["user"])){ ?>
-                    <a href="<?php echo DOMINIO_SITO;?>/inserisciAnnuncio">
-                        <button type="submit" class="btn btn-success btn-lg" style="float: right;">Aggiungi nuovo Annuncio +</button>
-                    </a>
-                <?php } ?>
-
             </div>
         </div>
-
 
         <?php
         for ($i = 0; $i < count($annunci); $i++) {
