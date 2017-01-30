@@ -4,11 +4,13 @@ include_once MODEL_DIR ."UtenteManager.php";
 
 if(isset($_SESSION['user'])){
 
-    $user = unserialize($_SESSION['user']);
-    $am = new AppuntiManager();
-    $annunci= $am->getAppuntiByUser($user->getKeyUtente());
+    $userLogged = unserialize($_SESSION['user']);
+    $am = new AnnuncioManager();
+    $annunci= $am->getAnnunciByUser($userLogged->getKeyUtente());
 
+    $um = new UtenteManager();
     $usersNameAds = array();
+
     for($k=0; $k<count($annunci); $k++){
         $keyUser = $annunci[$k]->getKeyUtente();
         $user = $um->getUtenteByKeyUtente($keyUser);

@@ -1,3 +1,4 @@
+<?php include_once BEANS_DIR . "Annuncio.php"?>
 <html lang="en">
 <head>
     <title>Flyers | I Miei Annunci </title>
