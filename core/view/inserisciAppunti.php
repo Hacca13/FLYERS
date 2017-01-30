@@ -4,7 +4,7 @@
 <head>
 
 
-    <title>Flyers | Inserisci Appunto</title>
+    <title>Flyers | Inserisci Appunti</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>

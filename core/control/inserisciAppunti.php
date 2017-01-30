@@ -66,12 +66,11 @@ if(isset($_FILES['file'])) {
 }
 
 $data = date("Y-m-d");
-$raiting = 0;
 $user = unserialize($_SESSION["user"]);
 $keyUtente = $user->getKeyUtente();
 $keyAppunti = 0;
 $manager = new AppuntiManager();
-$appunti = new Appunti($keyAppunti,$nome,$categoria,$descrizione, $raiting, $path, $data, $keyUtente ,$result);
+$appunti = new Appunti($keyAppunti,$nome,$categoria,$descrizione,$path, $data, $keyUtente ,$result);
 $manager->insertAppunti($appunti);
 
 

@@ -5,8 +5,8 @@ include_once BEANS_DIR ."Appunti.php";
 if(isset($_URL) && isset($_URL[1])) {
 
     $manager = new AppuntiManager();
-    $id = (int)testInput($_URL[1]);
-    $appunti = $manager->getAppuntiByKeyAppunti($id);
+    $key = (int)testInput($_URL[1]);
+    $appunti = $manager->getAppuntiByKeyAppunti($key);
     $file = $appunti->getPath();
 
     if (file_exists($file)) {

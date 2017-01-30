@@ -30,7 +30,6 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <p><b> Titolo:</b>&nbsp <?php echo $result[$i]->getNome(); ?></p>
                                     <p><b> Descrizione: </b>&nbsp <?php echo $result[$i]->getDescrizione(); ?> .</p>
-                                    <p><b> Raiting: <?php echo $result[$i]->getRaiting();?></b></p>
                                     <p><b> Categoria: &nbsp <?php echo  $result[$i]->getCategoria()?> </b></p>
                                     <p><b> Tag:</b>&nbsp <?php $tags = $result[$i]->getListTags();
                                         for($j=0; $j<count($tags) ;$j++){

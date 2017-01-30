@@ -171,7 +171,7 @@ class TagManager
         if($result){
             while ($obj = $result->fetch_assoc()) {
                 $listTag = $this->getTagByAppunti($obj['KEYAPPUNTI']);
-                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['RAITING'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
+                $appunti = new Appunti($obj['KEYAPPUNTI'],$obj['NOME'],$obj['CATEGORIA'],$obj['DESCRIZIONE'],$obj['PATH'],$obj['DATADICARICAMENTO'],$obj['KEYUTENTE'],$listTag);
                 array_push($listAppunti,$appunti);
             }
         }

@@ -13,7 +13,6 @@ class Appunti
     private $nome;
     private $categoria;
     private $descrizione;
-    private $raiting;
     private $path;
     private $dataDiCaricamento;
     private $keyUtente;
@@ -31,13 +30,12 @@ class Appunti
      * @param $keyUtente
      * @param $listTags
      */
-    public function __construct($keyFile, $nome, $categoria, $descrizione, $raiting, $path, $dataDiCaricamento, $keyUtente, $listTags)
+    public function __construct($keyFile, $nome, $categoria, $descrizione,$path, $dataDiCaricamento, $keyUtente, $listTags)
     {
         $this->keyFile = $keyFile;
         $this->nome = $nome;
         $this->categoria = $categoria;
         $this->descrizione = $descrizione;
-        $this->raiting = $raiting;
         $this->path = $path;
         $this->dataDiCaricamento = $dataDiCaricamento;
         $this->keyUtente = $keyUtente;
@@ -98,22 +96,6 @@ class Appunti
     public function setDescrizione($descrizione)
     {
         $this->descrizione = $descrizione;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getRaiting()
-    {
-        return $this->raiting;
-    }
-
-    /**
-     * @param mixed $raiting
-     */
-    public function setRaiting($raiting)
-    {
-        $this->raiting = $raiting;
     }
 
     /**

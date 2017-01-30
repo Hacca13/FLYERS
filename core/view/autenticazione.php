@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Flyers | Login</title>
+    <title>Flyers | Autenticazione</title>
     <?php include_once VIEW_DIR ."headerStart.php"?>
 
 </head>
