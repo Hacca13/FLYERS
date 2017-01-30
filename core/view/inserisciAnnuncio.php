@@ -1,9 +1,11 @@
+<?php if(!(isset($_SESSION['user']))){
+    header("Location:".DOMINIO_SITO);
+}?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
 
     <title>Flyers | Inserisci Annuncio</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
