@@ -27,7 +27,7 @@ class TagManager
     }
 
     private function insertTag($tag){
-        $insertTag = "INSERT INTO TAG(NOME) VALUES ('%s');";
+        $insertTag = "INSERT INTO TAG(NOMETAG) VALUES ('%s');";
         $query = sprintf($insertTag,$tag);
         mysqli_query(Connector::getConnector(), $query);
         $keyTag = $this->lastInsertKey();
@@ -83,7 +83,7 @@ class TagManager
     }
 
     public function checkExist($nameTag){
-        $selectSql = "SELECT * FROM TAG WHERE NOME = '%s'";
+        $selectSql = "SELECT * FROM TAG WHERE NOMETAG = '%s'";
         $query = sprintf($selectSql,$nameTag);
         $result = mysqli_query(Connector::getConnector(), $query);
 
@@ -100,12 +100,12 @@ class TagManager
     }
 
     public function getTagByName($nameTag){
-        $selectSql = "SELECT * FROM TAG WHERE NOME = '%s'";
+        $selectSql = "SELECT * FROM TAG WHERE NOMETAG = '%s'";
         $query = sprintf($selectSql,$nameTag);
         $result = mysqli_query(Connector::getConnector(), $query);
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
-                $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                $tag = new Tag($obj['KEYTAG'], $obj['NOMETAG']);
                 return $tag;
             }
 
@@ -119,7 +119,7 @@ class TagManager
         $result = mysqli_query(Connector::getConnector(), $query);
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
-                $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                $tag = new Tag($obj['KEYTAG'], $obj['NOMETAG']);
                 return $tag;
             }
 
@@ -136,21 +136,22 @@ class TagManager
         $listTags = array();
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
-                $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                $tag = new Tag($obj['KEYTAG'], $obj['NOMETAG']);
                 array_push($listTags,$tag);
             }
         }
         return $listTags;
     }
     public function getTagByAppunti($keyAppunti){
-        $selectSql = "SELECT * FROM TAG JOIN TAGPERAPPUNTI ON TAG.KEYTAG = TAGPERAPPUNTI.KEYTAG
-                                        WHERE TAG.KEYTAG = '%s'; ";
+        $selectSql = "SELECT * FROM TAG,TAGPERAPPUNTI,APPUNTI WHERE TAGPERAPPUNTI.KEYAPPUNTI ='%s'
+                                                                AND TAG.KEYTAG = TAGPERAPPUNTI.KEYTAG
+                                                                AND TAGPERAPPUNTI.KEYAPPUNTI = APPUNTI.KEYAPPUNTI";
         $query = sprintf($selectSql,$keyAppunti);
         $result = mysqli_query(Connector::getConnector(), $query);
         $listTags = array();
         if ($result) {
             while ($obj = $result->fetch_assoc()) {
-                $tag = new Tag($obj['KEYTAG'], $obj['NOME']);
+                $tag = new Tag($obj['KEYTAG'], $obj['NOMETAG']);
                 array_push($listTags,$tag);
             }
         }
@@ -160,7 +161,7 @@ class TagManager
 
     private function searchAppuntiByTag($nameTag){
         $GET_TAG_REFERENCES_OBJECTS = "SELECT * FROM TAG,TAGPERAPPUNTI,APPUNTI 
-                                        WHERE TAG.NOME LIKE '%s' AND 
+                                        WHERE TAG.NOMETAG LIKE '%s' AND 
                                         TAG.KEYTAG = TAPERAPPUNTI.KEYTAG 
                                         AND APPUNTI.KEYAPPUNTI = TAGPERAPPUNTI.KEYAPPUNTI";
         $nameTag = "%%".$nameTag."%%";
@@ -180,7 +181,7 @@ class TagManager
 
     private function searchAnnunciByTag($nameTag){
         $GET_TAG_REFERENCES_OBJECTS = "SELECT * FROM TAG,TAGPERANNUNCIO,ANNUNCIO
-                                        WHERE TAG.NOME LIKE '%s' AND 
+                                        WHERE TAG.NOMETAG LIKE '%s' AND 
                                         TAG.KEYTAG = TAGPERANNUNCIO.KEYTAG 
                                         AND ANNUNCIO.KEYANNUNCIO = TAGPERANNUNCIO.KEYANNUNCIO";
         $nameTag = "%%".$nameTag."%%";

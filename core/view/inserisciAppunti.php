@@ -22,7 +22,7 @@
     <div class="container" style="margin-top: 10%;">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2>Inserisci Appunto</h2>
+                <h2>Inserisci Appunti</h2>
                 <hr class="star-primary">
             </div>
         </div>
@@ -40,7 +40,7 @@
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
                             <label>Tags</label>
-                            <input type="text" class="form-control" placeholder="Tags" id="tags" name="tags" required data-validation-required-message="Inserisci almeno un tag.">
+                            <input type="text" class="form-control" placeholder="Tags...Inserisci i tag separandoli da uno spazio" id="tags" name="tags" required data-validation-required-message="Inserisci almeno un tag.">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
