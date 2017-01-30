@@ -37,7 +37,7 @@
                     <p><b> Categoria: &nbsp <?php echo  $appunti[$i]->getCategoria()?> </b></p>
                     <p><b> Tag:</b>&nbsp <?php $tags = $appunti[$i]->getListTags();
                                                 for($j=0; $j<count($tags) ;$j++){
-                                                    echo $tags[$j]->getNome();
+                                                    echo $tags[$j]->getNome()." ";
                                                 }
                                                 ?></p>
                     <p><b> Utente:</b>&nbsp <?php echo  $usersName[$i]?> </p>

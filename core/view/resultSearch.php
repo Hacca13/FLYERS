@@ -33,7 +33,7 @@
                                     <p><b> Categoria: &nbsp <?php echo  $result[$i]->getCategoria()?> </b></p>
                                     <p><b> Tag:</b>&nbsp <?php $tags = $result[$i]->getListTags();
                                         for($j=0; $j<count($tags) ;$j++){
-                                            echo $tags[$j]->getNome();
+                                            echo $tags[$j]->getNome()." ";
                                         }
                                         ?></p>
                                     <p><b> Utente:</b>&nbsp <?php echo  $usersNameAds[$i]?> </p>
@@ -43,7 +43,7 @@
                                             <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download
                                                 <i class="fa fa-download"></i></button>
                                         </a>
-                                        <?php $pathFile = $appunti[$i]->getPath();
+                                        <?php $pathFile = $result[$i]->getPath();
                                         //cerca la stringa .pdf all'interno del nome...
                                         if (strpos($pathFile, '.pdf') !== false) { ?>
                                             <a href="<?php echo DOMINIO_SITO; ?>/visualizzaFile/<?php echo $result[$i]->getKeyFile(); ?>">

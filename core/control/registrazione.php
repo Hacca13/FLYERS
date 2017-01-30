@@ -14,7 +14,8 @@ if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['citta'])
     $user = null;
     if($password == $confermaPassword){
         if(!($manager->existEmail($email)) && !($manager->existUsername($username))){
-            $user = new Utente($username,$email,$citta,$password);
+            $keyUtente =0;
+            $user = new Utente($keyUtente,$username,$email,$citta,$password);
             $manager->insertUser($user);
             $_SESSION['user'] = serialize($user);
 

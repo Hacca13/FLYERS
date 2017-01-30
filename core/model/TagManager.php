@@ -143,9 +143,8 @@ class TagManager
         return $listTags;
     }
     public function getTagByAppunti($keyAppunti){
-        $selectSql = "SELECT * FROM TAG,TAGPERAPPUNTI,APPUNTI WHERE TAGPERAPPUNTI.KEYAPPUNTI ='%s' 
-                      AND TAGPERAPPUNTI.KEYAPPUNTI = APPUNTI.KEYAPPUNTI
-                      AND TAGPERAPPUNTI.KEYTAG = TAG.KEYTAG";
+        $selectSql = "SELECT * FROM TAG JOIN TAGPERAPPUNTI ON TAG.KEYTAG = TAGPERAPPUNTI.KEYTAG
+                                        WHERE TAG.KEYTAG = '%s'; ";
         $query = sprintf($selectSql,$keyAppunti);
         $result = mysqli_query(Connector::getConnector(), $query);
         $listTags = array();
