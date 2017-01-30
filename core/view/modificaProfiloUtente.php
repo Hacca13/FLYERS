@@ -12,14 +12,14 @@
 <section class="main-section">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>Modifica Profilo</h2>
                 <hr class="star-primary">
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <form action="<?php echo DOMINIO_SITO;?>/modificaProfiloUtenteControl" name="modifyUser">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <form action="<?php echo DOMINIO_SITO;?>/modificaUtente" method="post">
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
 
@@ -28,7 +28,7 @@
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>ID</label>
+                            <label>Username</label>
                             <input type="text" class="form-control" placeholder="Username" name="username">
                             <p class="help-block text-danger"></p>
                         </div>
@@ -49,15 +49,15 @@
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Nuova Password</label>
-                            <input type="password" class="form-control" placeholder="Nuova Password" name="newpssw">
+                            <label>Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" placeholder="Password" name="pssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="row control-group">
                         <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Conferma Nuova Password</label>
-                            <input type="password" class="form-control" placeholder="Conferma Password" name="confermnewpssw">
+                            <label>Conferma Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" placeholder="Conferma Password" name="confermpssw">
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
@@ -65,7 +65,48 @@
                     <div id="success"></div>
                     <div class="row">
                         <div class="form-group col-xs-12 text-center">
-                            <button id="sendButton" class="btn btn-success btn-lg">Invia</button>
+                            <button type="submit" class="btn btn-success btn-lg">Invia</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h2>Cambia Password</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <form action="<?php echo DOMINIO_SITO;?>/cambiaPassword" method="post">
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Vecchia Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Vecchia Password" name="oldpssw">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Nuova Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Nuova Password" name="newpssw">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Conferma Password</label>
+                            <input type="password" pattern=".{6,}" class="form-control" required title="Minimo 6 caratteri" placeholder="Conferma Password" name="confermnewpssw">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12 text-center">
+                            <button type="submit" class="btn btn-success btn-lg">Invia</button>
                         </div>
                     </div>
                 </form>
@@ -76,8 +117,6 @@
 <?php include_once VIEW_DIR . "footer.php"?>
 </body>
 
-<!--Privacy User-->
-<script src="<?php echo STYLE_DIR;?>js/privacyUser.js"></script>
 <script>
 
     <?php if(isset($_SESSION["toast-type"]) && isset($_SESSION["toast-message"])) {?>

@@ -68,6 +68,9 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
             case 'modificaUtente':
                 include_once CONTROL_DIR . "modificaProfiloUtenteControl.php";
                 break;
+            case 'cambiaPassword':
+                include_once CONTROL_DIR ."cambiaPassword.php";
+                break;
             case 'registrazione':
                 include_once CONTROL_DIR . "registrazione.php";
                 break;
@@ -102,7 +105,7 @@ define('UTILS_DIR', CORE_DIR . 'utils/');
                 include_once VIEW_DIR . "modificaProfiloUtente.php";
                 break;
             default:
-                include_once VIEW_DIR ."404.html";
+                include_once VIEW_DIR ."404.php";
                 break;
         }
 

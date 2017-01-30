@@ -27,14 +27,14 @@
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Username</label>
-                                    <input type="text" class="form-control" placeholder="Username" name="username" id="Username" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <input type="text" class="form-control" placeholder="Username" name="username" id="Username" required title="Inserisci l'username" data-validation-required-message="Please enter your name." aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" name="password" id="password" required="" data-validation-required-message="Please enter your password." aria-invalid="false">
+                                    <input type="password" pattern=".{6,}" class="form-control" placeholder="Password" name="password" id="password" required title="Minimo 6 caratteri" data-validation-required-message="Please enter your password." aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -65,28 +65,28 @@
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Username</label>
-                                    <input type="text" class="form-control" placeholder="Username" name="username" id="Username" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <input type="text" class="form-control" placeholder="Username" name="username" id="Username" required title=Inserisci l'username" data-validation-required-message="Inserisci l'username" aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Email</label>
-                                    <input type="email" class="form-control" placeholder="Email" name="email" id="email" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <input type="email" class="form-control" placeholder="Email" name="email" id="email" required title="Inserisci l'email" data-validation-required-message="Inserisci l'email" aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Città</label>
-                                    <input type="text" class="form-control" placeholder="Città" name="citta" id="citta" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <input type="text" class="form-control" placeholder="Città" name="citta" id="citta" required title="Inserisci città" data-validation-required-message="Inserisci città" aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Password</label>
-                                    <input type="password" class="form-control" placeholder="Password" name="password" id="password" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <input type="password" pattern=".{6,}" class="form-control" placeholder="Password" name="password" id="password" required title="Minimo 6 caratteri" data-validation-required-message="Insersci la password" aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                             <div class="row control-group">
                                 <div class="form-group col-xs-12 floating-label-form-group controls">
                                     <label>Conferma Password</label>
-                                    <input type="password" class="form-control" placeholder="Conferma Password" name="confermaPassword" id="password" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                    <input type="password" pattern=".{6,}" class="form-control" placeholder="Conferma Password" name="confermaPassword" id="password" required title="Minimo 6 caratteri" data-validation-required-message="Conferma password" aria-invalid="false">
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>

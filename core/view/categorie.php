@@ -16,9 +16,22 @@
 <section id="portfolio" style="margin-top: 10%;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
                 <h2>Appunti</h2>
                 <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div style="margin:2%;float:right;">
+                    <?php if(isset($_SESSION["user"])){ ?>
+                        <a href="<?php echo DOMINIO_SITO;?>/inserisciAppunti">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                Aggiungi nuovi appunti +
+                            </button>
+                        </a>
+                    <?php }?>
+                </div>
             </div>
         </div>
         <div class="row">

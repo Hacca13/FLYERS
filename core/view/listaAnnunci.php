@@ -47,7 +47,9 @@
                                             }
                                     ?></p>
                     <p><b> Utente:</b>&nbsp <?php echo $usersNameAds[$i] ?> </p>
+                    <?php if(isset($_SESSION['user'])){?>
                     <p><b> Contatto:</b>&nbsp <?php echo $annunci[$i]->getContatto();?></p>
+                    <?php } ?>
                     <p><b> Data:</b>&nbsp <?php echo $annunci[$i]->getDataDiCaricamento();?></p>
                 </div>
             </div>

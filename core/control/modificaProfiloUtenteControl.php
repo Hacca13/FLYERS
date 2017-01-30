@@ -4,63 +4,58 @@ include_once BEANS_DIR . "Utente.php";
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-    if(isset($_POST["modifyUser"])){
-
-        $username ="";
         if(isset($_POST["username"])){
             $username = $_POST["username"];
             $um = new UtenteManager();
             $flag= $um->existUsername($username);
 
             if($flag){
-                $username= $_POST["username"];
-            }else{
                 $_SESSION['toast-type'] = "error";
                 $_SESSION['toast-message'] = "Username già esistente!";
                 header("Location:".DOMINIO_SITO."/modificaProfiloUtente");
             }
         }
 
-        $email = "";
         if(isset($_POST["email"])){
             $email = $_POST["email"];
             $um = new UtenteManager();
             $flag= $um->existEmail($email);
 
             if($flag){
-                $email = $_POST["email"];
-            }else{
                 $_SESSION['toast-type'] = "error";
                 $_SESSION['toast-message'] = "Email già esistente";
                 header("Location:".DOMINIO_SITO."/modificaProfiloUtente");
             }
         }
 
-        $citta = "";
         if(isset($_POST["citta"])){
             $citta = $_POST["citta"];
         }
 
-        if(isset($_POST["newpssw"]) && isset($_POST["confermnewpssw"]) && $_POST["newpssw"]!="" && $_POST["confermnewpssw"]!=""){
+        if(isset($_POST["pssw"]) && isset($_POST["confermpssw"])){
 
-            $newpssw = $_POST["newpssw"];
-            $confermnewpssw = $_POST["confermnewpssw"];
+            $pssw = $_POST["pssw"];
+            $confermpssw = $_POST["confermpssw"];
 
-            if($newpssw == $confermnewpssw) {
+            if($pssw == $confermpssw) {
 
                 $user = unserialize($_SESSION['user']);
 
-                    if ($username == "") {
-                        $username = $user->getId();
+                    if($email!= " " && $email!=""){
+                        $user->setEmail($email);
+                    }
+                    if($username!=" " && $username!=""){
+                        $user->setId($username);
+                    }
+                    if($citta!=" " && $citta!=""){
+                        $user->setCitta($citta);
                     }
 
-                    if ($email = "") {
-                        $email = $user->getEmail();
-                    }
-
-                    $userModified = new Utente($username, $email, $citta, $newpssw);
                     $um = new UtenteManager();
-                    $um->updateUser($user->getKeyUtente(), $userModified);
+                    $um->updateUser($user->getKeyUtente(), $user);
+
+                    unset($_SESSION['user']);
+                    $_SESSION['user'] = serialize($user);
 
                     $_SESSION['toast-type'] = "success";
                     $_SESSION['toast-message'] = "Modifiche applicate con successo";
@@ -78,7 +73,4 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             header("Location:".DOMINIO_SITO."/modificaProfiloUtente");
 
         }
-
-    }
-
 }

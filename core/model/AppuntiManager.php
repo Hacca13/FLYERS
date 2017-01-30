@@ -81,7 +81,7 @@ class AppuntiManager
 
     public function getAppuntiByTitolo ($name){
         $selectSql = "SELECT * FROM APPUNTI WHERE NOME LIKE '%s'";
-        $name = "%".$name."%";
+        $name = "%%".$name."%%";
         $query = sprintf($selectSql,$name);
         $res = mysqli_query(Connector::getConnector(), $query);
         $listAppunti = array();
