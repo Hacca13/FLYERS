@@ -42,7 +42,13 @@
                         </div>
                     </div>
                     <div class="row control-group">
-                        <div class="form-group col-xs-12 controls">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Categorie</label>
+                            <input type="text" name="Categorie" placeholder="Categorie" disabled>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 controls">
                                 <input id="mat" type="radio" name="categorie" value="Matematica"/>
                                 <label for="mat">Matematica</label><br>
 
@@ -58,37 +64,36 @@
                                 <input id="inf" type="radio" name="categorie" value="Informatica"/>
                                 <label for="inf">Informatica</label><br>
 
-                                <input id="sci" type="radio" name="categorie" value="Scienze_Ambientali"/>
+                                <input id="sci" type="radio" name="categorie" value="Scienze Ambientali"/>
                                 <label for="sci">Scienze Ambientali</label>
 
-                            <p class="help-block text-danger"></p>
+                                <p class="help-block text-danger"></p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Descrizione</label>
-                            <textarea rows="5" class="form-control" placeholder="Descrizione" id="descrizione" name="descrizione" required data-validation-required-message="Inserisci una descrizione."></textarea>
-                            <p class="help-block text-danger"></p>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Descrizione</label>
+                                <textarea rows="5" class="form-control" placeholder="Descrizione" id="descrizione" name="descrizione" required data-validation-required-message="Inserisci una descrizione."></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Scegli file</label>
-                            <input type="file" placeholder="Nessun file scelto.." name="file">
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Scegli file</label>
+                                <input type="file" placeholder="Nessun file scelto.." name="file">
+                            </div>
                         </div>
-                    </div>
 
 
-                    <br>
-                    <div id="success"></div>
-                    <div class="row">
-                        <div class="form-group col-xs-12" style="float: right;">
-                            <button type="reset" class="btn btn-danger btn-lg" style="float: right;">Cancella</button>
-                            <button type="submit" class="btn btn-success btn-lg" style="float: right;">Inserisci</button>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12" style="float: right;">
+                                <button type="reset" class="btn btn-danger btn-lg" style="float: right;">Cancella</button>
+                                <button type="submit" class="btn btn-success btn-lg" style="float: right;">Inserisci</button>
+                            </div>
                         </div>
-                    </div>
                 </form>
             </div>
         </div>
