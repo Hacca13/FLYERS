@@ -26,15 +26,15 @@ if(isset($_SESSION['user'])) {
 
     if (isset($_POST['categorie'])) {
 
-        if($_POST['categorie'] =="Matematica" || $_POST['categorie']=="Biologia" || $_POST['categorie']=="Fisica" || $_POST['categorie']=="Informatica"
-                            || $_POST['categorie']=="Scienze Ambientali" || $_POST['categorie']=="Chimica"){
+        if($_POST['categorie'] !="Matematica" && $_POST['categorie']!="Biologia" && $_POST['categorie']!="Fisica" && $_POST['categorie']!="Informatica"
+                            && $_POST['categorie']!="Scienze Ambientali" && $_POST['categorie']!="Chimica"){
 
-            $categoria = $_POST['categorie'];
-
-        }else{
             header("Location:".DOMINIO_SITO."/inserisciAppunti");
             $_SESSION['toast-type'] = "error";
             $_SESSION['toast-message'] = "Categoria non consentita";
+
+        }else{
+            $categoria = $_POST['categorie'];
         }
 
     } else {
@@ -85,7 +85,6 @@ if(isset($_SESSION['user'])) {
     $manager = new AppuntiManager();
     $appunti = new Appunti($keyAppunti, $nome, $categoria, $descrizione, $path, $data, $keyUtente, $result);
     $manager->insertAppunti($appunti);
-
 
     $_SESSION['toast-type'] = "success";
     $_SESSION['toast-message'] = "File inserito con successo!";
