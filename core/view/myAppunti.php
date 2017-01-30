@@ -40,7 +40,7 @@
                             echo $tags[$j]->getNome();
                         }
                         ?></p>
-                    <p><b> Utente:</b>&nbsp <?php echo  $usersNameAds[$i]?> </p>
+                    <p><b> Utente:</b>&nbsp <?php echo  $usersName[$i]?> </p>
                     <p><b> Data:</b>&nbsp <?php echo $appunti[$i]->getDataDiCaricamento(); ?> </p>
                         <a href="<?php echo DOMINIO_SITO; ?>/scaricaAppunti/<?php echo $appunti[$i]->getKeyFile(); ?>">
                             <button class="btn btn-success btn-lg" style="float: right; margin-left: 1%;">Download

@@ -1,7 +1,8 @@
 <?php include_once BEANS_DIR . "Annuncio.php"?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Flyers | I Miei Annunci </title>
+    <title>Flyers | I Miei Appunti</title>
     <?php include_once VIEW_DIR . "headerStart.php"?>
 
 </head>

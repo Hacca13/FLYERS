@@ -9,13 +9,13 @@ if(isset($_SESSION['user'])){
     $appunti = $am->getAppuntiByUser($userLogged->getKeyUtente());
 
     $um = new UtenteManager();
-    $usersNameAds = array();
+    $usersName = array();
 
     for($k=0; $k<count($appunti); $k++){
         $keyUser = $appunti[$k]->getKeyUtente();
         $user = $um->getUtenteByKeyUtente($keyUser);
 
-        array_push($usersNameAds,$user->getId());
+        array_push($usersName,$user->getId());
     }
 
     include_once VIEW_DIR . "myAppunti.php";

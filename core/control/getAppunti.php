@@ -13,12 +13,12 @@ if(isset($_URL) && isset($_URL[1])) {
 
     $um = new UtenteManager();
 
-    $usersNameAds = array();
+    $usersName = array();
     for($k=0; $k<count($appunti); $k++){
         $keyUser = $appunti[$k]->getKeyUtente();
         $user = $um->getUtenteByKeyUtente($keyUser);
 
-        array_push($usersNameAds,$user->getId());
+        array_push($usersName,$user->getId());
     }
 
     include_once VIEW_DIR . "listaAppunti.php";
