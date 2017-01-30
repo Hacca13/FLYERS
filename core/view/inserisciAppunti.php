@@ -41,15 +41,8 @@
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
-
                     <div class="row control-group">
-                        <div class="form-group col-xs-12 floating-label-form-group controls">
-                            <label>Categorie</label>
-                            <input type="text" placeholder="Categorie" name="categorie" disabled/>
-                        </div>
                         <div class="form-group col-xs-12 controls">
-                            <fieldset>
-
                                 <input id="mat" type="radio" name="categorie" value="Matematica"/>
                                 <label for="mat">Matematica</label><br>
 
@@ -67,7 +60,7 @@
 
                                 <input id="sci" type="radio" name="categorie" value="Scienze_Ambientali"/>
                                 <label for="sci">Scienze Ambientali</label>
-                            </fieldset>
+
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>

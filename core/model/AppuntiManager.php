@@ -26,8 +26,8 @@ class AppuntiManager
     }
 
     public function insertAppunti($appunti){
-        $insertSql = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, RAITING, PATH, DATADICARICAMENTO, KEYUTENTE) 
-                VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')" ;
+        $insertSql = "INSERT INTO APPUNTI (NOME, CATEGORIA, DESCRIZIONE, PATH, DATADICARICAMENTO, KEYUTENTE) 
+                VALUES ('%s', '%s', '%s', '%s','%s', '%s')" ;
         $query = sprintf($insertSql,$appunti->getNome(),$appunti->getCategoria(),$appunti->getDescrizione(),$appunti->getPath(),$appunti->getDataDiCaricamento(),$appunti->getKeyUtente());
         mysqli_query(Connector::getConnector(), $query);
         $keyAppunti = $this->lastInsertKey();
