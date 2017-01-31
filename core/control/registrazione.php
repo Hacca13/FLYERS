@@ -17,6 +17,7 @@ if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['citta'])
             $keyUtente =0;
             $user = new Utente($keyUtente,$username,$email,$citta,$password);
             $manager->insertUser($user);
+            $user = $manager->getUtenteById($username);
             $_SESSION['user'] = serialize($user);
 
             $_SESSION['toast-type'] = "success";
