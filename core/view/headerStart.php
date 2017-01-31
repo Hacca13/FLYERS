@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="<?php echo IMG_DIR; ?>flyers_logo.ico" size="16x16 24x24 32x32 48x48 64x64" type="image/x-icon">
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo STYLE_DIR; ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
