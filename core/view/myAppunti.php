@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <p><b> Titolo:</b>&nbsp <?php echo $appunti[$i]->getNome(); ?></p>
-                            <p><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione(); ?> .</p>
+                            <p><b> Descrizione: </b>&nbsp <?php echo $appunti[$i]->getDescrizione(); ?></p>
                             <p><b> Categoria: &nbsp <?php echo  $appunti[$i]->getCategoria()?> </b></p>
                             <p><b> Tag:</b>&nbsp <?php $tags = $appunti[$i]->getListTags();
                                 for($j=0; $j<count($tags) ;$j++){
